@@ -7,6 +7,7 @@
     Clock,
     Copy,
     FolderOpen,
+    FolderTree,
     LoaderCircle,
     Pencil,
     RotateCw,
@@ -108,6 +109,14 @@
         {/if}
         <button class="btn" onclick={() => app.openMode(job.mode, job.task)} data-tip="Open this task in its mode page"><Pencil size={14} /> Edit</button>
         {#if job.output}
+          <button
+            class="btn"
+            data-tip="Browse with previews in this app"
+            onclick={() => {
+              app.browsePath = job.output!;
+              app.page = 'files';
+            }}><FolderTree size={14} /> Browse</button
+          >
           <button class="btn" onclick={() => openPath(job.output!)}><FolderOpen size={14} /> Open folder</button>
         {/if}
         {#if job.status !== 'running'}

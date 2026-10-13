@@ -39,11 +39,15 @@
   }
 </script>
 
+{#snippet advanced()}
+  <span class="badge" data-tip="Not in DataTool's own help: an expert or debug option">advanced</span>
+{/snippet}
+
 <div class="flag" class:changed>
   {#if flag.type === 'boolean'}
     <Toggle checked={!!effective} {label} {help} onchange={(v) => set(v)} />
   {:else}
-    <span class="name">{label} <Help text={help} /></span>
+    <span class="name">{label} <Help text={help} />{#if flag.hidden}{@render advanced()}{/if}</span>
     {#if flag.choices?.length}
       <select value={String(effective ?? '')} onchange={(e) => set((e.currentTarget as HTMLSelectElement).value)}>
         {#if !flag.choices.includes(String(base))}<option value={String(base ?? '')}>{isLanguage ? 'Game\'s language' : `Default (${baseText})`}</option>{/if}
@@ -61,7 +65,7 @@
       />
     {/if}
   {/if}
-  {#if flag.hidden}<span class="badge" data-tip="Not in DataTool's own help: an expert or debug option">advanced</span>{/if}
+  {#if flag.hidden && flag.type === 'boolean'}{@render advanced()}{/if}
   {#if changed}
     <button class="btn ghost icon small reset" aria-label="Reset {label}" data-tip="Back to {inheritedLabel} ({baseText})" onclick={() => onchange(undefined)}>
       <RotateCcw size={13} />
@@ -91,18 +95,22 @@
   }
   select,
   input {
+    flex: 1 1 110px;
     width: auto;
-    min-width: 140px;
-    max-width: 260px;
+    min-width: 0;
+    max-width: 240px;
     margin-left: auto;
     height: 28px;
+  }
+  .name :global(.badge) {
+    margin-left: 2px;
   }
   .reset {
     margin-left: auto;
   }
   select + .reset,
   input + .reset,
-  .badge + .reset {
+  :global(.badge) + .reset {
     margin-left: 0;
   }
 </style>

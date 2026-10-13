@@ -44,7 +44,9 @@
   <section class="panel">
     <header><h2>Interface</h2></header>
     <div class="col">
-      <Field label="Theme" inline>
+      <div class="row" role="group" aria-label="Theme">
+        <span class="small" style="font-weight: 600; color: var(--text-2)">Theme</span>
+        <span class="spacer"></span>
         <Segmented
           bind:value={app.prefs.theme}
           options={[
@@ -53,7 +55,7 @@
             { value: 'dark' as Theme, label: 'Dark' },
           ]}
         />
-      </Field>
+      </div>
       <Toggle bind:checked={app.prefs.showAdvanced} label="Show advanced & debug modes and options" help="Modes and flags DataTool doesn't list in its own help." />
       <Toggle
         bind:checked={app.prefs.autoLoadChoices}

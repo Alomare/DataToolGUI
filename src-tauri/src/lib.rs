@@ -31,6 +31,14 @@ fn app_info(paths: tauri::State<'_, AppPaths>) -> AppInfo {
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     let app = tauri::Builder::default()
+        // A second launch focuses the running window: two instances would
+        // share (and overwrite) the same settings and DataTool folders.
+        .plugin(tauri_plugin_single_instance::init(|app, _args, _cwd| {
+            if let Some(w) = app.get_webview_window("main") {
+                let _ = w.unminimize();
+                let _ = w.set_focus();
+            }
+        }))
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
         .manage(process::Jobs::default())

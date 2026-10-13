@@ -77,6 +77,15 @@
   }
 </script>
 
+<svelte:window
+  onkeydown={(e) => {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey) && cores.active && !built.errors.length) {
+      e.preventDefault();
+      run();
+    }
+  }}
+/>
+
 <div class="mode">
   <div class="page-head">
     <div class="grow">
@@ -189,7 +198,7 @@
       {/if}
     </div>
     <button class="btn primary large" onclick={run} disabled={!cores.active || built.errors.length > 0}>
-      <Play size={16} /> {queue.active ? 'Queue' : 'Run'}
+      <Play size={16} /> {queue.active ? 'Queue' : 'Run'} <span class="kbd shortcut">Ctrl+Enter</span>
     </button>
   </div>
 </div>
@@ -243,6 +252,11 @@
   }
   .err {
     color: var(--danger);
+  }
+  .shortcut {
+    background: color-mix(in srgb, currentColor 18%, transparent);
+    color: inherit;
+    opacity: 0.85;
   }
   .warn {
     color: var(--warn);
