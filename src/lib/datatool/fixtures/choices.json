@@ -1,0 +1,5051 @@
+{
+ "Types": {
+  "datatool.ux.valid_hero_names": {
+   "Choices": [
+    {
+     "QueryName": "2",
+     "DisplayName": "Reaper",
+     "Children": {
+      "Types": {
+       "datatool.ux.valid_icon_names": {
+        "Choices": [
+         {
+          "QueryName": "Reaper",
+          "DisplayName": "Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Soul",
+          "DisplayName": "Soul",
+          "Children": null
+         },
+         {
+          "QueryName": "Emblem",
+          "DisplayName": "Emblem",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute Reaper",
+          "DisplayName": "Cute Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaper Silhouette",
+          "DisplayName": "Reaper Silhouette",
+          "Children": null
+         },
+         {
+          "QueryName": "BMX",
+          "DisplayName": "BMX",
+          "Children": null
+         },
+         {
+          "QueryName": "The Reaper",
+          "DisplayName": "The Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Dracula",
+          "DisplayName": "Dracula",
+          "Children": null
+         },
+         {
+          "QueryName": "Rat King",
+          "DisplayName": "Rat King",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaping General",
+          "DisplayName": "Reaping General",
+          "Children": null
+         },
+         {
+          "QueryName": "Soldier: 24",
+          "DisplayName": "Soldier: 24",
+          "Children": null
+         },
+         {
+          "QueryName": "Reapiversary",
+          "DisplayName": "Reapiversary",
+          "Children": null
+         },
+         {
+          "QueryName": "Masquerade",
+          "DisplayName": "Masquerade",
+          "Children": null
+         },
+         {
+          "QueryName": "Streetwear Reaper",
+          "DisplayName": "Streetwear Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Solaris Reaper",
+          "DisplayName": "Solaris Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Imperial Guard",
+          "DisplayName": "Imperial Guard",
+          "Children": null
+         },
+         {
+          "QueryName": "Dusk",
+          "DisplayName": "Dusk",
+          "Children": null
+         },
+         {
+          "QueryName": "Chasa",
+          "DisplayName": "Chasa",
+          "Children": null
+         },
+         {
+          "QueryName": "Nebula Reaper",
+          "DisplayName": "Nebula Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Hazmat",
+          "DisplayName": "Hazmat",
+          "Children": null
+         },
+         {
+          "QueryName": "Ultrawatch Reaper",
+          "DisplayName": "Ultrawatch Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Anubis Reaper",
+          "DisplayName": "Anubis Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Grim Effigy",
+          "DisplayName": "Grim Effigy",
+          "Children": null
+         },
+         {
+          "QueryName": "Ringleader Reaper",
+          "DisplayName": "Ringleader Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Tomura Shigaraki",
+          "DisplayName": "Tomura Shigaraki",
+          "Children": null
+         },
+         {
+          "QueryName": "Deathscythe Reaper",
+          "DisplayName": "Deathscythe Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "8-bit Reaper",
+          "DisplayName": "8-bit Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Cobra Commander - Reaper",
+          "DisplayName": "Cobra Commander - Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Stadium Reaper",
+          "DisplayName": "Stadium Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Oni Reaper",
+          "DisplayName": "Oni Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Anti-Hero Reaper",
+          "DisplayName": "Anti-Hero Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Frost Lich Reaper",
+          "DisplayName": "Frost Lich Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Heist Reaper",
+          "DisplayName": "Heist Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Snowreaper",
+          "DisplayName": "Snowreaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Reapermari",
+          "DisplayName": "Reapermari",
+          "Children": null
+         },
+         {
+          "QueryName": "Nyan Café Reaper",
+          "DisplayName": "Nyan Café Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Fancy Fangs Reaper",
+          "DisplayName": "Fancy Fangs Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Igris",
+          "DisplayName": "Igris",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_emote_names": {
+        "Choices": [
+         {
+          "QueryName": "Slice",
+          "DisplayName": "Slice",
+          "Children": null
+         },
+         {
+          "QueryName": "Slow Clap",
+          "DisplayName": "Slow Clap",
+          "Children": null
+         },
+         {
+          "QueryName": "Not Impressed",
+          "DisplayName": "Not Impressed",
+          "Children": null
+         },
+         {
+          "QueryName": "Cackle",
+          "DisplayName": "Cackle",
+          "Children": null
+         },
+         {
+          "QueryName": "Take a knee",
+          "DisplayName": "Take a knee",
+          "Children": null
+         },
+         {
+          "QueryName": "Shrug",
+          "DisplayName": "Shrug",
+          "Children": null
+         },
+         {
+          "QueryName": "Death Scroll",
+          "DisplayName": "Death Scroll",
+          "Children": null
+         },
+         {
+          "QueryName": "Heart Balloon",
+          "DisplayName": "Heart Balloon",
+          "Children": null
+         },
+         {
+          "QueryName": "Gauging Options",
+          "DisplayName": "Gauging Options",
+          "Children": null
+         },
+         {
+          "QueryName": "Dance",
+          "DisplayName": "Dance",
+          "Children": null
+         },
+         {
+          "QueryName": "Cobra!",
+          "DisplayName": "Cobra!",
+          "Children": null
+         },
+         {
+          "QueryName": "Dance-Off",
+          "DisplayName": "Dance-Off",
+          "Children": null
+         },
+         {
+          "QueryName": "Kitty Pets",
+          "DisplayName": "Kitty Pets",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Cookies",
+          "DisplayName": "Cookies",
+          "Children": null
+         },
+         {
+          "QueryName": "Stalk",
+          "DisplayName": "Stalk",
+          "Children": null
+         },
+         {
+          "QueryName": "Danza de los Diablos",
+          "DisplayName": "Danza de los Diablos",
+          "Children": null
+         },
+         {
+          "QueryName": "Mic Drop",
+          "DisplayName": "Mic Drop",
+          "Children": null
+         },
+         {
+          "QueryName": "Listen Up",
+          "DisplayName": "Listen Up",
+          "Children": null
+         },
+         {
+          "QueryName": "Salty",
+          "DisplayName": "Salty",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_victorypose_names": {
+        "Choices": [
+         {
+          "QueryName": "Enigmatic",
+          "DisplayName": "Enigmatic",
+          "Children": null
+         },
+         {
+          "QueryName": "Menacing",
+          "DisplayName": "Menacing",
+          "Children": null
+         },
+         {
+          "QueryName": "Casual",
+          "DisplayName": "Casual",
+          "Children": null
+         },
+         {
+          "QueryName": "Shrug",
+          "DisplayName": "Shrug",
+          "Children": null
+         },
+         {
+          "QueryName": "Gunpoint",
+          "DisplayName": "Gunpoint",
+          "Children": null
+         },
+         {
+          "QueryName": "All For One",
+          "DisplayName": "All For One",
+          "Children": null
+         },
+         {
+          "QueryName": "Brooding",
+          "DisplayName": "Brooding",
+          "Children": null
+         },
+         {
+          "QueryName": "Scythe Wielder",
+          "DisplayName": "Scythe Wielder",
+          "Children": null
+         },
+         {
+          "QueryName": "Medal",
+          "DisplayName": "Medal",
+          "Children": null
+         },
+         {
+          "QueryName": "R.I.P.",
+          "DisplayName": "R.I.P.",
+          "Children": null
+         },
+         {
+          "QueryName": "Toast",
+          "DisplayName": "Toast",
+          "Children": null
+         },
+         {
+          "QueryName": "Stockpile",
+          "DisplayName": "Stockpile",
+          "Children": null
+         },
+         {
+          "QueryName": "Cackle",
+          "DisplayName": "Cackle",
+          "Children": null
+         },
+         {
+          "QueryName": "Ready for Action",
+          "DisplayName": "Ready for Action",
+          "Children": null
+         },
+         {
+          "QueryName": "Total Domination",
+          "DisplayName": "Total Domination",
+          "Children": null
+         },
+         {
+          "QueryName": "Leveling",
+          "DisplayName": "Leveling",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Random from Favorites",
+          "DisplayName": "Random from Favorites",
+          "Children": null
+         },
+         {
+          "QueryName": "Locked and Loaded",
+          "DisplayName": "Locked and Loaded",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_highlightintro_names": {
+        "Choices": [
+         {
+          "QueryName": "Executioner",
+          "DisplayName": "Executioner",
+          "Children": null
+         },
+         {
+          "QueryName": "SHADOW STEP",
+          "DisplayName": "SHADOW STEP",
+          "Children": null
+         },
+         {
+          "QueryName": "Death Blossom",
+          "DisplayName": "Death Blossom",
+          "Children": null
+         },
+         {
+          "QueryName": "Ambush",
+          "DisplayName": "Ambush",
+          "Children": null
+         },
+         {
+          "QueryName": "Death Appears",
+          "DisplayName": "Death Appears",
+          "Children": null
+         },
+         {
+          "QueryName": "No Longer Necessary",
+          "DisplayName": "No Longer Necessary",
+          "Children": null
+         },
+         {
+          "QueryName": "Scythe Strike",
+          "DisplayName": "Scythe Strike",
+          "Children": null
+         },
+         {
+          "QueryName": "Eternal Rest",
+          "DisplayName": "Eternal Rest",
+          "Children": null
+         },
+         {
+          "QueryName": "Film Noir",
+          "DisplayName": "Film Noir",
+          "Children": null
+         },
+         {
+          "QueryName": "Caped Glare",
+          "DisplayName": "Caped Glare",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Random from Favorites",
+          "DisplayName": "Random from Favorites",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_voiceline_names": {
+        "Choices": [
+         {
+          "QueryName": "Dead man walking",
+          "DisplayName": "Dead man walking",
+          "Children": null
+         },
+         {
+          "QueryName": "Next",
+          "DisplayName": "Next",
+          "Children": null
+         },
+         {
+          "QueryName": "Haven't I killed you",
+          "DisplayName": "Haven't I killed you",
+          "Children": null
+         },
+         {
+          "QueryName": "Too easy",
+          "DisplayName": "Too easy",
+          "Children": null
+         },
+         {
+          "QueryName": "Was that all?",
+          "DisplayName": "Was that all?",
+          "Children": null
+         },
+         {
+          "QueryName": "Give me a break",
+          "DisplayName": "Give me a break",
+          "Children": null
+         },
+         {
+          "QueryName": "Psychopath",
+          "DisplayName": "Psychopath",
+          "Children": null
+         },
+         {
+          "QueryName": "Seen a ghost?",
+          "DisplayName": "Seen a ghost?",
+          "Children": null
+         },
+         {
+          "QueryName": "If it lives, I can kill it",
+          "DisplayName": "If it lives, I can kill it",
+          "Children": null
+         },
+         {
+          "QueryName": "I'm back in black",
+          "DisplayName": "I'm back in black",
+          "Children": null
+         },
+         {
+          "QueryName": "Any last words?",
+          "DisplayName": "Any last words?",
+          "Children": null
+         },
+         {
+          "QueryName": "It's in the refrigerator",
+          "DisplayName": "It's in the refrigerator",
+          "Children": null
+         },
+         {
+          "QueryName": "Just win",
+          "DisplayName": "Just win",
+          "Children": null
+         },
+         {
+          "QueryName": "I work the graveyard shift",
+          "DisplayName": "I work the graveyard shift",
+          "Children": null
+         },
+         {
+          "QueryName": "Things are looking grim",
+          "DisplayName": "Things are looking grim",
+          "Children": null
+         },
+         {
+          "QueryName": "I'm dressed to kill",
+          "DisplayName": "I'm dressed to kill",
+          "Children": null
+         },
+         {
+          "QueryName": "Too edgy for you?",
+          "DisplayName": "Too edgy for you?",
+          "Children": null
+         },
+         {
+          "QueryName": "Where's my candy?",
+          "DisplayName": "Where's my candy?",
+          "Children": null
+         },
+         {
+          "QueryName": "Holiday spirit",
+          "DisplayName": "Holiday spirit",
+          "Children": null
+         },
+         {
+          "QueryName": "You're on ice",
+          "DisplayName": "You're on ice",
+          "Children": null
+         },
+         {
+          "QueryName": "Now those are fireworks",
+          "DisplayName": "Now those are fireworks",
+          "Children": null
+         },
+         {
+          "QueryName": "I have the devil's own luck",
+          "DisplayName": "I have the devil's own luck",
+          "Children": null
+         },
+         {
+          "QueryName": "Lucky Color",
+          "DisplayName": "Lucky Color",
+          "Children": null
+         },
+         {
+          "QueryName": "Amateur hour",
+          "DisplayName": "Amateur hour",
+          "Children": null
+         },
+         {
+          "QueryName": "Moving on",
+          "DisplayName": "Moving on",
+          "Children": null
+         },
+         {
+          "QueryName": "Revenge is sweet",
+          "DisplayName": "Revenge is sweet",
+          "Children": null
+         },
+         {
+          "QueryName": "No one left behind",
+          "DisplayName": "No one left behind",
+          "Children": null
+         },
+         {
+          "QueryName": "I'll see you in hell",
+          "DisplayName": "I'll see you in hell",
+          "Children": null
+         },
+         {
+          "QueryName": "Pathetic",
+          "DisplayName": "Pathetic",
+          "Children": null
+         },
+         {
+          "QueryName": "Smile",
+          "DisplayName": "Smile",
+          "Children": null
+         },
+         {
+          "QueryName": "What are you looking at",
+          "DisplayName": "What are you looking at",
+          "Children": null
+         },
+         {
+          "QueryName": "It’s your day to be dead",
+          "DisplayName": "It’s your day to be dead",
+          "Children": null
+         },
+         {
+          "QueryName": "Thrill of the kill",
+          "DisplayName": "Thrill of the kill",
+          "Children": null
+         },
+         {
+          "QueryName": "What Lurks",
+          "DisplayName": "What Lurks",
+          "Children": null
+         },
+         {
+          "QueryName": "To be Killed",
+          "DisplayName": "To be Killed",
+          "Children": null
+         },
+         {
+          "QueryName": "No style",
+          "DisplayName": "No style",
+          "Children": null
+         },
+         {
+          "QueryName": "Immortality",
+          "DisplayName": "Immortality",
+          "Children": null
+         },
+         {
+          "QueryName": "Game over",
+          "DisplayName": "Game over",
+          "Children": null
+         },
+         {
+          "QueryName": "Fireworks",
+          "DisplayName": "Fireworks",
+          "Children": null
+         },
+         {
+          "QueryName": "Come to hell",
+          "DisplayName": "Come to hell",
+          "Children": null
+         },
+         {
+          "QueryName": "Everyone who sees",
+          "DisplayName": "Everyone who sees",
+          "Children": null
+         },
+         {
+          "QueryName": "Grim Reaper",
+          "DisplayName": "Grim Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Sneaking in undetected",
+          "DisplayName": "Sneaking in undetected",
+          "Children": null
+         },
+         {
+          "QueryName": "You fools!",
+          "DisplayName": "You fools!",
+          "Children": null
+         },
+         {
+          "QueryName": "Balderdash!",
+          "DisplayName": "Balderdash!",
+          "Children": null
+         },
+         {
+          "QueryName": "I hate this job",
+          "DisplayName": "I hate this job",
+          "Children": null
+         },
+         {
+          "QueryName": "What's so funny?",
+          "DisplayName": "What's so funny?",
+          "Children": null
+         },
+         {
+          "QueryName": "Stand and fight",
+          "DisplayName": "Stand and fight",
+          "Children": null
+         },
+         {
+          "QueryName": "Avenge this insult",
+          "DisplayName": "Avenge this insult",
+          "Children": null
+         },
+         {
+          "QueryName": "Get off my screen",
+          "DisplayName": "Get off my screen",
+          "Children": null
+         },
+         {
+          "QueryName": "Deader than disco",
+          "DisplayName": "Deader than disco",
+          "Children": null
+         },
+         {
+          "QueryName": "Always the answer",
+          "DisplayName": "Always the answer",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_skin_names": {
+        "Choices": [
+         {
+          "QueryName": "Royal",
+          "DisplayName": "Royal",
+          "Children": null
+         },
+         {
+          "QueryName": "Blood",
+          "DisplayName": "Blood",
+          "Children": null
+         },
+         {
+          "QueryName": "Midnight",
+          "DisplayName": "Midnight",
+          "Children": null
+         },
+         {
+          "QueryName": "Moss",
+          "DisplayName": "Moss",
+          "Children": null
+         },
+         {
+          "QueryName": "Desert",
+          "DisplayName": "Desert",
+          "Children": null
+         },
+         {
+          "QueryName": "Wight",
+          "DisplayName": "Wight",
+          "Children": null
+         },
+         {
+          "QueryName": "Mariachi",
+          "DisplayName": "Mariachi",
+          "Children": null
+         },
+         {
+          "QueryName": "El Blanco",
+          "DisplayName": "El Blanco",
+          "Children": null
+         },
+         {
+          "QueryName": "Nevermore",
+          "DisplayName": "Nevermore",
+          "Children": null
+         },
+         {
+          "QueryName": "Plague Doctor",
+          "DisplayName": "Plague Doctor",
+          "Children": null
+         },
+         {
+          "QueryName": "Hellfire",
+          "DisplayName": "Hellfire",
+          "Children": null
+         },
+         {
+          "QueryName": "Biker",
+          "DisplayName": "Biker",
+          "Children": null
+         },
+         {
+          "QueryName": "Pumpkin",
+          "DisplayName": "Pumpkin",
+          "Children": null
+         },
+         {
+          "QueryName": "Dracula",
+          "DisplayName": "Dracula",
+          "Children": null
+         },
+         {
+          "QueryName": "Shiver",
+          "DisplayName": "Shiver",
+          "Children": null
+         },
+         {
+          "QueryName": "Rat King",
+          "DisplayName": "Rat King",
+          "Children": null
+         },
+         {
+          "QueryName": "Lü Bu",
+          "DisplayName": "Lü Bu",
+          "Children": null
+         },
+         {
+          "QueryName": "Soldier: 24",
+          "DisplayName": "Soldier: 24",
+          "Children": null
+         },
+         {
+          "QueryName": "Masquerade",
+          "DisplayName": "Masquerade",
+          "Children": null
+         },
+         {
+          "QueryName": "Evermore",
+          "DisplayName": "Evermore",
+          "Children": null
+         },
+         {
+          "QueryName": "Luchador",
+          "DisplayName": "Luchador",
+          "Children": null
+         },
+         {
+          "QueryName": "Chasa",
+          "DisplayName": "Chasa",
+          "Children": null
+         },
+         {
+          "QueryName": "Eagle Warrior",
+          "DisplayName": "Eagle Warrior",
+          "Children": null
+         },
+         {
+          "QueryName": "Tiger Luchador",
+          "DisplayName": "Tiger Luchador",
+          "Children": null
+         },
+         {
+          "QueryName": "Lion Luchador",
+          "DisplayName": "Lion Luchador",
+          "Children": null
+         },
+         {
+          "QueryName": "Nebula",
+          "DisplayName": "Nebula",
+          "Children": null
+         },
+         {
+          "QueryName": "Hazmat",
+          "DisplayName": "Hazmat",
+          "Children": null
+         },
+         {
+          "QueryName": "Chained King",
+          "DisplayName": "Chained King",
+          "Children": null
+         },
+         {
+          "QueryName": "Heartbreaker",
+          "DisplayName": "Heartbreaker",
+          "Children": null
+         },
+         {
+          "QueryName": "Ultrawatch",
+          "DisplayName": "Ultrawatch",
+          "Children": null
+         },
+         {
+          "QueryName": "Ringleader",
+          "DisplayName": "Ringleader",
+          "Children": null
+         },
+         {
+          "QueryName": "Tomura Shigaraki",
+          "DisplayName": "Tomura Shigaraki",
+          "Children": null
+         },
+         {
+          "QueryName": "Heist",
+          "DisplayName": "Heist",
+          "Children": null
+         },
+         {
+          "QueryName": "Fenrir",
+          "DisplayName": "Fenrir",
+          "Children": null
+         },
+         {
+          "QueryName": "Anubis",
+          "DisplayName": "Anubis",
+          "Children": null
+         },
+         {
+          "QueryName": "Emotional",
+          "DisplayName": "Emotional",
+          "Children": null
+         },
+         {
+          "QueryName": "Grim Effigy",
+          "DisplayName": "Grim Effigy",
+          "Children": null
+         },
+         {
+          "QueryName": "Cardboard",
+          "DisplayName": "Cardboard",
+          "Children": null
+         },
+         {
+          "QueryName": "Deathscythe",
+          "DisplayName": "Deathscythe",
+          "Children": null
+         },
+         {
+          "QueryName": "8-bit",
+          "DisplayName": "8-bit",
+          "Children": null
+         },
+         {
+          "QueryName": "Anti-Hero",
+          "DisplayName": "Anti-Hero",
+          "Children": null
+         },
+         {
+          "QueryName": "Cobra Commander",
+          "DisplayName": "Cobra Commander",
+          "Children": null
+         },
+         {
+          "QueryName": "Streetwear",
+          "DisplayName": "Streetwear",
+          "Children": null
+         },
+         {
+          "QueryName": "Oni",
+          "DisplayName": "Oni",
+          "Children": null
+         },
+         {
+          "QueryName": "Solaris",
+          "DisplayName": "Solaris",
+          "Children": null
+         },
+         {
+          "QueryName": "Frost Lich",
+          "DisplayName": "Frost Lich",
+          "Children": null
+         },
+         {
+          "QueryName": "Nyan Café",
+          "DisplayName": "Nyan Café",
+          "Children": null
+         },
+         {
+          "QueryName": "Stadium All-Star",
+          "DisplayName": "Stadium All-Star",
+          "Children": null
+         },
+         {
+          "QueryName": "Fancy Fangs",
+          "DisplayName": "Fancy Fangs",
+          "Children": null
+         },
+         {
+          "QueryName": "Decennium",
+          "DisplayName": "Decennium",
+          "Children": null
+         },
+         {
+          "QueryName": "Igris",
+          "DisplayName": "Igris",
+          "Children": null
+         },
+         {
+          "QueryName": "Overwatch",
+          "DisplayName": "Overwatch",
+          "Children": null
+         },
+         {
+          "QueryName": "Overwatch Classic",
+          "DisplayName": "Overwatch Classic",
+          "Children": null
+         },
+         {
+          "QueryName": "Blackwatch Reyes",
+          "DisplayName": "Blackwatch Reyes",
+          "Children": null
+         },
+         {
+          "QueryName": "American",
+          "DisplayName": "American",
+          "Children": null
+         },
+         {
+          "QueryName": "Imperial Guard",
+          "DisplayName": "Imperial Guard",
+          "Children": null
+         },
+         {
+          "QueryName": "Dusk",
+          "DisplayName": "Dusk",
+          "Children": null
+         },
+         {
+          "QueryName": "Calavera",
+          "DisplayName": "Calavera",
+          "Children": null
+         },
+         {
+          "QueryName": "Cursed Captain",
+          "DisplayName": "Cursed Captain",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_spray_names": {
+        "Choices": [
+         {
+          "QueryName": "Icon",
+          "DisplayName": "Icon",
+          "Children": null
+         },
+         {
+          "QueryName": "Psst",
+          "DisplayName": "Psst",
+          "Children": null
+         },
+         {
+          "QueryName": "Everywhere",
+          "DisplayName": "Everywhere",
+          "Children": null
+         },
+         {
+          "QueryName": "Revenge!",
+          "DisplayName": "Revenge!",
+          "Children": null
+         },
+         {
+          "QueryName": "Soul Globe",
+          "DisplayName": "Soul Globe",
+          "Children": null
+         },
+         {
+          "QueryName": "Oops",
+          "DisplayName": "Oops",
+          "Children": null
+         },
+         {
+          "QueryName": "Blossom",
+          "DisplayName": "Blossom",
+          "Children": null
+         },
+         {
+          "QueryName": "Shadow",
+          "DisplayName": "Shadow",
+          "Children": null
+         },
+         {
+          "QueryName": "Cloaked",
+          "DisplayName": "Cloaked",
+          "Children": null
+         },
+         {
+          "QueryName": "Blackwatch",
+          "DisplayName": "Blackwatch",
+          "Children": null
+         },
+         {
+          "QueryName": "Hooded",
+          "DisplayName": "Hooded",
+          "Children": null
+         },
+         {
+          "QueryName": "Death Blossom",
+          "DisplayName": "Death Blossom",
+          "Children": null
+         },
+         {
+          "QueryName": "Shadow Step",
+          "DisplayName": "Shadow Step",
+          "Children": null
+         },
+         {
+          "QueryName": "Scythes",
+          "DisplayName": "Scythes",
+          "Children": null
+         },
+         {
+          "QueryName": "Grave",
+          "DisplayName": "Grave",
+          "Children": null
+         },
+         {
+          "QueryName": "Silent",
+          "DisplayName": "Silent",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaping",
+          "DisplayName": "Reaping",
+          "Children": null
+         },
+         {
+          "QueryName": "Death Comes",
+          "DisplayName": "Death Comes",
+          "Children": null
+         },
+         {
+          "QueryName": "Time to Kill",
+          "DisplayName": "Time to Kill",
+          "Children": null
+         },
+         {
+          "QueryName": "Die Die Die",
+          "DisplayName": "Die Die Die",
+          "Children": null
+         },
+         {
+          "QueryName": "Reap On",
+          "DisplayName": "Reap On",
+          "Children": null
+         },
+         {
+          "QueryName": "Hellfire",
+          "DisplayName": "Hellfire",
+          "Children": null
+         },
+         {
+          "QueryName": "Horns",
+          "DisplayName": "Horns",
+          "Children": null
+         },
+         {
+          "QueryName": "Shrug",
+          "DisplayName": "Shrug",
+          "Children": null
+         },
+         {
+          "QueryName": "Shiver",
+          "DisplayName": "Shiver",
+          "Children": null
+         },
+         {
+          "QueryName": "BMX",
+          "DisplayName": "BMX",
+          "Children": null
+         },
+         {
+          "QueryName": "Trick or Treat",
+          "DisplayName": "Trick or Treat",
+          "Children": null
+         },
+         {
+          "QueryName": "Stocking",
+          "DisplayName": "Stocking",
+          "Children": null
+         },
+         {
+          "QueryName": "Ornament",
+          "DisplayName": "Ornament",
+          "Children": null
+         },
+         {
+          "QueryName": "Rat King",
+          "DisplayName": "Rat King",
+          "Children": null
+         },
+         {
+          "QueryName": "Fire Blossom",
+          "DisplayName": "Fire Blossom",
+          "Children": null
+         },
+         {
+          "QueryName": "Dragon Dance",
+          "DisplayName": "Dragon Dance",
+          "Children": null
+         },
+         {
+          "QueryName": "Commando",
+          "DisplayName": "Commando",
+          "Children": null
+         },
+         {
+          "QueryName": "Ace of Clubs",
+          "DisplayName": "Ace of Clubs",
+          "Children": null
+         },
+         {
+          "QueryName": "Masquerade",
+          "DisplayName": "Masquerade",
+          "Children": null
+         },
+         {
+          "QueryName": "Pixel",
+          "DisplayName": "Pixel",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute",
+          "DisplayName": "Cute",
+          "Children": null
+         },
+         {
+          "QueryName": "Siwang",
+          "DisplayName": "Siwang",
+          "Children": null
+         },
+         {
+          "QueryName": "Red Death",
+          "DisplayName": "Red Death",
+          "Children": null
+         },
+         {
+          "QueryName": "Deadly Mischief",
+          "DisplayName": "Deadly Mischief",
+          "Children": null
+         },
+         {
+          "QueryName": "Grim Calling",
+          "DisplayName": "Grim Calling",
+          "Children": null
+         },
+         {
+          "QueryName": "Crusader",
+          "DisplayName": "Crusader",
+          "Children": null
+         },
+         {
+          "QueryName": "Resurrection",
+          "DisplayName": "Resurrection",
+          "Children": null
+         },
+         {
+          "QueryName": "Death and Deceit",
+          "DisplayName": "Death and Deceit",
+          "Children": null
+         },
+         {
+          "QueryName": "Code of Violence",
+          "DisplayName": "Code of Violence",
+          "Children": null
+         },
+         {
+          "QueryName": "Chasa",
+          "DisplayName": "Chasa",
+          "Children": null
+         },
+         {
+          "QueryName": "Hazmat",
+          "DisplayName": "Hazmat",
+          "Children": null
+         },
+         {
+          "QueryName": "Toxic Waste",
+          "DisplayName": "Toxic Waste",
+          "Children": null
+         },
+         {
+          "QueryName": "Anubis Reaper",
+          "DisplayName": "Anubis Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Tomura Shigaraki",
+          "DisplayName": "Tomura Shigaraki",
+          "Children": null
+         },
+         {
+          "QueryName": "Ringleader Reaper",
+          "DisplayName": "Ringleader Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Dev Doodle Reaper",
+          "DisplayName": "Dev Doodle Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Cobra Commander - Reaper",
+          "DisplayName": "Cobra Commander - Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "8-bit Reaper",
+          "DisplayName": "8-bit Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Oni Reaper",
+          "DisplayName": "Oni Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Anti-Hero Reaper",
+          "DisplayName": "Anti-Hero Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Fenrir Unchained",
+          "DisplayName": "Fenrir Unchained",
+          "Children": null
+         },
+         {
+          "QueryName": "Frost Lich Reaper",
+          "DisplayName": "Frost Lich Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Heist Reaper",
+          "DisplayName": "Heist Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Nyan Café Reaper",
+          "DisplayName": "Nyan Café Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Igris",
+          "DisplayName": "Igris",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_skincomponent_names": {
+        "Choices": [
+         {
+          "QueryName": "Iridescent",
+          "DisplayName": "Iridescent",
+          "Children": null
+         },
+         {
+          "QueryName": "Armor 1",
+          "DisplayName": "Armor 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 1",
+          "DisplayName": "Color 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Mask 1",
+          "DisplayName": "Mask 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 3",
+          "DisplayName": "Color 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 2",
+          "DisplayName": "Color 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Armor 4",
+          "DisplayName": "Armor 4",
+          "Children": null
+         },
+         {
+          "QueryName": "Armor 3",
+          "DisplayName": "Armor 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Armor 2",
+          "DisplayName": "Armor 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Mask 3",
+          "DisplayName": "Mask 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Mask 2",
+          "DisplayName": "Mask 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Gilded",
+          "DisplayName": "Gilded",
+          "Children": null
+         },
+         {
+          "QueryName": "Reactivity",
+          "DisplayName": "Reactivity",
+          "Children": null
+         },
+         {
+          "QueryName": "Flourish",
+          "DisplayName": "Flourish",
+          "Children": null
+         },
+         {
+          "QueryName": "Kill Effect",
+          "DisplayName": "Kill Effect",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_namecard_names": {
+        "Choices": [
+         {
+          "QueryName": "Solaris Reaper",
+          "DisplayName": "Solaris Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Eagle Warrior",
+          "DisplayName": "Eagle Warrior",
+          "Children": null
+         },
+         {
+          "QueryName": "Nebula Blossom",
+          "DisplayName": "Nebula Blossom",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaper - Tier 1",
+          "DisplayName": "Reaper - Tier 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaper - Tier 2",
+          "DisplayName": "Reaper - Tier 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaper - Tier 3",
+          "DisplayName": "Reaper - Tier 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaper - Tier 4",
+          "DisplayName": "Reaper - Tier 4",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaper - Tier 5",
+          "DisplayName": "Reaper - Tier 5",
+          "Children": null
+         },
+         {
+          "QueryName": "Reaper - Tier 6",
+          "DisplayName": "Reaper - Tier 6",
+          "Children": null
+         },
+         {
+          "QueryName": "Hazardous Wasteland",
+          "DisplayName": "Hazardous Wasteland",
+          "Children": null
+         },
+         {
+          "QueryName": "Scales of Judgement",
+          "DisplayName": "Scales of Judgement",
+          "Children": null
+         },
+         {
+          "QueryName": "Tomura Shigaraki",
+          "DisplayName": "Tomura Shigaraki",
+          "Children": null
+         },
+         {
+          "QueryName": "Ringleader Reaper",
+          "DisplayName": "Ringleader Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Deathscythe Reaper",
+          "DisplayName": "Deathscythe Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Cobra Commander - Reaper",
+          "DisplayName": "Cobra Commander - Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "8-bit Reaper",
+          "DisplayName": "8-bit Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Anti-Hero Reaper",
+          "DisplayName": "Anti-Hero Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Frost Lich Reaper",
+          "DisplayName": "Frost Lich Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Heist Reaper",
+          "DisplayName": "Heist Reaper",
+          "Children": null
+         },
+         {
+          "QueryName": "Igris",
+          "DisplayName": "Igris",
+          "Children": null
+         },
+         {
+          "QueryName": "Igris",
+          "DisplayName": "Igris",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_weaponvariant_names": {
+        "Choices": [
+         {
+          "QueryName": "DEFAULT",
+          "DisplayName": "DEFAULT",
+          "Children": null
+         },
+         {
+          "QueryName": "GOLDEN",
+          "DisplayName": "GOLDEN",
+          "Children": null
+         },
+         {
+          "QueryName": "Jade",
+          "DisplayName": "Jade",
+          "Children": null
+         },
+         {
+          "QueryName": "Galactic",
+          "DisplayName": "Galactic",
+          "Children": null
+         },
+         {
+          "QueryName": "Crimson Wolf",
+          "DisplayName": "Crimson Wolf",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_weaponskin_names": {
+        "Choices": [
+         {
+          "QueryName": "DEFAULT",
+          "DisplayName": "DEFAULT",
+          "Children": null
+         },
+         {
+          "QueryName": "Hard Light",
+          "DisplayName": "Hard Light",
+          "Children": null
+         },
+         {
+          "QueryName": "Steel Death",
+          "DisplayName": "Steel Death",
+          "Children": null
+         }
+        ]
+       }
+      }
+     }
+    },
+    {
+     "QueryName": "3",
+     "DisplayName": "Tracer",
+     "Children": {
+      "Types": {
+       "datatool.ux.valid_icon_names": {
+        "Choices": [
+         {
+          "QueryName": "Tracer",
+          "DisplayName": "Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Pulse Bomb",
+          "DisplayName": "Pulse Bomb",
+          "Children": null
+         },
+         {
+          "QueryName": "Patch",
+          "DisplayName": "Patch",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute Tracer",
+          "DisplayName": "Cute Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer Silhouette",
+          "DisplayName": "Tracer Silhouette",
+          "Children": null
+         },
+         {
+          "QueryName": "Track",
+          "DisplayName": "Track",
+          "Children": null
+         },
+         {
+          "QueryName": "Will-o'-Wisp",
+          "DisplayName": "Will-o'-Wisp",
+          "Children": null
+         },
+         {
+          "QueryName": "Jingle",
+          "DisplayName": "Jingle",
+          "Children": null
+         },
+         {
+          "QueryName": "Noble Thief",
+          "DisplayName": "Noble Thief",
+          "Children": null
+         },
+         {
+          "QueryName": "Nezha",
+          "DisplayName": "Nezha",
+          "Children": null
+         },
+         {
+          "QueryName": "Cadet",
+          "DisplayName": "Cadet",
+          "Children": null
+         },
+         {
+          "QueryName": "Cavalry",
+          "DisplayName": "Cavalry",
+          "Children": null
+         },
+         {
+          "QueryName": "Auxton",
+          "DisplayName": "Auxton",
+          "Children": null
+         },
+         {
+          "QueryName": "Streetwear Tracer",
+          "DisplayName": "Streetwear Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer Minifig",
+          "DisplayName": "Tracer Minifig",
+          "Children": null
+         },
+         {
+          "QueryName": "Comic Book",
+          "DisplayName": "Comic Book",
+          "Children": null
+         },
+         {
+          "QueryName": "Wooltide",
+          "DisplayName": "Wooltide",
+          "Children": null
+         },
+         {
+          "QueryName": "Questwatch Tracer",
+          "DisplayName": "Questwatch Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer Mastery",
+          "DisplayName": "Tracer Mastery",
+          "Children": null
+         },
+         {
+          "QueryName": "Formalwear Tracer",
+          "DisplayName": "Formalwear Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Winter Wonderland 2023",
+          "DisplayName": "Winter Wonderland 2023",
+          "Children": null
+         },
+         {
+          "QueryName": "Talon Tracer",
+          "DisplayName": "Talon Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat Sigil",
+          "DisplayName": "Black Cat Sigil",
+          "Children": null
+         },
+         {
+          "QueryName": "Deku",
+          "DisplayName": "Deku",
+          "Children": null
+         },
+         {
+          "QueryName": "Cosmic Tracer",
+          "DisplayName": "Cosmic Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Hero of Heart Tracer",
+          "DisplayName": "Hero of Heart Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Instructor Oxton",
+          "DisplayName": "Instructor Oxton",
+          "Children": null
+         },
+         {
+          "QueryName": "Cold Front Tracer",
+          "DisplayName": "Cold Front Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Reindeer Tracer",
+          "DisplayName": "Reindeer Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "New Era Tracer",
+          "DisplayName": "New Era Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracermari",
+          "DisplayName": "Tracermari",
+          "Children": null
+         },
+         {
+          "QueryName": "Spellcaster's Amulet",
+          "DisplayName": "Spellcaster's Amulet",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_emote_names": {
+        "Choices": [
+         {
+          "QueryName": "Spin",
+          "DisplayName": "Spin",
+          "Children": null
+         },
+         {
+          "QueryName": "Cheer",
+          "DisplayName": "Cheer",
+          "Children": null
+         },
+         {
+          "QueryName": "Having a laugh",
+          "DisplayName": "Having a laugh",
+          "Children": null
+         },
+         {
+          "QueryName": "Finger Guns",
+          "DisplayName": "Finger Guns",
+          "Children": null
+         },
+         {
+          "QueryName": "Sitting Around...",
+          "DisplayName": "Sitting Around...",
+          "Children": null
+         },
+         {
+          "QueryName": "Bomb Spin",
+          "DisplayName": "Bomb Spin",
+          "Children": null
+         },
+         {
+          "QueryName": "Full Health",
+          "DisplayName": "Full Health",
+          "Children": null
+         },
+         {
+          "QueryName": "Choreography",
+          "DisplayName": "Choreography",
+          "Children": null
+         },
+         {
+          "QueryName": "Warm up",
+          "DisplayName": "Warm up",
+          "Children": null
+         },
+         {
+          "QueryName": "Charleston",
+          "DisplayName": "Charleston",
+          "Children": null
+         },
+         {
+          "QueryName": "Kickin'",
+          "DisplayName": "Kickin'",
+          "Children": null
+         },
+         {
+          "QueryName": "Warm ups",
+          "DisplayName": "Warm ups",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Alliance Banner",
+          "DisplayName": "Alliance Banner",
+          "Children": null
+         },
+         {
+          "QueryName": "Horde Banner",
+          "DisplayName": "Horde Banner",
+          "Children": null
+         },
+         {
+          "QueryName": "Mic Drop",
+          "DisplayName": "Mic Drop",
+          "Children": null
+         },
+         {
+          "QueryName": "Listen Up",
+          "DisplayName": "Listen Up",
+          "Children": null
+         },
+         {
+          "QueryName": "Salty",
+          "DisplayName": "Salty",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_victorypose_names": {
+        "Choices": [
+         {
+          "QueryName": "Salute",
+          "DisplayName": "Salute",
+          "Children": null
+         },
+         {
+          "QueryName": "Over the Shoulder",
+          "DisplayName": "Over the Shoulder",
+          "Children": null
+         },
+         {
+          "QueryName": "Sitting",
+          "DisplayName": "Sitting",
+          "Children": null
+         },
+         {
+          "QueryName": "Shrug",
+          "DisplayName": "Shrug",
+          "Children": null
+         },
+         {
+          "QueryName": "Traysi Pose",
+          "DisplayName": "Traysi Pose",
+          "Children": null
+         },
+         {
+          "QueryName": "Hero Mastery",
+          "DisplayName": "Hero Mastery",
+          "Children": null
+         },
+         {
+          "QueryName": "Confident",
+          "DisplayName": "Confident",
+          "Children": null
+         },
+         {
+          "QueryName": "Death Comes",
+          "DisplayName": "Death Comes",
+          "Children": null
+         },
+         {
+          "QueryName": "Plus Ultra",
+          "DisplayName": "Plus Ultra",
+          "Children": null
+         },
+         {
+          "QueryName": "Medal",
+          "DisplayName": "Medal",
+          "Children": null
+         },
+         {
+          "QueryName": "R.I.P.",
+          "DisplayName": "R.I.P.",
+          "Children": null
+         },
+         {
+          "QueryName": "Pumpkin",
+          "DisplayName": "Pumpkin",
+          "Children": null
+         },
+         {
+          "QueryName": "Toast",
+          "DisplayName": "Toast",
+          "Children": null
+         },
+         {
+          "QueryName": "Fireworks",
+          "DisplayName": "Fireworks",
+          "Children": null
+         },
+         {
+          "QueryName": "Wink",
+          "DisplayName": "Wink",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Random from Favorites",
+          "DisplayName": "Random from Favorites",
+          "Children": null
+         },
+         {
+          "QueryName": "Newspaper",
+          "DisplayName": "Newspaper",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_highlightintro_names": {
+        "Choices": [
+         {
+          "QueryName": "Just in Time",
+          "DisplayName": "Just in Time",
+          "Children": null
+         },
+         {
+          "QueryName": "Serious Business",
+          "DisplayName": "Serious Business",
+          "Children": null
+         },
+         {
+          "QueryName": "Backflip",
+          "DisplayName": "Backflip",
+          "Children": null
+         },
+         {
+          "QueryName": "Synthdrift",
+          "DisplayName": "Synthdrift",
+          "Children": null
+         },
+         {
+          "QueryName": "Blink Fast",
+          "DisplayName": "Blink Fast",
+          "Children": null
+         },
+         {
+          "QueryName": "One For All",
+          "DisplayName": "One For All",
+          "Children": null
+         },
+         {
+          "QueryName": "Hurdle",
+          "DisplayName": "Hurdle",
+          "Children": null
+         },
+         {
+          "QueryName": "Lion Dance",
+          "DisplayName": "Lion Dance",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Random from Favorites",
+          "DisplayName": "Random from Favorites",
+          "Children": null
+         },
+         {
+          "QueryName": "Nailed It",
+          "DisplayName": "Nailed It",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_voiceline_names": {
+        "Choices": [
+         {
+          "QueryName": "Aw, rubbish",
+          "DisplayName": "Aw, rubbish",
+          "Children": null
+         },
+         {
+          "QueryName": "Under control",
+          "DisplayName": "Under control",
+          "Children": null
+         },
+         {
+          "QueryName": "The world needs heroes",
+          "DisplayName": "The world needs heroes",
+          "Children": null
+         },
+         {
+          "QueryName": "You need a time out",
+          "DisplayName": "You need a time out",
+          "Children": null
+         },
+         {
+          "QueryName": "Check me out",
+          "DisplayName": "Check me out",
+          "Children": null
+         },
+         {
+          "QueryName": "She shoots, she scores",
+          "DisplayName": "She shoots, she scores",
+          "Children": null
+         },
+         {
+          "QueryName": "Cheers, love!",
+          "DisplayName": "Cheers, love!",
+          "Children": null
+         },
+         {
+          "QueryName": "Keep calm",
+          "DisplayName": "Keep calm",
+          "Children": null
+         },
+         {
+          "QueryName": "Be right back!",
+          "DisplayName": "Be right back!",
+          "Children": null
+         },
+         {
+          "QueryName": "déjà vu",
+          "DisplayName": "déjà vu",
+          "Children": null
+         },
+         {
+          "QueryName": "Cheeky",
+          "DisplayName": "Cheeky",
+          "Children": null
+         },
+         {
+          "QueryName": "Eat my dust",
+          "DisplayName": "Eat my dust",
+          "Children": null
+         },
+         {
+          "QueryName": "Time out!",
+          "DisplayName": "Time out!",
+          "Children": null
+         },
+         {
+          "QueryName": "Bit dodgy",
+          "DisplayName": "Bit dodgy",
+          "Children": null
+         },
+         {
+          "QueryName": "Ooh, Scary!",
+          "DisplayName": "Ooh, Scary!",
+          "Children": null
+         },
+         {
+          "QueryName": "Boo!",
+          "DisplayName": "Boo!",
+          "Children": null
+         },
+         {
+          "QueryName": "Trick or treat",
+          "DisplayName": "Trick or treat",
+          "Children": null
+         },
+         {
+          "QueryName": "Is that a costume?",
+          "DisplayName": "Is that a costume?",
+          "Children": null
+         },
+         {
+          "QueryName": "It's in the bag",
+          "DisplayName": "It's in the bag",
+          "Children": null
+         },
+         {
+          "QueryName": "Ho ho ho!",
+          "DisplayName": "Ho ho ho!",
+          "Children": null
+         },
+         {
+          "QueryName": "Ready for some pudding",
+          "DisplayName": "Ready for some pudding",
+          "Children": null
+         },
+         {
+          "QueryName": "Ready for some fireworks?",
+          "DisplayName": "Ready for some fireworks?",
+          "Children": null
+         },
+         {
+          "QueryName": "I'm over the moon",
+          "DisplayName": "I'm over the moon",
+          "Children": null
+         },
+         {
+          "QueryName": "Don't be daft",
+          "DisplayName": "Don't be daft",
+          "Children": null
+         },
+         {
+          "QueryName": "Sorry I'm late",
+          "DisplayName": "Sorry I'm late",
+          "Children": null
+         },
+         {
+          "QueryName": "Time is on my side",
+          "DisplayName": "Time is on my side",
+          "Children": null
+         },
+         {
+          "QueryName": "Did I miss something?",
+          "DisplayName": "Did I miss something?",
+          "Children": null
+         },
+         {
+          "QueryName": "Too slow!",
+          "DisplayName": "Too slow!",
+          "Children": null
+         },
+         {
+          "QueryName": "I knew I forgot something",
+          "DisplayName": "I knew I forgot something",
+          "Children": null
+         },
+         {
+          "QueryName": "I love this part!",
+          "DisplayName": "I love this part!",
+          "Children": null
+         },
+         {
+          "QueryName": "Give Up?",
+          "DisplayName": "Give Up?",
+          "Children": null
+         },
+         {
+          "QueryName": "You got it",
+          "DisplayName": "You got it",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer-thon",
+          "DisplayName": "Tracer-thon",
+          "Children": null
+         },
+         {
+          "QueryName": "Crash another party",
+          "DisplayName": "Crash another party",
+          "Children": null
+         },
+         {
+          "QueryName": "Plus Ultra!",
+          "DisplayName": "Plus Ultra!",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_skin_names": {
+        "Choices": [
+         {
+          "QueryName": "Neon Green",
+          "DisplayName": "Neon Green",
+          "Children": null
+         },
+         {
+          "QueryName": "Royal Blue",
+          "DisplayName": "Royal Blue",
+          "Children": null
+         },
+         {
+          "QueryName": "Hot Pink",
+          "DisplayName": "Hot Pink",
+          "Children": null
+         },
+         {
+          "QueryName": "Electric Purple",
+          "DisplayName": "Electric Purple",
+          "Children": null
+         },
+         {
+          "QueryName": "Posh",
+          "DisplayName": "Posh",
+          "Children": null
+         },
+         {
+          "QueryName": "Sporty",
+          "DisplayName": "Sporty",
+          "Children": null
+         },
+         {
+          "QueryName": "Punk",
+          "DisplayName": "Punk",
+          "Children": null
+         },
+         {
+          "QueryName": "Ultraviolet",
+          "DisplayName": "Ultraviolet",
+          "Children": null
+         },
+         {
+          "QueryName": "T. Racer",
+          "DisplayName": "T. Racer",
+          "Children": null
+         },
+         {
+          "QueryName": "Mach T",
+          "DisplayName": "Mach T",
+          "Children": null
+         },
+         {
+          "QueryName": "Sprinter",
+          "DisplayName": "Sprinter",
+          "Children": null
+         },
+         {
+          "QueryName": "Track and Field",
+          "DisplayName": "Track and Field",
+          "Children": null
+         },
+         {
+          "QueryName": "Will-o'-Wisp",
+          "DisplayName": "Will-o'-Wisp",
+          "Children": null
+         },
+         {
+          "QueryName": "Jingle",
+          "DisplayName": "Jingle",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose",
+          "DisplayName": "Rose",
+          "Children": null
+         },
+         {
+          "QueryName": "Hong Gildong",
+          "DisplayName": "Hong Gildong",
+          "Children": null
+         },
+         {
+          "QueryName": "Nezha",
+          "DisplayName": "Nezha",
+          "Children": null
+         },
+         {
+          "QueryName": "Cadet Oxton",
+          "DisplayName": "Cadet Oxton",
+          "Children": null
+         },
+         {
+          "QueryName": "Cavalry",
+          "DisplayName": "Cavalry",
+          "Children": null
+         },
+         {
+          "QueryName": "Graffiti",
+          "DisplayName": "Graffiti",
+          "Children": null
+         },
+         {
+          "QueryName": "Lightning",
+          "DisplayName": "Lightning",
+          "Children": null
+         },
+         {
+          "QueryName": "Tagged",
+          "DisplayName": "Tagged",
+          "Children": null
+         },
+         {
+          "QueryName": "Formalwear",
+          "DisplayName": "Formalwear",
+          "Children": null
+         },
+         {
+          "QueryName": "Polar",
+          "DisplayName": "Polar",
+          "Children": null
+         },
+         {
+          "QueryName": "Adventurer",
+          "DisplayName": "Adventurer",
+          "Children": null
+         },
+         {
+          "QueryName": "Synthwave",
+          "DisplayName": "Synthwave",
+          "Children": null
+         },
+         {
+          "QueryName": "ANTIFRAGILE Traysi",
+          "DisplayName": "ANTIFRAGILE Traysi",
+          "Children": null
+         },
+         {
+          "QueryName": "Operative Oxton",
+          "DisplayName": "Operative Oxton",
+          "Children": null
+         },
+         {
+          "QueryName": "Deku",
+          "DisplayName": "Deku",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat",
+          "DisplayName": "Black Cat",
+          "Children": null
+         },
+         {
+          "QueryName": "Evening Wear",
+          "DisplayName": "Evening Wear",
+          "Children": null
+         },
+         {
+          "QueryName": "Neon Streets",
+          "DisplayName": "Neon Streets",
+          "Children": null
+         },
+         {
+          "QueryName": "Hero of Heart",
+          "DisplayName": "Hero of Heart",
+          "Children": null
+         },
+         {
+          "QueryName": "Rainy Day",
+          "DisplayName": "Rainy Day",
+          "Children": null
+         },
+         {
+          "QueryName": "Cosmic",
+          "DisplayName": "Cosmic",
+          "Children": null
+         },
+         {
+          "QueryName": "Blue Flame",
+          "DisplayName": "Blue Flame",
+          "Children": null
+         },
+         {
+          "QueryName": "Streetwear",
+          "DisplayName": "Streetwear",
+          "Children": null
+         },
+         {
+          "QueryName": "Instructor Oxton",
+          "DisplayName": "Instructor Oxton",
+          "Children": null
+         },
+         {
+          "QueryName": "Cold Front",
+          "DisplayName": "Cold Front",
+          "Children": null
+         },
+         {
+          "QueryName": "Reindeer",
+          "DisplayName": "Reindeer",
+          "Children": null
+         },
+         {
+          "QueryName": "New Era",
+          "DisplayName": "New Era",
+          "Children": null
+         },
+         {
+          "QueryName": "Spring Fairy",
+          "DisplayName": "Spring Fairy",
+          "Children": null
+         },
+         {
+          "QueryName": "Stadium Elite",
+          "DisplayName": "Stadium Elite",
+          "Children": null
+         },
+         {
+          "QueryName": "Spellcaster",
+          "DisplayName": "Spellcaster",
+          "Children": null
+         },
+         {
+          "QueryName": "Flamebound",
+          "DisplayName": "Flamebound",
+          "Children": null
+         },
+         {
+          "QueryName": "10-Years Cheers",
+          "DisplayName": "10-Years Cheers",
+          "Children": null
+         },
+         {
+          "QueryName": "Overwatch",
+          "DisplayName": "Overwatch",
+          "Children": null
+         },
+         {
+          "QueryName": "Overwatch Classic",
+          "DisplayName": "Overwatch Classic",
+          "Children": null
+         },
+         {
+          "QueryName": "Slipstream",
+          "DisplayName": "Slipstream",
+          "Children": null
+         },
+         {
+          "QueryName": "2018 Atlantic All-Stars",
+          "DisplayName": "2018 Atlantic All-Stars",
+          "Children": null
+         },
+         {
+          "QueryName": "Union Jack",
+          "DisplayName": "Union Jack",
+          "Children": null
+         },
+         {
+          "QueryName": "Comic Book",
+          "DisplayName": "Comic Book",
+          "Children": null
+         },
+         {
+          "QueryName": "Wooltide",
+          "DisplayName": "Wooltide",
+          "Children": null
+         },
+         {
+          "QueryName": "Constable",
+          "DisplayName": "Constable",
+          "Children": null
+         },
+         {
+          "QueryName": "Street Urchin",
+          "DisplayName": "Street Urchin",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_spray_names": {
+        "Choices": [
+         {
+          "QueryName": "Icon",
+          "DisplayName": "Icon",
+          "Children": null
+         },
+         {
+          "QueryName": "Wings",
+          "DisplayName": "Wings",
+          "Children": null
+         },
+         {
+          "QueryName": "Blink",
+          "DisplayName": "Blink",
+          "Children": null
+         },
+         {
+          "QueryName": "Fighter",
+          "DisplayName": "Fighter",
+          "Children": null
+         },
+         {
+          "QueryName": "Cheers, Love",
+          "DisplayName": "Cheers, Love",
+          "Children": null
+         },
+         {
+          "QueryName": "Tagged",
+          "DisplayName": "Tagged",
+          "Children": null
+         },
+         {
+          "QueryName": "Orange",
+          "DisplayName": "Orange",
+          "Children": null
+         },
+         {
+          "QueryName": "Lena",
+          "DisplayName": "Lena",
+          "Children": null
+         },
+         {
+          "QueryName": "Clock's Tickin'",
+          "DisplayName": "Clock's Tickin'",
+          "Children": null
+         },
+         {
+          "QueryName": "Pistols",
+          "DisplayName": "Pistols",
+          "Children": null
+         },
+         {
+          "QueryName": "Shaded",
+          "DisplayName": "Shaded",
+          "Children": null
+         },
+         {
+          "QueryName": "Pulse Bomb",
+          "DisplayName": "Pulse Bomb",
+          "Children": null
+         },
+         {
+          "QueryName": "Bomb's Away!",
+          "DisplayName": "Bomb's Away!",
+          "Children": null
+         },
+         {
+          "QueryName": "Ready for Action",
+          "DisplayName": "Ready for Action",
+          "Children": null
+         },
+         {
+          "QueryName": "Confident",
+          "DisplayName": "Confident",
+          "Children": null
+         },
+         {
+          "QueryName": "Emily",
+          "DisplayName": "Emily",
+          "Children": null
+         },
+         {
+          "QueryName": "Kneeling",
+          "DisplayName": "Kneeling",
+          "Children": null
+         },
+         {
+          "QueryName": "Whatcha' Lookin' At?",
+          "DisplayName": "Whatcha' Lookin' At?",
+          "Children": null
+         },
+         {
+          "QueryName": "Cavalry's Here",
+          "DisplayName": "Cavalry's Here",
+          "Children": null
+         },
+         {
+          "QueryName": "Cheers",
+          "DisplayName": "Cheers",
+          "Children": null
+         },
+         {
+          "QueryName": "Pew! Pew! Pew!",
+          "DisplayName": "Pew! Pew! Pew!",
+          "Children": null
+         },
+         {
+          "QueryName": "Poster",
+          "DisplayName": "Poster",
+          "Children": null
+         },
+         {
+          "QueryName": "Salute",
+          "DisplayName": "Salute",
+          "Children": null
+         },
+         {
+          "QueryName": "Portrait",
+          "DisplayName": "Portrait",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose",
+          "DisplayName": "Rose",
+          "Children": null
+         },
+         {
+          "QueryName": "Track",
+          "DisplayName": "Track",
+          "Children": null
+         },
+         {
+          "QueryName": "Trick or Treat",
+          "DisplayName": "Trick or Treat",
+          "Children": null
+         },
+         {
+          "QueryName": "Will-o'-Wisp",
+          "DisplayName": "Will-o'-Wisp",
+          "Children": null
+         },
+         {
+          "QueryName": "Snowboarding",
+          "DisplayName": "Snowboarding",
+          "Children": null
+         },
+         {
+          "QueryName": "Ornament",
+          "DisplayName": "Ornament",
+          "Children": null
+         },
+         {
+          "QueryName": "Fan Dance",
+          "DisplayName": "Fan Dance",
+          "Children": null
+         },
+         {
+          "QueryName": "Dragon Dance",
+          "DisplayName": "Dragon Dance",
+          "Children": null
+         },
+         {
+          "QueryName": "Nezha's Mischief",
+          "DisplayName": "Nezha's Mischief",
+          "Children": null
+         },
+         {
+          "QueryName": "Slipstream",
+          "DisplayName": "Slipstream",
+          "Children": null
+         },
+         {
+          "QueryName": "Cavalry",
+          "DisplayName": "Cavalry",
+          "Children": null
+         },
+         {
+          "QueryName": "Ace of Diamonds",
+          "DisplayName": "Ace of Diamonds",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer Tag",
+          "DisplayName": "Tracer Tag",
+          "Children": null
+         },
+         {
+          "QueryName": "Lena and Emily",
+          "DisplayName": "Lena and Emily",
+          "Children": null
+         },
+         {
+          "QueryName": "Pixel",
+          "DisplayName": "Pixel",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute",
+          "DisplayName": "Cute",
+          "Children": null
+         },
+         {
+          "QueryName": "Union Jack",
+          "DisplayName": "Union Jack",
+          "Children": null
+         },
+         {
+          "QueryName": "Blink!",
+          "DisplayName": "Blink!",
+          "Children": null
+         },
+         {
+          "QueryName": "Zap!",
+          "DisplayName": "Zap!",
+          "Children": null
+         },
+         {
+          "QueryName": "Pow!",
+          "DisplayName": "Pow!",
+          "Children": null
+         },
+         {
+          "QueryName": "Bang!",
+          "DisplayName": "Bang!",
+          "Children": null
+         },
+         {
+          "QueryName": "Whack!",
+          "DisplayName": "Whack!",
+          "Children": null
+         },
+         {
+          "QueryName": "Pew Pew!",
+          "DisplayName": "Pew Pew!",
+          "Children": null
+         },
+         {
+          "QueryName": "Quote Me",
+          "DisplayName": "Quote Me",
+          "Children": null
+         },
+         {
+          "QueryName": "Wooltide",
+          "DisplayName": "Wooltide",
+          "Children": null
+         },
+         {
+          "QueryName": "Constable",
+          "DisplayName": "Constable",
+          "Children": null
+         },
+         {
+          "QueryName": "Street Urchin",
+          "DisplayName": "Street Urchin",
+          "Children": null
+         },
+         {
+          "QueryName": "Extra!",
+          "DisplayName": "Extra!",
+          "Children": null
+         },
+         {
+          "QueryName": "Realm Heroes",
+          "DisplayName": "Realm Heroes",
+          "Children": null
+         },
+         {
+          "QueryName": "Ostentatious Oxton",
+          "DisplayName": "Ostentatious Oxton",
+          "Children": null
+         },
+         {
+          "QueryName": "Dev Doodle Tracer",
+          "DisplayName": "Dev Doodle Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Talon Accelerator",
+          "DisplayName": "Talon Accelerator",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat Tracer",
+          "DisplayName": "Black Cat Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Deku",
+          "DisplayName": "Deku",
+          "Children": null
+         },
+         {
+          "QueryName": "Doki Wings",
+          "DisplayName": "Doki Wings",
+          "Children": null
+         },
+         {
+          "QueryName": "Instructor Oxton",
+          "DisplayName": "Instructor Oxton",
+          "Children": null
+         },
+         {
+          "QueryName": "Cold Front Goggles",
+          "DisplayName": "Cold Front Goggles",
+          "Children": null
+         },
+         {
+          "QueryName": "New Era Tracer",
+          "DisplayName": "New Era Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Atlantic Waves",
+          "DisplayName": "Atlantic Waves",
+          "Children": null
+         },
+         {
+          "QueryName": "Spring Fairy Tracer",
+          "DisplayName": "Spring Fairy Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Flamebound Tracer",
+          "DisplayName": "Flamebound Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Spellcaster's Pulse Bomb",
+          "DisplayName": "Spellcaster's Pulse Bomb",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_weaponskin_names": {
+        "Choices": [
+         {
+          "QueryName": "NERF Gelfire Pro",
+          "DisplayName": "NERF Gelfire Pro",
+          "Children": null
+         },
+         {
+          "QueryName": "DEFAULT",
+          "DisplayName": "DEFAULT",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_skincomponent_names": {
+        "Choices": [
+         {
+          "QueryName": "Iridescent",
+          "DisplayName": "Iridescent",
+          "Children": null
+         },
+         {
+          "QueryName": "Armor 1",
+          "DisplayName": "Armor 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Armor 2",
+          "DisplayName": "Armor 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Armor 3",
+          "DisplayName": "Armor 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 1",
+          "DisplayName": "Color 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 2",
+          "DisplayName": "Color 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 3",
+          "DisplayName": "Color 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Weapon 1",
+          "DisplayName": "Weapon 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Weapon 2",
+          "DisplayName": "Weapon 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Weapon 3",
+          "DisplayName": "Weapon 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Gilded",
+          "DisplayName": "Gilded",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_weaponvariant_names": {
+        "Choices": [
+         {
+          "QueryName": "DEFAULT",
+          "DisplayName": "DEFAULT",
+          "Children": null
+         },
+         {
+          "QueryName": "GOLDEN",
+          "DisplayName": "GOLDEN",
+          "Children": null
+         },
+         {
+          "QueryName": "Jade",
+          "DisplayName": "Jade",
+          "Children": null
+         },
+         {
+          "QueryName": "Galactic",
+          "DisplayName": "Galactic",
+          "Children": null
+         },
+         {
+          "QueryName": "Crimson Wolf",
+          "DisplayName": "Crimson Wolf",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_namecard_names": {
+        "Choices": [
+         {
+          "QueryName": "Tracer - Tier 1",
+          "DisplayName": "Tracer - Tier 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer - Tier 2",
+          "DisplayName": "Tracer - Tier 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer - Tier 3",
+          "DisplayName": "Tracer - Tier 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer - Tier 4",
+          "DisplayName": "Tracer - Tier 4",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer - Tier 5",
+          "DisplayName": "Tracer - Tier 5",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer - Tier 6",
+          "DisplayName": "Tracer - Tier 6",
+          "Children": null
+         },
+         {
+          "QueryName": "Tracer Mastery",
+          "DisplayName": "Tracer Mastery",
+          "Children": null
+         },
+         {
+          "QueryName": "Golden Invitation",
+          "DisplayName": "Golden Invitation",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat Tracer",
+          "DisplayName": "Black Cat Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "Deku",
+          "DisplayName": "Deku",
+          "Children": null
+         },
+         {
+          "QueryName": "Cosmic Tracer",
+          "DisplayName": "Cosmic Tracer",
+          "Children": null
+         },
+         {
+          "QueryName": "New Era Tracer",
+          "DisplayName": "New Era Tracer",
+          "Children": null
+         }
+        ]
+       }
+      }
+     }
+    },
+    {
+     "QueryName": "4",
+     "DisplayName": "Mercy",
+     "Children": {
+      "Types": {
+       "datatool.ux.valid_icon_names": {
+        "Choices": [
+         {
+          "QueryName": "Mercy",
+          "DisplayName": "Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Guardian Angel",
+          "DisplayName": "Guardian Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Valkyrie",
+          "DisplayName": "Valkyrie",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute Mercy",
+          "DisplayName": "Cute Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy Silhouette",
+          "DisplayName": "Mercy Silhouette",
+          "Children": null
+         },
+         {
+          "QueryName": "Badminton",
+          "DisplayName": "Badminton",
+          "Children": null
+         },
+         {
+          "QueryName": "The Witch",
+          "DisplayName": "The Witch",
+          "Children": null
+         },
+         {
+          "QueryName": "Sugar Plum Fairy",
+          "DisplayName": "Sugar Plum Fairy",
+          "Children": null
+         },
+         {
+          "QueryName": "Seolbim",
+          "DisplayName": "Seolbim",
+          "Children": null
+         },
+         {
+          "QueryName": "Combat Medic",
+          "DisplayName": "Combat Medic",
+          "Children": null
+         },
+         {
+          "QueryName": "Jahrestag",
+          "DisplayName": "Jahrestag",
+          "Children": null
+         },
+         {
+          "QueryName": "Dragoon",
+          "DisplayName": "Dragoon",
+          "Children": null
+         },
+         {
+          "QueryName": "Cosmic Star",
+          "DisplayName": "Cosmic Star",
+          "Children": null
+         },
+         {
+          "QueryName": "Panther Mercy",
+          "DisplayName": "Panther Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Pink",
+          "DisplayName": "Pink",
+          "Children": null
+         },
+         {
+          "QueryName": "Ribbon",
+          "DisplayName": "Ribbon",
+          "Children": null
+         },
+         {
+          "QueryName": "Camouflage",
+          "DisplayName": "Camouflage",
+          "Children": null
+         },
+         {
+          "QueryName": "Dr. Ziegler",
+          "DisplayName": "Dr. Ziegler",
+          "Children": null
+         },
+         {
+          "QueryName": "Snow Angel",
+          "DisplayName": "Snow Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Kumihimo",
+          "DisplayName": "Kumihimo",
+          "Children": null
+         },
+         {
+          "QueryName": "Owl Guardian",
+          "DisplayName": "Owl Guardian",
+          "Children": null
+         },
+         {
+          "QueryName": "Lovey Dovey Mercy",
+          "DisplayName": "Lovey Dovey Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Infinite Seer",
+          "DisplayName": "Infinite Seer",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy Mastery",
+          "DisplayName": "Mercy Mastery",
+          "Children": null
+         },
+         {
+          "QueryName": "Jingle Belle",
+          "DisplayName": "Jingle Belle",
+          "Children": null
+         },
+         {
+          "QueryName": "Vengeance",
+          "DisplayName": "Vengeance",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute Rose Gold Mercy",
+          "DisplayName": "Cute Rose Gold Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold Mercy Silhouette",
+          "DisplayName": "Rose Gold Mercy Silhouette",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold Mercy",
+          "DisplayName": "Rose Gold Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Wyvern Mercy",
+          "DisplayName": "Wyvern Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Formalwear Mercy",
+          "DisplayName": "Formalwear Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat Mercy",
+          "DisplayName": "Black Cat Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Happy Holly",
+          "DisplayName": "Happy Holly",
+          "Children": null
+         },
+         {
+          "QueryName": "Ducky",
+          "DisplayName": "Ducky",
+          "Children": null
+         },
+         {
+          "QueryName": "Fearless Mercy",
+          "DisplayName": "Fearless Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Crimson Seal",
+          "DisplayName": "Crimson Seal",
+          "Children": null
+         },
+         {
+          "QueryName": "Wing Zero Mercy",
+          "DisplayName": "Wing Zero Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Sakura Mercy",
+          "DisplayName": "Sakura Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Stadium Mercy",
+          "DisplayName": "Stadium Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Radiant Emblem",
+          "DisplayName": "Radiant Emblem",
+          "Children": null
+         },
+         {
+          "QueryName": "Music Festival Mercy",
+          "DisplayName": "Music Festival Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Fallen Angel Mercy",
+          "DisplayName": "Fallen Angel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Scarlet Angel Mercy",
+          "DisplayName": "Scarlet Angel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Celestial Guardian Mercy",
+          "DisplayName": "Celestial Guardian Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Commander White Mercy",
+          "DisplayName": "Commander White Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Pompompurin x Mercy",
+          "DisplayName": "Pompompurin x Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Street Rebel Mercy",
+          "DisplayName": "Street Rebel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Molten Wings",
+          "DisplayName": "Molten Wings",
+          "Children": null
+         },
+         {
+          "QueryName": "Pixel Star Mercy",
+          "DisplayName": "Pixel Star Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Fancy Fangs Mercy",
+          "DisplayName": "Fancy Fangs Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Heart of Mercy",
+          "DisplayName": "Heart of Mercy",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_emote_names": {
+        "Choices": [
+         {
+          "QueryName": "Caduceus",
+          "DisplayName": "Caduceus",
+          "Children": null
+         },
+         {
+          "QueryName": "Applause",
+          "DisplayName": "Applause",
+          "Children": null
+         },
+         {
+          "QueryName": "No Pulse",
+          "DisplayName": "No Pulse",
+          "Children": null
+         },
+         {
+          "QueryName": "The Best Medicine",
+          "DisplayName": "The Best Medicine",
+          "Children": null
+         },
+         {
+          "QueryName": "Relax",
+          "DisplayName": "Relax",
+          "Children": null
+         },
+         {
+          "QueryName": "Parasol",
+          "DisplayName": "Parasol",
+          "Children": null
+         },
+         {
+          "QueryName": "Rainy Stroll",
+          "DisplayName": "Rainy Stroll",
+          "Children": null
+         },
+         {
+          "QueryName": "Crazy Choreography",
+          "DisplayName": "Crazy Choreography",
+          "Children": null
+         },
+         {
+          "QueryName": "Flurry",
+          "DisplayName": "Flurry",
+          "Children": null
+         },
+         {
+          "QueryName": "Hustle",
+          "DisplayName": "Hustle",
+          "Children": null
+         },
+         {
+          "QueryName": "So Tough",
+          "DisplayName": "So Tough",
+          "Children": null
+         },
+         {
+          "QueryName": "Lazy River",
+          "DisplayName": "Lazy River",
+          "Children": null
+         },
+         {
+          "QueryName": "Shuffle",
+          "DisplayName": "Shuffle",
+          "Children": null
+         },
+         {
+          "QueryName": "Loved",
+          "DisplayName": "Loved",
+          "Children": null
+         },
+         {
+          "QueryName": "Bunny Hop",
+          "DisplayName": "Bunny Hop",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Listen Up",
+          "DisplayName": "Listen Up",
+          "Children": null
+         },
+         {
+          "QueryName": "Mic Drop",
+          "DisplayName": "Mic Drop",
+          "Children": null
+         },
+         {
+          "QueryName": "Salty",
+          "DisplayName": "Salty",
+          "Children": null
+         },
+         {
+          "QueryName": "Pod Glide",
+          "DisplayName": "Pod Glide",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_victorypose_names": {
+        "Choices": [
+         {
+          "QueryName": "Ready for battle",
+          "DisplayName": "Ready for battle",
+          "Children": null
+         },
+         {
+          "QueryName": "Carefree",
+          "DisplayName": "Carefree",
+          "Children": null
+         },
+         {
+          "QueryName": "Angelic",
+          "DisplayName": "Angelic",
+          "Children": null
+         },
+         {
+          "QueryName": "Blaster",
+          "DisplayName": "Blaster",
+          "Children": null
+         },
+         {
+          "QueryName": "Triage",
+          "DisplayName": "Triage",
+          "Children": null
+         },
+         {
+          "QueryName": "Proud",
+          "DisplayName": "Proud",
+          "Children": null
+         },
+         {
+          "QueryName": "Hero Mastery",
+          "DisplayName": "Hero Mastery",
+          "Children": null
+         },
+         {
+          "QueryName": "Flying High",
+          "DisplayName": "Flying High",
+          "Children": null
+         },
+         {
+          "QueryName": "Rainy Day",
+          "DisplayName": "Rainy Day",
+          "Children": null
+         },
+         {
+          "QueryName": "Crazy Choreography",
+          "DisplayName": "Crazy Choreography",
+          "Children": null
+         },
+         {
+          "QueryName": "Medal",
+          "DisplayName": "Medal",
+          "Children": null
+         },
+         {
+          "QueryName": "R.I.P.",
+          "DisplayName": "R.I.P.",
+          "Children": null
+         },
+         {
+          "QueryName": "Pumpkin",
+          "DisplayName": "Pumpkin",
+          "Children": null
+         },
+         {
+          "QueryName": "Mistletoe",
+          "DisplayName": "Mistletoe",
+          "Children": null
+         },
+         {
+          "QueryName": "Toast",
+          "DisplayName": "Toast",
+          "Children": null
+         },
+         {
+          "QueryName": "Lantern",
+          "DisplayName": "Lantern",
+          "Children": null
+         },
+         {
+          "QueryName": "Parasol",
+          "DisplayName": "Parasol",
+          "Children": null
+         },
+         {
+          "QueryName": "Sakura Petals",
+          "DisplayName": "Sakura Petals",
+          "Children": null
+         },
+         {
+          "QueryName": "All-Out Attack",
+          "DisplayName": "All-Out Attack",
+          "Children": null
+         },
+         {
+          "QueryName": "OWCS Trophy",
+          "DisplayName": "OWCS Trophy",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Random from Favorites",
+          "DisplayName": "Random from Favorites",
+          "Children": null
+         },
+         {
+          "QueryName": "Glory to Mankind",
+          "DisplayName": "Glory to Mankind",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_highlightintro_names": {
+        "Choices": [
+         {
+          "QueryName": "Heroes Never Die",
+          "DisplayName": "Heroes Never Die",
+          "Children": null
+         },
+         {
+          "QueryName": "Guardian Angel",
+          "DisplayName": "Guardian Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Battle Angel",
+          "DisplayName": "Battle Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Rescue Run",
+          "DisplayName": "Rescue Run",
+          "Children": null
+         },
+         {
+          "QueryName": "On the Scene",
+          "DisplayName": "On the Scene",
+          "Children": null
+         },
+         {
+          "QueryName": "Kitty Shimmy",
+          "DisplayName": "Kitty Shimmy",
+          "Children": null
+         },
+         {
+          "QueryName": "Ascending Flight",
+          "DisplayName": "Ascending Flight",
+          "Children": null
+         },
+         {
+          "QueryName": "Fortune",
+          "DisplayName": "Fortune",
+          "Children": null
+         },
+         {
+          "QueryName": "Caduceus Carrier",
+          "DisplayName": "Caduceus Carrier",
+          "Children": null
+         },
+         {
+          "QueryName": "All-Out Attack",
+          "DisplayName": "All-Out Attack",
+          "Children": null
+         },
+         {
+          "QueryName": "Boogie",
+          "DisplayName": "Boogie",
+          "Children": null
+         },
+         {
+          "QueryName": "Pompompurin Hug",
+          "DisplayName": "Pompompurin Hug",
+          "Children": null
+         },
+         {
+          "QueryName": "Staff Spin",
+          "DisplayName": "Staff Spin",
+          "Children": null
+         },
+         {
+          "QueryName": "Rhythm",
+          "DisplayName": "Rhythm",
+          "Children": null
+         },
+         {
+          "QueryName": "Merciful Heart",
+          "DisplayName": "Merciful Heart",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroic",
+          "DisplayName": "Heroic",
+          "Children": null
+         },
+         {
+          "QueryName": "Random from Favorites",
+          "DisplayName": "Random from Favorites",
+          "Children": null
+         },
+         {
+          "QueryName": "Homemade Cookies",
+          "DisplayName": "Homemade Cookies",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_voiceline_names": {
+        "Choices": [
+         {
+          "QueryName": "Doctor's orders",
+          "DisplayName": "Doctor's orders",
+          "Children": null
+         },
+         {
+          "QueryName": "Take two",
+          "DisplayName": "Take two",
+          "Children": null
+         },
+         {
+          "QueryName": "The doctor will see you",
+          "DisplayName": "The doctor will see you",
+          "Children": null
+         },
+         {
+          "QueryName": "On a scale of 1-10",
+          "DisplayName": "On a scale of 1-10",
+          "Children": null
+         },
+         {
+          "QueryName": "Consultation fee",
+          "DisplayName": "Consultation fee",
+          "Children": null
+         },
+         {
+          "QueryName": "How Barbaric",
+          "DisplayName": "How Barbaric",
+          "Children": null
+         },
+         {
+          "QueryName": "Miracle Worker",
+          "DisplayName": "Miracle Worker",
+          "Children": null
+         },
+         {
+          "QueryName": "Super!",
+          "DisplayName": "Super!",
+          "Children": null
+         },
+         {
+          "QueryName": "Need a second opinion?",
+          "DisplayName": "Need a second opinion?",
+          "Children": null
+         },
+         {
+          "QueryName": "The Doctor Is In",
+          "DisplayName": "The Doctor Is In",
+          "Children": null
+         },
+         {
+          "QueryName": "Should get that looked at",
+          "DisplayName": "Should get that looked at",
+          "Children": null
+         },
+         {
+          "QueryName": "Piece of cake",
+          "DisplayName": "Piece of cake",
+          "Children": null
+         },
+         {
+          "QueryName": "Sponge or spray?",
+          "DisplayName": "Sponge or spray?",
+          "Children": null
+         },
+         {
+          "QueryName": "Superstition",
+          "DisplayName": "Superstition",
+          "Children": null
+         },
+         {
+          "QueryName": "Sometimes you scare me",
+          "DisplayName": "Sometimes you scare me",
+          "Children": null
+         },
+         {
+          "QueryName": "I'll cast a spell on you",
+          "DisplayName": "I'll cast a spell on you",
+          "Children": null
+         },
+         {
+          "QueryName": "Your guardian angel",
+          "DisplayName": "Your guardian angel",
+          "Children": null
+         },
+         {
+          "QueryName": "I could use the time off",
+          "DisplayName": "I could use the time off",
+          "Children": null
+         },
+         {
+          "QueryName": "A most impressive display",
+          "DisplayName": "A most impressive display",
+          "Children": null
+         },
+         {
+          "QueryName": "How lucky for you",
+          "DisplayName": "How lucky for you",
+          "Children": null
+         },
+         {
+          "QueryName": "How are you feeling",
+          "DisplayName": "How are you feeling",
+          "Children": null
+         },
+         {
+          "QueryName": "Take care of yourself",
+          "DisplayName": "Take care of yourself",
+          "Children": null
+         },
+         {
+          "QueryName": "Not sure why I bother",
+          "DisplayName": "Not sure why I bother",
+          "Children": null
+         },
+         {
+          "QueryName": "A timely intervention",
+          "DisplayName": "A timely intervention",
+          "Children": null
+         },
+         {
+          "QueryName": "I'm needed somewhere",
+          "DisplayName": "I'm needed somewhere",
+          "Children": null
+         },
+         {
+          "QueryName": "My Expert Opinion",
+          "DisplayName": "My Expert Opinion",
+          "Children": null
+         },
+         {
+          "QueryName": "Questionable Judgment",
+          "DisplayName": "Questionable Judgment",
+          "Children": null
+         },
+         {
+          "QueryName": "You're welcome",
+          "DisplayName": "You're welcome",
+          "Children": null
+         },
+         {
+          "QueryName": "I've seen worse",
+          "DisplayName": "I've seen worse",
+          "Children": null
+         },
+         {
+          "QueryName": "Call the whambulance",
+          "DisplayName": "Call the whambulance",
+          "Children": null
+         },
+         {
+          "QueryName": "Are you quite done?",
+          "DisplayName": "Are you quite done?",
+          "Children": null
+         },
+         {
+          "QueryName": "I have my eye on you",
+          "DisplayName": "I have my eye on you",
+          "Children": null
+         },
+         {
+          "QueryName": "Birds of a feather get healed together",
+          "DisplayName": "Birds of a feather get healed together",
+          "Children": null
+         },
+         {
+          "QueryName": "Healthiest",
+          "DisplayName": "Healthiest",
+          "Children": null
+         },
+         {
+          "QueryName": "Witching Hour",
+          "DisplayName": "Witching Hour",
+          "Children": null
+         },
+         {
+          "QueryName": "Are you finished?",
+          "DisplayName": "Are you finished?",
+          "Children": null
+         },
+         {
+          "QueryName": "ZERO, lead me",
+          "DisplayName": "ZERO, lead me",
+          "Children": null
+         },
+         {
+          "QueryName": "ZERO system activated",
+          "DisplayName": "ZERO system activated",
+          "Children": null
+         },
+         {
+          "QueryName": "Mission Accomplished",
+          "DisplayName": "Mission Accomplished",
+          "Children": null
+         },
+         {
+          "QueryName": "Royal pain",
+          "DisplayName": "Royal pain",
+          "Children": null
+         },
+         {
+          "QueryName": "Dance, Carmen!",
+          "DisplayName": "Dance, Carmen!",
+          "Children": null
+         },
+         {
+          "QueryName": "A beautiful rose",
+          "DisplayName": "A beautiful rose",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_skin_names": {
+        "Choices": [
+         {
+          "QueryName": "Celestial",
+          "DisplayName": "Celestial",
+          "Children": null
+         },
+         {
+          "QueryName": "Verdant",
+          "DisplayName": "Verdant",
+          "Children": null
+         },
+         {
+          "QueryName": "Orchid",
+          "DisplayName": "Orchid",
+          "Children": null
+         },
+         {
+          "QueryName": "Mist",
+          "DisplayName": "Mist",
+          "Children": null
+         },
+         {
+          "QueryName": "Cobalt",
+          "DisplayName": "Cobalt",
+          "Children": null
+         },
+         {
+          "QueryName": "Amber",
+          "DisplayName": "Amber",
+          "Children": null
+         },
+         {
+          "QueryName": "Devil",
+          "DisplayName": "Devil",
+          "Children": null
+         },
+         {
+          "QueryName": "Imp",
+          "DisplayName": "Imp",
+          "Children": null
+         },
+         {
+          "QueryName": "Valkyrie",
+          "DisplayName": "Valkyrie",
+          "Children": null
+         },
+         {
+          "QueryName": "Sigrún",
+          "DisplayName": "Sigrún",
+          "Children": null
+         },
+         {
+          "QueryName": "Miko",
+          "DisplayName": "Miko",
+          "Children": null
+         },
+         {
+          "QueryName": "Eidgenossin",
+          "DisplayName": "Eidgenossin",
+          "Children": null
+         },
+         {
+          "QueryName": "Winged Victory",
+          "DisplayName": "Winged Victory",
+          "Children": null
+         },
+         {
+          "QueryName": "Witch",
+          "DisplayName": "Witch",
+          "Children": null
+         },
+         {
+          "QueryName": "Sugar Plum Fairy",
+          "DisplayName": "Sugar Plum Fairy",
+          "Children": null
+         },
+         {
+          "QueryName": "Fortune",
+          "DisplayName": "Fortune",
+          "Children": null
+         },
+         {
+          "QueryName": "Zhuque",
+          "DisplayName": "Zhuque",
+          "Children": null
+         },
+         {
+          "QueryName": "Seolbim",
+          "DisplayName": "Seolbim",
+          "Children": null
+         },
+         {
+          "QueryName": "Combat Medic Ziegler",
+          "DisplayName": "Combat Medic Ziegler",
+          "Children": null
+         },
+         {
+          "QueryName": "Dragoon",
+          "DisplayName": "Dragoon",
+          "Children": null
+         },
+         {
+          "QueryName": "Mage",
+          "DisplayName": "Mage",
+          "Children": null
+         },
+         {
+          "QueryName": "Formalwear",
+          "DisplayName": "Formalwear",
+          "Children": null
+         },
+         {
+          "QueryName": "Mystic Swan",
+          "DisplayName": "Mystic Swan",
+          "Children": null
+         },
+         {
+          "QueryName": "Honey Bee",
+          "DisplayName": "Honey Bee",
+          "Children": null
+         },
+         {
+          "QueryName": "Lifeguard",
+          "DisplayName": "Lifeguard",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Majesty",
+          "DisplayName": "Rose Majesty",
+          "Children": null
+         },
+         {
+          "QueryName": "Zombie Doctor",
+          "DisplayName": "Zombie Doctor",
+          "Children": null
+         },
+         {
+          "QueryName": "Jingle Belle",
+          "DisplayName": "Jingle Belle",
+          "Children": null
+         },
+         {
+          "QueryName": "Vengeance",
+          "DisplayName": "Vengeance",
+          "Children": null
+         },
+         {
+          "QueryName": "Wyvern",
+          "DisplayName": "Wyvern",
+          "Children": null
+         },
+         {
+          "QueryName": "Beach Rescue",
+          "DisplayName": "Beach Rescue",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat",
+          "DisplayName": "Black Cat",
+          "Children": null
+         },
+         {
+          "QueryName": "Conjurer",
+          "DisplayName": "Conjurer",
+          "Children": null
+         },
+         {
+          "QueryName": "Royal Princess",
+          "DisplayName": "Royal Princess",
+          "Children": null
+         },
+         {
+          "QueryName": "Happy Holly",
+          "DisplayName": "Happy Holly",
+          "Children": null
+         },
+         {
+          "QueryName": "Rainy Day",
+          "DisplayName": "Rainy Day",
+          "Children": null
+         },
+         {
+          "QueryName": "Fearless",
+          "DisplayName": "Fearless",
+          "Children": null
+         },
+         {
+          "QueryName": "Cosmic",
+          "DisplayName": "Cosmic",
+          "Children": null
+         },
+         {
+          "QueryName": "Wing Zero",
+          "DisplayName": "Wing Zero",
+          "Children": null
+         },
+         {
+          "QueryName": "Crimson Knight",
+          "DisplayName": "Crimson Knight",
+          "Children": null
+         },
+         {
+          "QueryName": "Radiant Angel",
+          "DisplayName": "Radiant Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Sakura",
+          "DisplayName": "Sakura",
+          "Children": null
+         },
+         {
+          "QueryName": "Poolside",
+          "DisplayName": "Poolside",
+          "Children": null
+         },
+         {
+          "QueryName": "Fallen Angel",
+          "DisplayName": "Fallen Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Music Festival",
+          "DisplayName": "Music Festival",
+          "Children": null
+         },
+         {
+          "QueryName": "Panther",
+          "DisplayName": "Panther",
+          "Children": null
+         },
+         {
+          "QueryName": "Stadium All-Star",
+          "DisplayName": "Stadium All-Star",
+          "Children": null
+         },
+         {
+          "QueryName": "Borealis",
+          "DisplayName": "Borealis",
+          "Children": null
+         },
+         {
+          "QueryName": "Pompompurin Skin",
+          "DisplayName": "Pompompurin Skin",
+          "Children": null
+         },
+         {
+          "QueryName": "Gothic Cat",
+          "DisplayName": "Gothic Cat",
+          "Children": null
+         },
+         {
+          "QueryName": "Commander White",
+          "DisplayName": "Commander White",
+          "Children": null
+         },
+         {
+          "QueryName": "Heavenly Hop",
+          "DisplayName": "Heavenly Hop",
+          "Children": null
+         },
+         {
+          "QueryName": "Cloudy Day",
+          "DisplayName": "Cloudy Day",
+          "Children": null
+         },
+         {
+          "QueryName": "Scarlet Angel",
+          "DisplayName": "Scarlet Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Ivory Rose",
+          "DisplayName": "Ivory Rose",
+          "Children": null
+         },
+         {
+          "QueryName": "Street Rebel",
+          "DisplayName": "Street Rebel",
+          "Children": null
+         },
+         {
+          "QueryName": "Decennium",
+          "DisplayName": "Decennium",
+          "Children": null
+         },
+         {
+          "QueryName": "Cairo Holiday",
+          "DisplayName": "Cairo Holiday",
+          "Children": null
+         },
+         {
+          "QueryName": "Fancy Fangs",
+          "DisplayName": "Fancy Fangs",
+          "Children": null
+         },
+         {
+          "QueryName": "Flamebound",
+          "DisplayName": "Flamebound",
+          "Children": null
+         },
+         {
+          "QueryName": "Pixel Star",
+          "DisplayName": "Pixel Star",
+          "Children": null
+         },
+         {
+          "QueryName": "Heart of Mercy",
+          "DisplayName": "Heart of Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Molten Angel",
+          "DisplayName": "Molten Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Twilight Heiress",
+          "DisplayName": "Twilight Heiress",
+          "Children": null
+         },
+         {
+          "QueryName": "Starlight Champion",
+          "DisplayName": "Starlight Champion",
+          "Children": null
+         },
+         {
+          "QueryName": "Pureflow",
+          "DisplayName": "Pureflow",
+          "Children": null
+         },
+         {
+          "QueryName": "Overwatch",
+          "DisplayName": "Overwatch",
+          "Children": null
+         },
+         {
+          "QueryName": "Overwatch Classic",
+          "DisplayName": "Overwatch Classic",
+          "Children": null
+         },
+         {
+          "QueryName": "Pink",
+          "DisplayName": "Pink",
+          "Children": null
+         },
+         {
+          "QueryName": "2019 Atlantic All-Stars",
+          "DisplayName": "2019 Atlantic All-Stars",
+          "Children": null
+         },
+         {
+          "QueryName": "Camouflage",
+          "DisplayName": "Camouflage",
+          "Children": null
+         },
+         {
+          "QueryName": "Dr. Ziegler",
+          "DisplayName": "Dr. Ziegler",
+          "Children": null
+         },
+         {
+          "QueryName": "Snow Angel",
+          "DisplayName": "Snow Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Royal Knight",
+          "DisplayName": "Royal Knight",
+          "Children": null
+         },
+         {
+          "QueryName": "Royal Gladiator",
+          "DisplayName": "Royal Gladiator",
+          "Children": null
+         },
+         {
+          "QueryName": "Infinite Seer",
+          "DisplayName": "Infinite Seer",
+          "Children": null
+         },
+         {
+          "QueryName": "Owl Guardian",
+          "DisplayName": "Owl Guardian",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold",
+          "DisplayName": "Rose Gold",
+          "Children": null
+         },
+         {
+          "QueryName": "Celestial Guardian",
+          "DisplayName": "Celestial Guardian",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_spray_names": {
+        "Choices": [
+         {
+          "QueryName": "Icon",
+          "DisplayName": "Icon",
+          "Children": null
+         },
+         {
+          "QueryName": "Emblem",
+          "DisplayName": "Emblem",
+          "Children": null
+         },
+         {
+          "QueryName": "Blaster",
+          "DisplayName": "Blaster",
+          "Children": null
+         },
+         {
+          "QueryName": "Support",
+          "DisplayName": "Support",
+          "Children": null
+         },
+         {
+          "QueryName": "Halo",
+          "DisplayName": "Halo",
+          "Children": null
+         },
+         {
+          "QueryName": "Light",
+          "DisplayName": "Light",
+          "Children": null
+         },
+         {
+          "QueryName": "Smile",
+          "DisplayName": "Smile",
+          "Children": null
+         },
+         {
+          "QueryName": "On Call",
+          "DisplayName": "On Call",
+          "Children": null
+         },
+         {
+          "QueryName": "Valkyrie",
+          "DisplayName": "Valkyrie",
+          "Children": null
+         },
+         {
+          "QueryName": "Swiss",
+          "DisplayName": "Swiss",
+          "Children": null
+         },
+         {
+          "QueryName": "Arrow",
+          "DisplayName": "Arrow",
+          "Children": null
+         },
+         {
+          "QueryName": "Medic",
+          "DisplayName": "Medic",
+          "Children": null
+         },
+         {
+          "QueryName": "Battle Ready",
+          "DisplayName": "Battle Ready",
+          "Children": null
+         },
+         {
+          "QueryName": "Sting",
+          "DisplayName": "Sting",
+          "Children": null
+         },
+         {
+          "QueryName": "Gauze",
+          "DisplayName": "Gauze",
+          "Children": null
+         },
+         {
+          "QueryName": "Heartbeat",
+          "DisplayName": "Heartbeat",
+          "Children": null
+         },
+         {
+          "QueryName": "Bandage",
+          "DisplayName": "Bandage",
+          "Children": null
+         },
+         {
+          "QueryName": "Patched Up",
+          "DisplayName": "Patched Up",
+          "Children": null
+         },
+         {
+          "QueryName": "Ziegler",
+          "DisplayName": "Ziegler",
+          "Children": null
+         },
+         {
+          "QueryName": "Huge Rez!!",
+          "DisplayName": "Huge Rez!!",
+          "Children": null
+         },
+         {
+          "QueryName": "Heroes Never Die",
+          "DisplayName": "Heroes Never Die",
+          "Children": null
+         },
+         {
+          "QueryName": "Resurrect",
+          "DisplayName": "Resurrect",
+          "Children": null
+         },
+         {
+          "QueryName": "Wings",
+          "DisplayName": "Wings",
+          "Children": null
+         },
+         {
+          "QueryName": "Sigil",
+          "DisplayName": "Sigil",
+          "Children": null
+         },
+         {
+          "QueryName": "Eidgenossin",
+          "DisplayName": "Eidgenossin",
+          "Children": null
+         },
+         {
+          "QueryName": "Badminton",
+          "DisplayName": "Badminton",
+          "Children": null
+         },
+         {
+          "QueryName": "Trick or Treat",
+          "DisplayName": "Trick or Treat",
+          "Children": null
+         },
+         {
+          "QueryName": "Snow Angel",
+          "DisplayName": "Snow Angel",
+          "Children": null
+         },
+         {
+          "QueryName": "Ornament",
+          "DisplayName": "Ornament",
+          "Children": null
+         },
+         {
+          "QueryName": "Parasol",
+          "DisplayName": "Parasol",
+          "Children": null
+         },
+         {
+          "QueryName": "Dragon Dance",
+          "DisplayName": "Dragon Dance",
+          "Children": null
+         },
+         {
+          "QueryName": "Seolbim",
+          "DisplayName": "Seolbim",
+          "Children": null
+         },
+         {
+          "QueryName": "Combat Medic",
+          "DisplayName": "Combat Medic",
+          "Children": null
+         },
+         {
+          "QueryName": "Queen of Clubs",
+          "DisplayName": "Queen of Clubs",
+          "Children": null
+         },
+         {
+          "QueryName": "Dragoon",
+          "DisplayName": "Dragoon",
+          "Children": null
+         },
+         {
+          "QueryName": "Panther Mercy",
+          "DisplayName": "Panther Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Poolside Mercy",
+          "DisplayName": "Poolside Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Pixel",
+          "DisplayName": "Pixel",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute",
+          "DisplayName": "Cute",
+          "Children": null
+         },
+         {
+          "QueryName": "Pink",
+          "DisplayName": "Pink",
+          "Children": null
+         },
+         {
+          "QueryName": "Cure",
+          "DisplayName": "Cure",
+          "Children": null
+         },
+         {
+          "QueryName": "Ribbon",
+          "DisplayName": "Ribbon",
+          "Children": null
+         },
+         {
+          "QueryName": "Together",
+          "DisplayName": "Together",
+          "Children": null
+         },
+         {
+          "QueryName": "Reconstruction",
+          "DisplayName": "Reconstruction",
+          "Children": null
+         },
+         {
+          "QueryName": "Night Mission",
+          "DisplayName": "Night Mission",
+          "Children": null
+         },
+         {
+          "QueryName": "Evaluation",
+          "DisplayName": "Evaluation",
+          "Children": null
+         },
+         {
+          "QueryName": "Lab Coat",
+          "DisplayName": "Lab Coat",
+          "Children": null
+         },
+         {
+          "QueryName": "On the clock",
+          "DisplayName": "On the clock",
+          "Children": null
+         },
+         {
+          "QueryName": "Healing touch",
+          "DisplayName": "Healing touch",
+          "Children": null
+         },
+         {
+          "QueryName": "Hanan",
+          "DisplayName": "Hanan",
+          "Children": null
+         },
+         {
+          "QueryName": "Suit fitting",
+          "DisplayName": "Suit fitting",
+          "Children": null
+         },
+         {
+          "QueryName": "Late night",
+          "DisplayName": "Late night",
+          "Children": null
+         },
+         {
+          "QueryName": "Ascent",
+          "DisplayName": "Ascent",
+          "Children": null
+         },
+         {
+          "QueryName": "Winter spell",
+          "DisplayName": "Winter spell",
+          "Children": null
+         },
+         {
+          "QueryName": "Crows",
+          "DisplayName": "Crows",
+          "Children": null
+         },
+         {
+          "QueryName": "Owl Guardian",
+          "DisplayName": "Owl Guardian",
+          "Children": null
+         },
+         {
+          "QueryName": "Infinite Vision",
+          "DisplayName": "Infinite Vision",
+          "Children": null
+         },
+         {
+          "QueryName": "Lifebuoy",
+          "DisplayName": "Lifebuoy",
+          "Children": null
+         },
+         {
+          "QueryName": "Reindeer Headband",
+          "DisplayName": "Reindeer Headband",
+          "Children": null
+         },
+         {
+          "QueryName": "Mystic Swan",
+          "DisplayName": "Mystic Swan",
+          "Children": null
+         },
+         {
+          "QueryName": "Dev Doodle Mercy",
+          "DisplayName": "Dev Doodle Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy and Vengeance",
+          "DisplayName": "Mercy and Vengeance",
+          "Children": null
+         },
+         {
+          "QueryName": "Angel of Vengeance",
+          "DisplayName": "Angel of Vengeance",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute Vengeance",
+          "DisplayName": "Cute Vengeance",
+          "Children": null
+         },
+         {
+          "QueryName": "Winged Ribbon",
+          "DisplayName": "Winged Ribbon",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold Heart",
+          "DisplayName": "Rose Gold Heart",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold Mercy",
+          "DisplayName": "Rose Gold Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Art Deco",
+          "DisplayName": "Art Deco",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat Mercy",
+          "DisplayName": "Black Cat Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Conjuror's Curiosity",
+          "DisplayName": "Conjuror's Curiosity",
+          "Children": null
+         },
+         {
+          "QueryName": "Happy Holly Cookie",
+          "DisplayName": "Happy Holly Cookie",
+          "Children": null
+         },
+         {
+          "QueryName": "Ducky",
+          "DisplayName": "Ducky",
+          "Children": null
+         },
+         {
+          "QueryName": "Fearless Mercy",
+          "DisplayName": "Fearless Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "ZERO System",
+          "DisplayName": "ZERO System",
+          "Children": null
+         },
+         {
+          "QueryName": "Sakura Mercy",
+          "DisplayName": "Sakura Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Radiant Emblem",
+          "DisplayName": "Radiant Emblem",
+          "Children": null
+         },
+         {
+          "QueryName": "Festival Selfie",
+          "DisplayName": "Festival Selfie",
+          "Children": null
+         },
+         {
+          "QueryName": "Fallen Angel Mercy",
+          "DisplayName": "Fallen Angel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Borealis Halo",
+          "DisplayName": "Borealis Halo",
+          "Children": null
+         },
+         {
+          "QueryName": "Celestial Guardian Mercy",
+          "DisplayName": "Celestial Guardian Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Pompompurin Wing",
+          "DisplayName": "Pompompurin Wing",
+          "Children": null
+         },
+         {
+          "QueryName": "Atlantic Moon",
+          "DisplayName": "Atlantic Moon",
+          "Children": null
+         },
+         {
+          "QueryName": "Council of Humanity Emblem",
+          "DisplayName": "Council of Humanity Emblem",
+          "Children": null
+         },
+         {
+          "QueryName": "Heavenly Hop Mercy",
+          "DisplayName": "Heavenly Hop Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Flamebound Mercy",
+          "DisplayName": "Flamebound Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Pompompurin x Mercy",
+          "DisplayName": "Pompompurin x Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Street Rebel Mercy",
+          "DisplayName": "Street Rebel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Dev Doodle Lifeguard Mercy",
+          "DisplayName": "Dev Doodle Lifeguard Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Fancy Fangs Mercy",
+          "DisplayName": "Fancy Fangs Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Pixel Star Mercy",
+          "DisplayName": "Pixel Star Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Heart of Mercy",
+          "DisplayName": "Heart of Mercy",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_namecard_names": {
+        "Choices": [
+         {
+          "QueryName": "Cosmic Mercy",
+          "DisplayName": "Cosmic Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Panther Mercy",
+          "DisplayName": "Panther Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Poolside Mercy",
+          "DisplayName": "Poolside Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy - Tier 1",
+          "DisplayName": "Mercy - Tier 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy - Tier 2",
+          "DisplayName": "Mercy - Tier 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy - Tier 3",
+          "DisplayName": "Mercy - Tier 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy - Tier 4",
+          "DisplayName": "Mercy - Tier 4",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy - Tier 5",
+          "DisplayName": "Mercy - Tier 5",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy - Tier 6",
+          "DisplayName": "Mercy - Tier 6",
+          "Children": null
+         },
+         {
+          "QueryName": "Mercy Mastery",
+          "DisplayName": "Mercy Mastery",
+          "Children": null
+         },
+         {
+          "QueryName": "Jingle Belle",
+          "DisplayName": "Jingle Belle",
+          "Children": null
+         },
+         {
+          "QueryName": "Mystic Swan",
+          "DisplayName": "Mystic Swan",
+          "Children": null
+         },
+         {
+          "QueryName": "Staff of Vengeance",
+          "DisplayName": "Staff of Vengeance",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold Dreams",
+          "DisplayName": "Rose Gold Dreams",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold Mercy",
+          "DisplayName": "Rose Gold Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Gold Trim",
+          "DisplayName": "Gold Trim",
+          "Children": null
+         },
+         {
+          "QueryName": "Black Cat Mercy",
+          "DisplayName": "Black Cat Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Happy Holly Mercy",
+          "DisplayName": "Happy Holly Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Duckling Crossing",
+          "DisplayName": "Duckling Crossing",
+          "Children": null
+         },
+         {
+          "QueryName": "Fearless Mercy",
+          "DisplayName": "Fearless Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Crimson Rose Mercy",
+          "DisplayName": "Crimson Rose Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Wing Zero Mercy",
+          "DisplayName": "Wing Zero Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Sakura Mercy",
+          "DisplayName": "Sakura Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Radiant Angel Mercy",
+          "DisplayName": "Radiant Angel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Fallen Angel Mercy",
+          "DisplayName": "Fallen Angel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Scarlet Angel Mercy",
+          "DisplayName": "Scarlet Angel Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Borealis Mercy",
+          "DisplayName": "Borealis Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Celestial Guardian Mercy",
+          "DisplayName": "Celestial Guardian Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Pompompurin x Mercy",
+          "DisplayName": "Pompompurin x Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Cute Pompompurin x Mercy",
+          "DisplayName": "Cute Pompompurin x Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Commander White Mercy",
+          "DisplayName": "Commander White Mercy",
+          "Children": null
+         },
+         {
+          "QueryName": "Commander White Mercy - Amusement Park",
+          "DisplayName": "Commander White Mercy - Amusement Park",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_skincomponent_names": {
+        "Choices": [
+         {
+          "QueryName": "Iridescent",
+          "DisplayName": "Iridescent",
+          "Children": null
+         },
+         {
+          "QueryName": "Mask 2",
+          "DisplayName": "Mask 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Hair 1",
+          "DisplayName": "Hair 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Hair 2",
+          "DisplayName": "Hair 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Mask 1",
+          "DisplayName": "Mask 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 1",
+          "DisplayName": "Color 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 2",
+          "DisplayName": "Color 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 3",
+          "DisplayName": "Color 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Weapon 2",
+          "DisplayName": "Weapon 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Weapon 1",
+          "DisplayName": "Weapon 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Mask 3",
+          "DisplayName": "Mask 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Gilded",
+          "DisplayName": "Gilded",
+          "Children": null
+         },
+         {
+          "QueryName": "Reactivity",
+          "DisplayName": "Reactivity",
+          "Children": null
+         },
+         {
+          "QueryName": "Flourish",
+          "DisplayName": "Flourish",
+          "Children": null
+         },
+         {
+          "QueryName": "Assist Effect",
+          "DisplayName": "Assist Effect",
+          "Children": null
+         },
+         {
+          "QueryName": "Dawn",
+          "DisplayName": "Dawn",
+          "Children": null
+         },
+         {
+          "QueryName": "Iridescent",
+          "DisplayName": "Iridescent",
+          "Children": null
+         },
+         {
+          "QueryName": "Gilded",
+          "DisplayName": "Gilded",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 3",
+          "DisplayName": "Color 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 2",
+          "DisplayName": "Color 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Color 1",
+          "DisplayName": "Color 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Wings 3",
+          "DisplayName": "Wings 3",
+          "Children": null
+         },
+         {
+          "QueryName": "Wings 2",
+          "DisplayName": "Wings 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Wings 1",
+          "DisplayName": "Wings 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Skin VFX 2",
+          "DisplayName": "Skin VFX 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Skin VFX 1",
+          "DisplayName": "Skin VFX 1",
+          "Children": null
+         },
+         {
+          "QueryName": "Ability VFX 2",
+          "DisplayName": "Ability VFX 2",
+          "Children": null
+         },
+         {
+          "QueryName": "Ability VFX 1",
+          "DisplayName": "Ability VFX 1",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_weaponvariant_names": {
+        "Choices": [
+         {
+          "QueryName": "DEFAULT",
+          "DisplayName": "DEFAULT",
+          "Children": null
+         },
+         {
+          "QueryName": "GOLDEN",
+          "DisplayName": "GOLDEN",
+          "Children": null
+         },
+         {
+          "QueryName": "Jade",
+          "DisplayName": "Jade",
+          "Children": null
+         },
+         {
+          "QueryName": "Galactic",
+          "DisplayName": "Galactic",
+          "Children": null
+         },
+         {
+          "QueryName": "Crimson Wolf",
+          "DisplayName": "Crimson Wolf",
+          "Children": null
+         }
+        ]
+       },
+       "datatool.ux.valid_weaponskin_names": {
+        "Choices": [
+         {
+          "QueryName": "DEFAULT",
+          "DisplayName": "DEFAULT",
+          "Children": null
+         },
+         {
+          "QueryName": "Hard Light",
+          "DisplayName": "Hard Light",
+          "Children": null
+         },
+         {
+          "QueryName": "Rose Gold",
+          "DisplayName": "Rose Gold",
+          "Children": null
+         },
+         {
+          "QueryName": "Merciful Magitech",
+          "DisplayName": "Merciful Magitech",
+          "Children": null
+         }
+        ]
+       }
+      }
+     }
+    }
+   ]
+  },
+  "datatool.ux.valid_map_names": {
+   "Choices": [
+    {
+     "QueryName": "5B",
+     "DisplayName": "Temple of Anubis",
+     "Children": null
+    },
+    {
+     "QueryName": "D4",
+     "DisplayName": "King's Row",
+     "Children": null
+    },
+    {
+     "QueryName": "165",
+     "DisplayName": "Hanamura",
+     "Children": null
+    },
+    {
+     "QueryName": "184",
+     "DisplayName": "Watchpoint: Gibraltar",
+     "Children": null
+    }
+   ]
+  },
+  "datatool.ux.valid_npc_names": {
+   "Choices": [
+    {
+     "QueryName": "16B",
+     "DisplayName": "Training Bot (16B)",
+     "Children": null
+    },
+    {
+     "QueryName": "16C",
+     "DisplayName": "Friendly Bot (16C)",
+     "Children": null
+    },
+    {
+     "QueryName": "16D",
+     "DisplayName": "Friendly Bot (16D)",
+     "Children": null
+    },
+    {
+     "QueryName": "16E",
+     "DisplayName": "Training Bot (16E)",
+     "Children": null
+    }
+   ]
+  },
+  "datatool.ux.valid_owl_teams": {
+   "Choices": [
+    {
+     "QueryName": "Philadelphia Fusion",
+     "DisplayName": "Philadelphia Fusion",
+     "Children": null
+    },
+    {
+     "QueryName": "Boston Uprising",
+     "DisplayName": "Boston Uprising",
+     "Children": null
+    },
+    {
+     "QueryName": "Dallas Fuel",
+     "DisplayName": "Dallas Fuel",
+     "Children": null
+    },
+    {
+     "QueryName": "London Spitfire",
+     "DisplayName": "London Spitfire",
+     "Children": null
+    }
+   ]
+  }
+ }
+}

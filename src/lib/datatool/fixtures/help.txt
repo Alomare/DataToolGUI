@@ -1,0 +1,107 @@
+﻿[Core] DataTool v2.25.0.0+1151+68397365
+[Core] CommandLine: ["--help"]
+Positional "directory" is required
+
+Usage: DataTool <directory> <mode> [mode options] [--flags]
+
+Flags:
+  flag                      | help                                  | default
+----------------------------------------------------------------------------------
+  -h --help                 | Print this help text                  | False
+  --language -L             | Language to load (Needs Value)        | 
+  --speech-language -T      | Speech Language to load (Needs Value) | 
+  --online                  | Allow downloading of corrupted files  | True
+  --deduplicate-textures -0 | Re-use textures from other models     | False
+  --rcn                     | Load Chinese exclusive content        | False
+  --rkr                     | Load Korean exclusive content         | False
+
+Positionals:
+  index | positional | help
+---------------------------------------------
+  0     | directory  | Overwatch Install Directory
+  1     | mode       | Extraction Mode
+
+Modes:
+  mode                       | description                             
+----------------------------------------------------------------------------------------------
+  dump-lootbox-pools         | Dump Loot Box Pools
+  dump-strings               | Dump strings
+  dump-textures              | Saves all textures
+  dump-ui-textures           | Saves all UI textures
+  extract-abilities          | Extract abilities
+  extract-charms             | Extract all Weapon Charms
+  extract-conversations      | Extracts heroes voice conversations
+  extract-gamemode-images    | Extracts gamemode and arcade images
+  extract-general            | Extract general unlocks
+  extract-hero-icons         | Extract hero GUI images
+  extract-hero-voice         | Extracts hero voicelines.
+  extract-intel-database     | Extracts assets from the Intel Database
+  extract-lootbox            | Extract lootbox models
+  extract-map-envs           | Extract map environment data
+  extract-map-objectives     | Extract map objective bounds
+  extract-maps               | Extract maps
+  extract-movies             | Extract movies
+  extract-music              | Extracts every sound file classified as music
+  extract-name-cards         | Extract all Name Cards
+  extract-npc-voice          | Extracts NPC voicelines.
+  extract-npcs               | Extract npcs
+  extract-player-icons       | Extract all Player Icons
+  extract-souvenirs          | Extract all Souvenirs
+  extract-sprays             | Extract all Sprays
+  extract-talents            | Extract talents
+  extract-unlocks            | Extract hero cosmetics
+  extract-vector-images      | Extracts vector images used in UI to SVGs
+  extract-voice-sets         | Extract voice sets
+  list-abilities             | List abilities
+  list-achievements          | List achievements
+  list-challenges            | List challenges
+  list-general-unlocks       | List general unlocks
+  list-heroes                | List heroes
+  list-maps                  | List maps
+  list-subtitles             | List subtitles
+  list-subtitles-real        | List subtitles (from audio data)
+  list-talents               | List talents
+  list-unlocks               | List hero unlocks
+  list-workshop              | List workshop data
+
+Extract Flags - Flags for extracting data. These apply to all extract-* modes.
+
+  flag                      | help                                                                                      | default
+--------------------------------------------------------------------------------------------------------------------------------------
+  --convert-textures-type   | Texture output type (Needs Value)                                                         | png
+  --convert-animations-type | Animation output type (Needs Value)                                                       | owanimclip
+  --extract-refpose         | Extract skeleton refposes                                                                 | False
+  --raw-textures            | Do not convert textures                                                                   | False
+  --raw-sound               | Do not convert sounds                                                                     | False
+  --raw-models              | Do not convert models                                                                     | False
+  --raw-animations          | Do not convert animations                                                                 | False
+  --raw                     | Skip all conversion                                                                       | False
+  --force-dds-multisurface  | Save multisurface textures as DDS                                                         | False
+  --sheet-multisurface      | Save multisurface textures as one large image, tiled across in the Y (vertical) direction | False
+  --combine-multisurface    | Combine all surfaces into one image (only supported on TIF and DDS)                       | False
+  --grayscale               | Convert single channel textures to grayscale RGB                                          | True
+  --subtitles-with-sounds   | Extract subtitles alongside voicelines                                                    | False
+  --subtitles-as-sounds     | Saves the sound files as the subtitle                                                     | True
+  --use-texture-decoder     | Use TextureDecoder for decoding textures, slower but more accurate (enforced on Linux)    | True
+  --all-lods --lods         | Extract all model LODs                                                                    | False
+
+Positionals:
+  index | positional | help
+---------------------------------------------
+  0     | directory  | Overwatch Install Directory
+  1     | mode       | Extraction Mode
+  2     | out-path   | Output path to save data
+
+List Flags - Flags for listing data. These generally apply to list-* and dump-* commands.
+
+  flag       | help                                                                                   | default
+--------------------------------------------------------------------------------------------------------------------
+  --json     | Output JSON to stderr                                                                  | False
+  --out -o   | Output JSON file (Needs Value)                                                         | 
+  --simplify | Reduces the amount of information output by -list commands (doesn't work for JSON out) | False
+
+Positionals:
+  index | positional | help
+---------------------------------------------
+  0     | directory  | Overwatch Install Directory
+  1     | mode       | Extraction Mode
