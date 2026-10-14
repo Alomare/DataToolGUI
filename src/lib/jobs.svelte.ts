@@ -16,6 +16,8 @@ export type JobStatus = 'queued' | 'running' | 'done' | 'failed' | 'cancelled';
 export interface LogLine {
   kind: LineKind;
   text: string;
+  /** Line number in the whole log (stable across trimming, for keyed rendering). */
+  n: number;
 }
 
 export interface Job {
@@ -94,9 +96,10 @@ class JobQueue {
 
   private ingest(job: Job, batch: { stream: string; line: string }[]) {
     const added: LogLine[] = [];
+    let n = job.dropped + job.lines.length;
     for (const { line } of batch) {
       const kind = classifyLine(line);
-      added.push({ kind, text: line });
+      added.push({ kind, text: line, n: n++ });
       if (kind === 'error') job.errors++;
       else if (kind === 'warn') job.warnings++;
       job.phase = nextPhase(job.phase, line);

@@ -130,7 +130,10 @@ class AppState {
         this.history = saved.history ?? [];
       }
     } catch (e) {
-      this.notify(`Settings couldn't be read, starting fresh (${backend.errorText(e)})`, 'error');
+      // Keep the unreadable file for recovery before the next save replaces it.
+      const backup = `${this.settingsPath}.broken-${Date.now()}`;
+      await backend.copyFile(this.settingsPath, backup).catch(() => {});
+      this.notify(`Settings couldn't be read, starting fresh. The old file was kept as ${backup} (${backend.errorText(e)})`, 'error');
     }
     this.loaded = true;
   }

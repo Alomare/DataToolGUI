@@ -20,3 +20,7 @@ vite.config.ts.timestamp-*
 
 # OWLib checkout used by scripts/gen-catalog.mjs
 /.cache
+
+# Playwright
+/test-results
+/playwright-report

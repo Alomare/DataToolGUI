@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { getCurrentWindow } from '@tauri-apps/api/window';
+  import { ask } from '@tauri-apps/plugin-dialog';
   import { X } from '@lucide/svelte';
   import * as backend from '$lib/backend';
   import HomePage from '$lib/components/HomePage.svelte';
@@ -18,6 +19,17 @@
   let loadError = $state('');
 
   onMount(() => {
+    // Closing kills a running extraction; make sure that's intended.
+    const closing = getCurrentWindow().onCloseRequested(async (event) => {
+      const active = queue.active;
+      if (!active) return;
+      const waiting = queue.pending - 1;
+      const stop = await ask(
+        `${active.title} is still running${waiting ? ` (and ${waiting} more queued)` : ''}. Closing stops it and leaves its output unfinished.`,
+        { title: 'Stop and close?', kind: 'warning', okLabel: 'Stop and close', cancelLabel: 'Keep running' },
+      );
+      if (!stop) event.preventDefault();
+    });
     (async () => {
       try {
         await queue.init();
@@ -44,6 +56,7 @@
         }
       }
     })();
+    return () => void closing.then((unlisten) => unlisten());
   });
 
   // Persist settings whenever they change.
@@ -154,9 +167,11 @@
     padding-bottom: 10px;
   }
   .toast {
+    /* Top center of the content: the bottom right is where Run and Stop are. */
     position: fixed;
-    right: 18px;
-    bottom: 18px;
+    top: 14px;
+    left: calc(50% + 124px);
+    transform: translateX(-50%);
     z-index: 700;
     display: flex;
     align-items: center;

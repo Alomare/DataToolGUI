@@ -187,7 +187,9 @@
 
   <div class="runbar card">
     <div class="grow small">
-      {#if runErrors.length || built.errors.length}
+      {#if !cores.active}
+        <span class="err">Install DataTool first: <button class="link-btn" onclick={() => (app.page = 'settings')}>Settings → DataTool</button></span>
+      {:else if runErrors.length || built.errors.length}
         <span class="err">{(runErrors.length ? runErrors : built.errors)[0]}</span>
       {:else if built.warnings.length}
         <span class="warn">{built.warnings[0]}</span>

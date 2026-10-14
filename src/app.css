@@ -94,7 +94,10 @@ body {
   color: var(--text);
   font: 14px/1.45 var(--font);
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
+  /* The app scrolls inside its own panels. `clip` (unlike `hidden`) also
+     stops focus and scrollIntoView from scrolling the page itself, which
+     would slide the whole UI out of the window. */
+  overflow: clip;
 }
 
 h1, h2, h3, h4 {

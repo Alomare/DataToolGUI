@@ -72,7 +72,26 @@
   </header>
 
   {#if choices.error && query.choicesKey}
-    <div class="notice warn small" style="margin-bottom: 10px">Couldn't read names from the game: {choices.error}. You can still type names.</div>
+    {@const outdated = /does not support this version/i.test(choices.error)}
+    <div class="notice warn small" style="margin-bottom: 10px">
+      <span class="grow">
+        {#if outdated}
+          This DataTool build doesn't support your game version, so it can't read names from it (or extract anything).
+        {:else}
+          Couldn't read names from the game: {choices.error.replace(/^\[\w+\]\s*/, '').replace(/\.+$/, '')}.
+        {/if}
+        You can still type names.
+      </span>
+      {#if outdated}
+        <button
+          class="btn small"
+          onclick={() => {
+            app.page = 'settings';
+            void cores.checkUpdates(true);
+          }}>Update DataTool</button
+        >
+      {/if}
+    </div>
   {/if}
 
   {#if asText}

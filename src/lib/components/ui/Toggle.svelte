@@ -19,6 +19,9 @@
 
 <style>
   .toggle {
+    /* Contains the hidden checkbox: without it the input is placed relative
+       to the page, and focusing it scrolls the whole app out of view. */
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -33,8 +36,19 @@
   }
   input {
     position: absolute;
+    top: 50%;
+    left: 0;
+    width: 32px;
+    height: 18px;
+    margin: 0;
+    transform: translateY(-50%);
     opacity: 0;
     pointer-events: none;
+  }
+  /* Keyboard focus is on the hidden checkbox; show it on the track. */
+  input:focus-visible + .track {
+    box-shadow: 0 0 0 3px var(--accent-soft);
+    outline: 1px solid var(--accent);
   }
   .track {
     position: relative;

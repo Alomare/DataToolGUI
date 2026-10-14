@@ -34,6 +34,7 @@ Requirements: [Node.js](https://nodejs.org) 20+, [Rust](https://rustup.rs) (MSVC
 npm install
 npm run tauri dev                      # run in development
 npm test                               # frontend unit tests
+npm run test:e2e                       # end-to-end tests of the real app (see tests/e2e/README.md)
 cargo test --manifest-path src-tauri/Cargo.toml
 npm run check                          # type-check
 npm run tauri build -- --no-bundle     # release exe
@@ -41,7 +42,7 @@ npm run package                        # dist/DataToolGUI-<version>-windows-x64(
 npm run package -- --with-datatool     # same, with the latest DataTool bundled
 ```
 
-In development, the portable folders (`datatool/`, `data/`) are created next to the dev executable in `src-tauri/target/debug/`.
+In development, the portable folders (`datatool/`, `data/`) are created next to the dev executable in `src-tauri/target/debug/`. Set `DATATOOLGUI_HOME` to use another folder instead (it also gets its own browser profile, so it can run next to a normal instance).
 
 ### When DataTool changes
 

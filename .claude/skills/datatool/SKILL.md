@@ -42,4 +42,6 @@ Source: github.com/overtools/OWLib, folder `DataTool/` (C#, .NET 10). Verified a
 - `[GUIDNames] Failed to parse line ...` is benign noise.
 
 ## Testing against the real tool
-A Steam install is at `C:\Program Files (x86)\Steam\steamapps\common\Overwatch`. To drive the dev app: start `npm run tauri dev` with `WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS=--remote-debugging-port=9222`, then use playwright-core `chromium.connectOverCDP('http://127.0.0.1:9222')`.
+A Steam install is at `C:\Program Files (x86)\Steam\steamapps\common\Overwatch`.
+- `npm run test:e2e` runs the Playwright suite against an isolated debug build (`tests/e2e/README.md`). Add a failing test before fixing a UI bug; `App.intact()` checks layout integrity.
+- Ad hoc driving: start `npm run tauri dev` with `WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS=--remote-debugging-port=9222`, then `chromium.connectOverCDP('http://127.0.0.1:9222')`. Stopping that background task can orphan Vite on port 1420; kill it before restarting.

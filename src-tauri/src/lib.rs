@@ -5,7 +5,7 @@ mod paths;
 mod process;
 
 use serde::Serialize;
-use tauri::{Manager, RunEvent};
+use tauri::{Manager, RunEvent, WebviewUrl, WebviewWindowBuilder};
 
 use paths::AppPaths;
 
@@ -30,22 +30,38 @@ fn app_info(paths: tauri::State<'_, AppPaths>) -> AppInfo {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    let app = tauri::Builder::default()
+    let isolated = paths::home_override().is_some();
+    let mut builder = tauri::Builder::default();
+    if !isolated {
         // A second launch focuses the running window: two instances would
         // share (and overwrite) the same settings and DataTool folders.
-        .plugin(tauri_plugin_single_instance::init(|app, _args, _cwd| {
+        builder = builder.plugin(tauri_plugin_single_instance::init(|app, _args, _cwd| {
             if let Some(w) = app.get_webview_window("main") {
                 let _ = w.unminimize();
                 let _ = w.set_focus();
             }
-        }))
+        }));
+    }
+    let app = builder
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
         .manage(process::Jobs::default())
         .manage(process::AllowedPrograms::default())
         .manage(cores::Downloads::default())
-        .setup(|app| {
+        .setup(move |app| {
             let paths = AppPaths::resolve(app.handle());
+            let mut window = WebviewWindowBuilder::new(app, "main", WebviewUrl::default())
+                .title("DataTool GUI")
+                .inner_size(1360.0, 900.0)
+                .min_inner_size(980.0, 640.0)
+                .center();
+            if isolated {
+                // Its own browser profile, so it can run next to a normal
+                // instance (WebView2 refuses to share one between processes
+                // started with different options).
+                window = window.data_directory(paths.data.join("webview"));
+            }
+            window.build()?;
             app.manage(paths);
             Ok(())
         })

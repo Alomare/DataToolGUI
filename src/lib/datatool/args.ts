@@ -162,7 +162,8 @@ export function buildArgs(ctx: BuildContext): BuiltCommand {
 /** Quote an argument for a Windows command prompt / PowerShell. */
 export function quoteArg(a: string): string {
   if (a === '') return '""';
-  return /[\s|&<>^()%!;,'`]/.test(a) ? `"${a}"` : a;
+  // `*` and `?` too: pasted into bash (Git Bash, WSL) they would be globbed.
+  return /[\s|&<>^()%!;,'`*?$]/.test(a) ? `"${a}"` : a;
 }
 
 export function formatCommand(exe: string, args: string[]): string {

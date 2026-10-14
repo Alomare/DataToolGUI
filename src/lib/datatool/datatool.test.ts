@@ -74,6 +74,11 @@ describe('query', () => {
     }
   });
 
+  it('keeps an empty target empty so it can be replaced', () => {
+    expect(serializeQuery(parseQuery('|skin=*'))).toBe('|skin=*');
+    expect(queryProblems('|skin=*', ['skin'])[0]).toMatch(/Choose who/);
+  });
+
   it('parses tags, items and exclusions', () => {
     const q = parseQuery('Mercy|skin=(rarity=legendary,rarity=!epic),Witch,!Default');
     expect(q.target).toBe('Mercy');
@@ -142,6 +147,8 @@ describe('args', () => {
     expect(formatCommand('C:\\DT\\DataTool.exe', ['C:\\Program Files\\OW', 'extract-unlocks', 'Tracer|skin=*'])).toBe(
       'C:\\DT\\DataTool.exe "C:\\Program Files\\OW" extract-unlocks "Tracer|skin=*"',
     );
+    // Globs are quoted so bash (Git Bash, WSL) doesn't expand them.
+    expect(formatCommand('DataTool.exe', ['x', 'extract-maps', '*'])).toBe('DataTool.exe x extract-maps "*"');
   });
 });
 

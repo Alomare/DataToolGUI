@@ -56,7 +56,7 @@
         {/if}
       </div>
     {/if}
-    {#each visible as l, i (i)}
+    {#each visible as l (l.n)}
       <div class="line {l.kind}">{l.text}</div>
     {:else}
       <div class="more">{lines.length ? 'No lines match.' : 'No output yet.'}</div>

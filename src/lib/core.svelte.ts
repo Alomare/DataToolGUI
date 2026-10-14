@@ -264,7 +264,9 @@ class Cores {
 
   /** Keep the newest `keepCores` installed builds (and always the active one). */
   async prune() {
-    const keep = Math.max(1, app.prefs.keepCores);
+    // The field can be cleared or hold junk; never let that delete versions.
+    const n = Math.floor(Number(app.prefs.keepCores));
+    const keep = Number.isFinite(n) && n >= 1 ? n : 3;
     const sorted = [...this.installed].sort((a, b) => compareVersions(coreKey(b.manifest?.tag ?? b.name), coreKey(a.manifest?.tag ?? a.name)));
     const active = this.active?.name;
     const extra = sorted.slice(keep).filter((c) => c.name !== active);

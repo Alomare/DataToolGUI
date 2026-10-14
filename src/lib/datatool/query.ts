@@ -45,8 +45,9 @@ export function serializePart(p: QueryPart): string {
 }
 
 export function serializeQuery(q: ParsedQuery): string {
-  const target = q.target.trim() || '*';
-  return [target, ...q.parts.map(serializePart)].join('|');
+  // An empty target stays empty (validation asks for one) so the user can
+  // clear it and pick another.
+  return [q.target.trim(), ...q.parts.map(serializePart)].join('|');
 }
 
 export function parseQuery(text: string): ParsedQuery {

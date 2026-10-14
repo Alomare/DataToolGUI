@@ -43,7 +43,7 @@
   <span class="badge" data-tip="Not in DataTool's own help: an expert or debug option">advanced</span>
 {/snippet}
 
-<div class="flag" class:changed>
+<div class="flag" class:changed data-flag={flag.name}>
   {#if flag.type === 'boolean'}
     <Toggle checked={!!effective} {label} {help} onchange={(v) => set(v)} />
   {:else}

@@ -32,7 +32,9 @@ impl AppPaths {
             .and_then(|p| p.parent().map(Path::to_path_buf))
             .unwrap_or_else(|| PathBuf::from("."));
 
-        let (root, portable) = if is_writable(&exe_dir) {
+        let (root, portable) = if let Some(home) = home_override() {
+            (home, true)
+        } else if is_writable(&exe_dir) {
             (exe_dir.clone(), true)
         } else {
             let fallback = app.path().app_data_dir().unwrap_or_else(|_| exe_dir.clone());
@@ -54,6 +56,12 @@ impl AppPaths {
         }
         paths
     }
+}
+
+/// `DATATOOLGUI_HOME` replaces the folder next to the exe (used by the
+/// end-to-end tests, and handy for keeping several setups side by side).
+pub fn home_override() -> Option<PathBuf> {
+    std::env::var_os("DATATOOLGUI_HOME").filter(|v| !v.is_empty()).map(PathBuf::from)
 }
 
 fn is_writable(dir: &Path) -> bool {

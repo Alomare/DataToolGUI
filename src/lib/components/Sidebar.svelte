@@ -65,7 +65,7 @@
         </button>
         {#if !isCollapsed}
           {#each g.modes as m (m.keyword)}
-            <button class="mode" class:active={app.page === 'mode' && app.mode === m.keyword} onclick={() => open(m)} data-tip={`${m.description || m.label}\n${m.keyword}`}>
+            <button class="mode" data-mode={m.keyword} class:active={app.page === 'mode' && app.mode === m.keyword} onclick={() => open(m)} data-tip={`${m.description || m.label}\n${m.keyword}`}>
               <span class="ellipsis">{m.label}</span>
               {#if !m.live && m.sensitive}<span class="tiny faint">debug</span>{/if}
             </button>
