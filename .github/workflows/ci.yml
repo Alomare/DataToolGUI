@@ -52,6 +52,11 @@ jobs:
   e2e:
     # The real app in WebView2, driven by Playwright. No game on the runner,
     # so tests that read game files are skipped.
+    # Non-blocking: on GitHub's hosted runners the app starts but WebView2
+    # never opens its debug port (no interactive desktop). Run the suite
+    # locally with `npm run test:e2e`; this job is kept to pick it up if the
+    # runner image changes.
+    continue-on-error: true
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
