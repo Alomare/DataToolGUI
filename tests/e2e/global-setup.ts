@@ -9,8 +9,8 @@
 //                  tests that read game files are skipped without one
 //   E2E_KEEP=1     keep the temporary data folder
 
-import { execFileSync, spawn } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { execFileSync, spawn, type ChildProcess } from 'node:child_process';
+import { existsSync, mkdirSync, mkdtempSync, openSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -93,9 +93,12 @@ function freePort(): Promise<number> {
   });
 }
 
-async function waitForCdp(port: number, ms = 60_000) {
+async function waitForCdp(port: number, child: ChildProcess, log: string, ms = 120_000) {
   const end = Date.now() + ms;
   while (Date.now() < end) {
+    if (child.exitCode !== null) {
+      throw new Error(`The app exited with code ${child.exitCode} before opening its debug port.\n${tail(log)}`);
+    }
     try {
       const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
       if (list.some((t: { type: string }) => t.type === 'page')) return;
@@ -104,7 +107,15 @@ async function waitForCdp(port: number, ms = 60_000) {
     }
     await new Promise((r) => setTimeout(r, 300));
   }
-  throw new Error(`The app didn't open a debug port on ${port}`);
+  throw new Error(`The app didn't open a debug port on ${port} within ${ms / 1000} s.\n${tail(log)}`);
+}
+
+function tail(file: string): string {
+  try {
+    return `App output:\n${readFileSync(file, 'utf8').split('\n').slice(-40).join('\n')}`;
+  } catch {
+    return 'No app output.';
+  }
 }
 
 export default async function globalSetup() {
@@ -114,11 +125,18 @@ export default async function globalSetup() {
   const home = mkdtempSync(join(tmpdir(), 'dtg-e2e-'));
   const port = await freePort();
 
+  const log = join(home, 'app.log');
+  const out = openSync(log, 'a');
   const child = spawn(exe, [], {
-    env: { ...process.env, DATATOOLGUI_HOME: home, WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--remote-debugging-port=${port}` },
-    stdio: 'ignore',
+    env: {
+      ...process.env,
+      DATATOOLGUI_HOME: home,
+      WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--remote-debugging-port=${port}`,
+      RUST_BACKTRACE: '1',
+    },
+    stdio: ['ignore', out, out],
   });
-  await waitForCdp(port);
+  await waitForCdp(port, child, log);
 
   process.env.E2E_PORT = String(port);
   process.env.E2E_PID = String(child.pid ?? '');
