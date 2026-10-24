@@ -22,13 +22,16 @@
     // Closing kills a running extraction; make sure that's intended.
     const closing = getCurrentWindow().onCloseRequested(async (event) => {
       const active = queue.active;
-      if (!active) return;
-      const waiting = queue.pending - 1;
-      const stop = await ask(
-        `${active.title} is still running${waiting ? ` (and ${waiting} more queued)` : ''}. Closing stops it and leaves its output unfinished.`,
-        { title: 'Stop and close?', kind: 'warning', okLabel: 'Stop and close', cancelLabel: 'Keep running' },
-      );
-      if (!stop) event.preventDefault();
+      if (active) {
+        const waiting = queue.pending - 1;
+        const stop = await ask(
+          `${active.title} is still running${waiting ? ` (and ${waiting} more queued)` : ''}. Closing stops it and leaves its output unfinished.`,
+          { title: 'Stop and close?', kind: 'warning', okLabel: 'Stop and close', cancelLabel: 'Keep running' },
+        );
+        if (!stop) return event.preventDefault();
+      }
+      // Settings are saved a moment after each change; don't lose the last one.
+      await app.flushSave();
     });
     (async () => {
       try {

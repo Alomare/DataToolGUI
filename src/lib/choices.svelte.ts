@@ -26,6 +26,7 @@ class Choices {
   loading = $state(false);
   error = $state('');
   private pending: Promise<void> | null = null;
+  private pendingKey = '';
 
   /** Cache key for the current DataTool build, game install and language. */
   get key(): string {
@@ -39,18 +40,24 @@ class Choices {
     return !!this.key && this.loadedKey !== this.key;
   }
 
-  private get cacheFile(): string {
-    return joinPath(app.info!.paths.cache, `choices-${this.key}.json`);
+  private cacheFile(key: string): string {
+    return joinPath(app.info!.paths.cache, `choices-${key}.json`);
   }
 
   /** Load cached names, or read them from the game when `fetch` is set. */
-  async ensure(fetch: boolean) {
+  async ensure(fetch: boolean): Promise<void> {
     const key = this.key;
     if (!key || this.loadedKey === key) return;
-    if (this.pending) return this.pending;
+    if (this.pending) {
+      if (this.pendingKey === key) return this.pending;
+      // The language or install changed meanwhile: load for the new key after.
+      await this.pending;
+      return this.ensure(fetch);
+    }
+    this.pendingKey = key;
     this.pending = (async () => {
       try {
-        const text = await backend.readText(this.cacheFile);
+        const text = await backend.readText(this.cacheFile(key));
         if (text) {
           const cached = JSON.parse(text) as CacheFile;
           if (cached.key === key) {
@@ -101,7 +108,7 @@ class Choices {
       this.loadedKey = key;
       this.loadedAt = Date.now();
       const cache: CacheFile = { key, loadedAt: this.loadedAt, build, data };
-      await backend.writeText(this.cacheFile, JSON.stringify(cache));
+      await backend.writeText(this.cacheFile(key), JSON.stringify(cache));
       await backend.removeFile(out).catch(() => {});
     } catch (e) {
       this.error = backend.errorText(e);

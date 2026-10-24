@@ -68,6 +68,8 @@ class Cores {
   releasesError = $state('');
   checking = $state(false);
   installing = $state<InstallProgress | null>(null);
+  /** Bumped by each loadSchema; a reply for an older call is dropped. */
+  private schemaSeq = 0;
 
   get active(): CoreInfo | null {
     if (app.prefs.customCore) return this.custom;
@@ -136,10 +138,13 @@ class Cores {
   /** Ask the active DataTool what it can do (no game files needed, ~1 s). */
   async loadSchema() {
     const core = this.active;
+    // Switching builds quickly runs this twice; only the last one may land.
+    const seq = ++this.schemaSeq;
     this.schemaError = '';
     this.version = null;
     if (!core) {
       this.schema = buildSchema(null);
+      this.loadingSchema = false;
       return;
     }
     this.loadingSchema = true;
@@ -149,15 +154,17 @@ class Cores {
         backend.runCapture(core.exe, ['.', 'util-tool-info', '--json', `--out=${out}`]),
         backend.runCapture(core.exe, ['--help']),
       ]);
-      this.version = parseCoreVersion(info.stdout + info.stderr) ?? parseCoreVersion(help.stdout);
       const text = await backend.readText(out);
+      if (seq !== this.schemaSeq) return;
+      this.version = parseCoreVersion(info.stdout + info.stderr) ?? parseCoreVersion(help.stdout);
       if (!text) throw new Error((info.stderr || info.stdout).split('\n').slice(-3).join(' ') || 'DataTool produced no tool info');
       this.schema = buildSchema(JSON.parse(text) as ToolInfo, help.stdout);
     } catch (e) {
+      if (seq !== this.schemaSeq) return;
       this.schemaError = backend.errorText(e);
       this.schema = buildSchema(null);
     } finally {
-      this.loadingSchema = false;
+      if (seq === this.schemaSeq) this.loadingSchema = false;
     }
   }
 

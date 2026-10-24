@@ -7,7 +7,7 @@
 //!   (DataTool itself has no progress output for most modes).
 
 use std::collections::{HashMap, HashSet};
-use std::io::{Read, Write};
+use std::io::{BufWriter, Read, Write};
 use std::path::{Path, PathBuf};
 use std::process::{Child, Command, Stdio};
 use std::sync::atomic::{AtomicBool, Ordering};
@@ -285,6 +285,19 @@ pub fn start_job(
     stdout_file: Option<String>,
 ) -> Result<u32, String> {
     allowed.check(&program)?;
+    // Before spawning: failing after it would leave DataTool running unseen.
+    let mut tee = match stdout_file.as_deref().filter(|s| !s.is_empty()) {
+        Some(path) => {
+            if let Some(parent) = Path::new(path).parent() {
+                let _ = std::fs::create_dir_all(parent);
+            }
+            let file = std::fs::File::create(path).map_err(|e| format!("Could not create {path}: {e}"))?;
+            // List modes can print hundreds of thousands of lines.
+            Some(BufWriter::new(file))
+        }
+        None => None,
+    };
+
     // File timestamps can be coarser than the clock; start a little early so
     // files written in the first instant still count.
     let started = SystemTime::now() - Duration::from_secs(2);
@@ -298,16 +311,6 @@ pub fn start_job(
         .lock()
         .unwrap()
         .insert(id.clone(), RunningJob { pid, cancelled: cancelled.clone() });
-
-    let mut tee = match stdout_file.as_deref().filter(|s| !s.is_empty()) {
-        Some(path) => {
-            if let Some(parent) = Path::new(path).parent() {
-                let _ = std::fs::create_dir_all(parent);
-            }
-            Some(std::fs::File::create(path).map_err(|e| format!("Could not create {path}: {e}"))?)
-        }
-        None => None,
-    };
 
     // Readers send lines to one emitter, which batches them: some modes print
     // tens of thousands of lines and one event per line would swamp the UI.
@@ -328,6 +331,10 @@ pub fn start_job(
                 }
                 let _ = tx.send(OutputLine { stream: name, line });
             });
+            // Complete on disk before the exit event lets the UI read it.
+            if let Some(f) = tee.as_mut() {
+                let _ = f.flush();
+            }
         })
     })
     .collect();

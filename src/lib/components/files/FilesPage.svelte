@@ -23,6 +23,8 @@
   let grid = $state(false);
   let filter = $state('');
   let limit = $state(400);
+  // A slow folder that answers after the user moved on must not replace the newer one.
+  let loadSeq = 0;
 
   let path = $derived(app.browsePath || app.prefs.outputDir);
   let crumbs = $derived.by(() => {
@@ -39,19 +41,23 @@
   });
 
   async function load(p: string) {
+    const seq = ++loadSeq;
     loading = true;
     error = '';
     selected = null;
     limit = 400;
     try {
-      entries = await backend.listDir(p);
+      const list = await backend.listDir(p);
+      if (seq !== loadSeq) return;
+      entries = list;
       // Folders full of images read best as a grid.
       grid = entries.filter((e) => BROWSER_IMAGE.includes(extname(e.name))).length > entries.length / 2;
     } catch (e) {
+      if (seq !== loadSeq) return;
       entries = [];
       error = backend.errorText(e);
     } finally {
-      loading = false;
+      if (seq === loadSeq) loading = false;
     }
   }
 
@@ -64,7 +70,8 @@
     selected = e;
     text = null;
     if (TEXT.includes(extname(e.name)) && e.size < 1_000_000) {
-      text = await backend.readText(e.path).catch(() => null);
+      const t = await backend.readText(e.path).catch(() => null);
+      if (selected?.path === e.path) text = t;
     }
   }
 

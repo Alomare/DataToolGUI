@@ -73,7 +73,7 @@ fn inspect(path: &Path, source: &str) -> Option<GameInstall> {
 
 /// Validate a folder picked by the user, with a hint when it's close but wrong
 /// (e.g. the `_retail_` subfolder or the `data` folder).
-#[tauri::command]
+#[tauri::command(async)]
 pub fn check_install(path: String) -> InstallCheck {
     let p = PathBuf::from(path.trim().trim_end_matches(['\\', '/']));
     if !p.is_dir() {

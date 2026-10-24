@@ -1,10 +1,12 @@
 # DataTool GUI
 
-A portable desktop app for [DataTool](https://github.com/overtools/OWLib) (overtools/OWLib), the tool that extracts models, textures, sounds, maps and data from Overwatch, so you never have to use the command line.
+A portable Windows app for [DataTool](https://github.com/overtools/OWLib) (overtools/OWLib), the tool that extracts models, textures, sounds, maps and data from Overwatch. You fill in forms instead of typing commands.
 
-- **Portable.** One folder, no installer, no .NET to install. Unzip and run `DataToolGUI.exe`. DataTool, settings and caches stay in that folder.
-- **Complete.** Every DataTool mode and flag, including the unlisted debug modes and hidden options behind an "advanced" switch, plus free-form extra arguments.
-- **Always current.** Every Overwatch patch needs a new DataTool release. The app checks GitHub on start, installs a release in one click (or automatically) and keeps older versions for rollback. The forms are built from what the installed DataTool reports about itself, so new modes and flags appear without an app update.
+There is no installer and no .NET to set up. Unzip the folder and run `DataToolGUI.exe`; DataTool, your settings and the caches all live in that folder.
+
+Every DataTool mode and flag is available, including the unlisted debug modes and hidden options (behind an "advanced" switch), and you can add your own arguments on top.
+
+Each Overwatch patch needs a new DataTool release. The app checks GitHub when it starts and installs a new release in one click, or on its own if you turn that on. Older versions stay installed so you can roll back. The forms are built from what the installed DataTool reports about itself, so new modes and flags show up without an app update.
 
 ## Features
 
@@ -22,9 +24,13 @@ A portable desktop app for [DataTool](https://github.com/overtools/OWLib) (overt
 
 ## Download
 
-Get `DataToolGUI-<version>-windows-x64.zip` from the Releases page, unzip it anywhere and run `DataToolGUI.exe`. It needs Windows 10 or 11 (the Microsoft Edge WebView2 runtime ships with both). On first start the app downloads the latest DataTool (about 75 MB).
+Get `DataToolGUI-<version>-windows-x64.zip` from the [latest release](https://github.com/Alomare/DataToolGUI/releases/latest), unzip it anywhere and run `DataToolGUI.exe`. It needs Windows 10 or 11, which both ship with the Microsoft Edge WebView2 runtime it uses. On first start the app downloads the latest DataTool (about 75 MB).
 
-Close Overwatch and Battle.net while extracting. Import models and maps into Blender with [io_scene_owm](https://github.com/overtools/io_scene_owm).
+The exe isn't code-signed, so Windows SmartScreen may stop it the first time. Click "More info", then "Run anyway".
+
+Close Overwatch and Battle.net while extracting. To bring models and maps into Blender, use [io_scene_owm](https://github.com/overtools/io_scene_owm).
+
+Right after an Overwatch patch, extractions fail until overtools publishes a DataTool release for the new build. The app tells you when that's the cause, and offers the new release as soon as it's out.
 
 ## Building from source
 
@@ -42,11 +48,11 @@ npm run package                        # dist/DataToolGUI-<version>-windows-x64(
 npm run package -- --with-datatool     # same, with the latest DataTool bundled
 ```
 
-In development, the portable folders (`datatool/`, `data/`) are created next to the dev executable in `src-tauri/target/debug/`. Set `DATATOOLGUI_HOME` to use another folder instead (it also gets its own browser profile, so it can run next to a normal instance).
+In development, the portable folders (`datatool/`, `data/`) are created next to the dev executable in `src-tauri/target/debug/`, so `cargo clean` deletes them along with the build. Set `DATATOOLGUI_HOME` to use another folder instead. That folder also gets its own browser profile, so it can run next to a normal instance.
 
 ### When DataTool changes
 
-Nothing is needed for a normal DataTool update. The app reads the modes, flags and query syntax from `DataTool util-tool-info` and the defaults from `DataTool --help`.
+A normal DataTool update needs no change here. The app reads the modes, flags and query syntax from `DataTool util-tool-info` and the defaults from `DataTool --help`.
 
 `src/lib/datatool/catalog.json` adds what that output leaves out (debug modes, hidden flags, aliases). Regenerate it from the OWLib source when DataTool adds those:
 

@@ -61,6 +61,8 @@ const LOG_LIMIT = 20000;
 class JobQueue {
   jobs = $state<Job[]>([]);
   private listening = false;
+  /** Jobs the user stopped, for a stop that comes before DataTool has started. */
+  private stopRequested = new Set<string>();
 
   get active(): Job | undefined {
     return this.jobs.find((j) => j.status === 'running');
@@ -126,6 +128,7 @@ class JobQueue {
   }
 
   private finish(job: Job, e: backend.JobExitEvent) {
+    this.stopRequested.delete(job.id);
     job.endedAt = Date.now();
     job.code = e.code;
     const texts = job.lines.map((l) => l.text);
@@ -231,7 +234,10 @@ class JobQueue {
         watchDir: job.output ?? undefined,
         stdoutFile: job.stdoutFile ?? undefined,
       });
+      // Stop was clicked while the output folder was being created.
+      if (this.stopRequested.has(job.id)) await backend.stopJob(job.id);
     } catch (e) {
+      this.stopRequested.delete(job.id);
       job.status = 'failed';
       job.error = backend.errorText(e);
       job.endedAt = Date.now();
@@ -246,7 +252,10 @@ class JobQueue {
       job.status = 'cancelled';
       return;
     }
-    if (job.status === 'running') await backend.stopJob(id);
+    if (job.status === 'running') {
+      this.stopRequested.add(id);
+      await backend.stopJob(id);
+    }
   }
 
   retry(id: string) {

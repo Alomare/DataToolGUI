@@ -1,12 +1,17 @@
 //! Small filesystem helpers for settings, cached tool info, list results and
 //! the output browser.
 
+//!
+//! Commands that touch the disk are `async` so Tauri runs them off the main
+//! thread: a big folder or result file must not freeze the window.
+
 use std::path::{Path, PathBuf};
+use std::sync::atomic::{AtomicU64, Ordering};
 use std::time::UNIX_EPOCH;
 
 use serde::Serialize;
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn read_text(path: String) -> Result<Option<String>, String> {
     match std::fs::read(&path) {
         Ok(bytes) => {
@@ -18,19 +23,27 @@ pub fn read_text(path: String) -> Result<Option<String>, String> {
     }
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn write_text(path: String, contents: String) -> Result<(), String> {
     let p = Path::new(&path);
     if let Some(parent) = p.parent() {
         std::fs::create_dir_all(parent).map_err(|e| e.to_string())?;
     }
-    // Write-then-rename so a crash never leaves a half-written file.
-    let tmp = p.with_extension("tmp");
-    std::fs::write(&tmp, contents).map_err(|e| format!("Could not write {path}: {e}"))?;
-    std::fs::rename(&tmp, p).map_err(|e| format!("Could not write {path}: {e}"))
+    // Write-then-rename so a crash never leaves a half-written file. The temp
+    // name is unique: writes run concurrently, and `a.json`/`a.txt` would
+    // otherwise share `a.tmp`.
+    static NEXT: AtomicU64 = AtomicU64::new(0);
+    let mut tmp = p.as_os_str().to_owned();
+    tmp.push(format!(".{}-{}.tmp", std::process::id(), NEXT.fetch_add(1, Ordering::Relaxed)));
+    let tmp = PathBuf::from(tmp);
+    let result = std::fs::write(&tmp, contents).and_then(|()| std::fs::rename(&tmp, p));
+    if result.is_err() {
+        let _ = std::fs::remove_file(&tmp);
+    }
+    result.map_err(|e| format!("Could not write {path}: {e}"))
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn copy_file(from: String, to: String) -> Result<(), String> {
     if let Some(parent) = Path::new(&to).parent() {
         std::fs::create_dir_all(parent).map_err(|e| e.to_string())?;
@@ -38,7 +51,7 @@ pub fn copy_file(from: String, to: String) -> Result<(), String> {
     std::fs::copy(&from, &to).map(|_| ()).map_err(|e| format!("Could not copy to {to}: {e}"))
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn remove_file(path: String) -> Result<(), String> {
     match std::fs::remove_file(&path) {
         Ok(()) => Ok(()),
@@ -47,12 +60,12 @@ pub fn remove_file(path: String) -> Result<(), String> {
     }
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn path_exists(path: String) -> bool {
     Path::new(&path).exists()
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn make_dir(path: String) -> Result<(), String> {
     std::fs::create_dir_all(&path).map_err(|e| format!("Could not create {path}: {e}"))
 }
@@ -69,7 +82,7 @@ pub struct DirEntry {
 }
 
 /// One level of a folder, folders first, then by name.
-#[tauri::command]
+#[tauri::command(async)]
 pub fn list_dir(path: String) -> Result<Vec<DirEntry>, String> {
     let entries = std::fs::read_dir(&path).map_err(|e| format!("Could not open {path}: {e}"))?;
     let mut out: Vec<DirEntry> = entries
@@ -115,7 +128,7 @@ fn natural_key(s: &str) -> String {
 }
 
 /// Delete the oldest files in `dir` beyond the newest `keep`.
-#[tauri::command]
+#[tauri::command(async)]
 pub fn prune_dir(path: String, keep: usize) -> Result<usize, String> {
     let Ok(entries) = std::fs::read_dir(&path) else { return Ok(0) };
     let mut files: Vec<(std::time::SystemTime, PathBuf)> = entries
@@ -138,6 +151,27 @@ pub fn prune_dir(path: String, keep: usize) -> Result<usize, String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn write_text_replaces_atomically() {
+        let dir = std::env::temp_dir().join(format!("dtg-write-{}", std::process::id()));
+        let file = dir.join("settings.json");
+        let path = file.to_string_lossy().to_string();
+        // Concurrent writers of the same file all succeed; the last one wins.
+        let handles: Vec<_> = (0..8)
+            .map(|i| {
+                let path = path.clone();
+                std::thread::spawn(move || write_text(path, format!("{{\"n\":{i}}}")))
+            })
+            .collect();
+        for h in handles {
+            h.join().unwrap().unwrap();
+        }
+        assert!(std::fs::read_to_string(&file).unwrap().starts_with("{\"n\":"));
+        // No temp files left behind.
+        assert_eq!(std::fs::read_dir(&dir).unwrap().count(), 1);
+        std::fs::remove_dir_all(&dir).unwrap();
+    }
 
     #[test]
     fn natural_sort() {

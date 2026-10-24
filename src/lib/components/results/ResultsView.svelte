@@ -25,6 +25,7 @@
 
   $effect(() => {
     const p = path;
+    let current = true;
     loading = true;
     error = '';
     data = null;
@@ -32,6 +33,7 @@
     backend
       .readText(p)
       .then((text) => {
+        if (!current) return;
         raw = text ?? '';
         if (text === null) error = 'The result file is missing (DataTool may have written nothing).';
         else if (kind === 'json') {
@@ -42,22 +44,28 @@
           }
         }
       })
-      .catch((e) => (error = backend.errorText(e)))
-      .finally(() => (loading = false));
+      .catch((e) => current && (error = backend.errorText(e)))
+      .finally(() => current && (loading = false));
+    return () => (current = false);
   });
 
   let table = $derived(kind === 'json' && data !== null ? toTable(data) : null);
   /** The chosen view, falling back to the tree when the data isn't tabular. */
   let shown = $derived(view === 'table' && !table ? 'tree' : view);
 
+  // Each row's text, lowercased once per result rather than on every keystroke.
+  let haystacks = $derived(table ? table.rows.map((x) => `${x.key} ${searchText(x.record)}`.toLowerCase()) : []);
+  const collator = new Intl.Collator(undefined, { numeric: true });
+
   let rows = $derived.by(() => {
     if (!table) return [];
     const q = search.trim().toLowerCase();
-    let r = q ? table.rows.filter((x) => x.key.toLowerCase().includes(q) || searchText(x.record).toLowerCase().includes(q)) : table.rows;
+    let r = q ? table.rows.filter((_, i) => haystacks[i].includes(q)) : table.rows;
     if (sortCol) {
       const col = sortCol;
-      const get = (x: (typeof r)[number]) => (col === '__key' ? x.key : cellText(x.record[col]));
-      r = [...r].sort((a, b) => sortDir * get(a).localeCompare(get(b), undefined, { numeric: true }));
+      const keyed = r.map((x) => ({ x, k: col === '__key' ? x.key : cellText(x.record[col]) }));
+      keyed.sort((a, b) => sortDir * collator.compare(a.k, b.k));
+      r = keyed.map((e) => e.x);
     }
     return r;
   });

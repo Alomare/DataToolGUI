@@ -223,7 +223,7 @@ fn core_info(dir: &Path, managed: bool, allowed: &AllowedPrograms) -> Option<Cor
     })
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn list_cores(paths: tauri::State<'_, AppPaths>, allowed: tauri::State<'_, AllowedPrograms>) -> Vec<CoreInfo> {
     let Ok(entries) = std::fs::read_dir(&paths.cores) else {
         return vec![];
@@ -238,7 +238,7 @@ pub fn list_cores(paths: tauri::State<'_, AppPaths>, allowed: tauri::State<'_, A
 }
 
 /// Use a DataTool folder (or DataTool.exe) the user already has.
-#[tauri::command]
+#[tauri::command(async)]
 pub fn open_core(path: String, allowed: tauri::State<'_, AllowedPrograms>) -> Result<CoreInfo, String> {
     let p = PathBuf::from(&path);
     let dir = if p.is_file() { p.parent().map(Path::to_path_buf).unwrap_or(p) } else { p };
@@ -336,7 +336,7 @@ pub async fn remove_core(paths: tauri::State<'_, AppPaths>, name: String) -> Res
 }
 
 /// Delete DataTool's saved-arguments file, which it otherwise adds to every run.
-#[tauri::command]
+#[tauri::command(async)]
 pub fn delete_args_file(path: String) -> Result<(), String> {
     let p = PathBuf::from(&path);
     let name = p.file_name().map(|n| n.to_string_lossy().to_string()).unwrap_or_default();

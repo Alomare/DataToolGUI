@@ -50,6 +50,9 @@ pub fn run() {
         .manage(cores::Downloads::default())
         .setup(move |app| {
             let paths = AppPaths::resolve(app.handle());
+            let data = paths.data.clone();
+            // Managed before the page exists, so no command can run without it.
+            app.manage(paths);
             let mut window = WebviewWindowBuilder::new(app, "main", WebviewUrl::default())
                 .title("DataTool GUI")
                 .inner_size(1360.0, 900.0)
@@ -59,10 +62,9 @@ pub fn run() {
                 // Its own browser profile, so it can run next to a normal
                 // instance (WebView2 refuses to share one between processes
                 // started with different options).
-                window = window.data_directory(paths.data.join("webview"));
+                window = window.data_directory(data.join("webview"));
             }
             window.build()?;
-            app.manage(paths);
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![

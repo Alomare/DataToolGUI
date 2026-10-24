@@ -109,6 +109,7 @@ class AppState {
 
   loaded = false;
   private saveTimer: ReturnType<typeof setTimeout> | null = null;
+  private unsaved: SavedFile | null = null;
 
   get settingsPath(): string {
     return this.info ? joinPath(this.info.paths.data, 'settings.json') : '';
@@ -148,12 +149,21 @@ class AppState {
       presets: clone(this.presets),
       history: clone(this.history),
     };
+    this.unsaved = snapshot;
     if (this.saveTimer) clearTimeout(this.saveTimer);
-    this.saveTimer = setTimeout(() => {
-      backend.writeText(this.settingsPath, JSON.stringify(snapshot, null, 2)).catch((e) => {
-        this.notify(`Couldn't save settings: ${backend.errorText(e)}`, 'error');
-      });
-    }, 400);
+    this.saveTimer = setTimeout(() => void this.flushSave(), 400);
+  }
+
+  /** Write a pending save now (before the window closes). */
+  async flushSave() {
+    if (this.saveTimer) clearTimeout(this.saveTimer);
+    this.saveTimer = null;
+    const snapshot = this.unsaved;
+    if (!snapshot) return;
+    this.unsaved = null;
+    await backend.writeText(this.settingsPath, JSON.stringify(snapshot, null, 2)).catch((e) => {
+      this.notify(`Couldn't save settings: ${backend.errorText(e)}`, 'error');
+    });
   }
 
   task(mode: string): TaskForm {
