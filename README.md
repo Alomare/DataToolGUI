@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="assets/logo/app-icon-256.png" alt="DataTool GUI logo" width="128" height="128" />
+</p>
+
 # DataTool GUI
 
-A portable Windows app for [DataTool](https://github.com/overtools/OWLib) (overtools/OWLib), the tool that extracts models, textures, sounds, maps and data from Overwatch. You fill in forms instead of typing commands.
+A portable Windows app for [DataTool](https://github.com/overtools/OWLib) (overtools/OWLib), the tool that extracts models, textures, sounds, maps and data from Overwatch. It puts DataTool's command line behind forms.
 
 There is no installer and no .NET to set up. Unzip the folder and run `DataToolGUI.exe`; DataTool, your settings and the caches all live in that folder.
 

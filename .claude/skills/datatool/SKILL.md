@@ -1,6 +1,6 @@
 ---
 name: datatool
-description: How DataTool (overtools/OWLib) is invoked, parsed and released — CLI grammar, query syntax, self-description modes, log shapes and failure signatures. Use when changing how this app builds DataTool commands, reads its output, or handles a new DataTool release.
+description: How DataTool (overtools/OWLib) is invoked, parsed and released: CLI grammar, query syntax, self-description modes, log shapes and failure signatures. Use when changing how this app builds DataTool commands, reads its output, or handles a new DataTool release.
 ---
 
 # DataTool facts this app depends on

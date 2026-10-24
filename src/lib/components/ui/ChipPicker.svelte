@@ -150,7 +150,7 @@
         </button>
       {/each}
       {#if filtered.length > LIMIT}
-        <div class="more tiny faint">{(filtered.length - LIMIT).toLocaleString()} more — keep typing to narrow down</div>
+        <div class="more tiny faint">{(filtered.length - LIMIT).toLocaleString()} more. Keep typing to narrow the list.</div>
       {/if}
     </div>
   {/if}

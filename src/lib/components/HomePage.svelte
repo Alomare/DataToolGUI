@@ -83,7 +83,7 @@
             <strong>Install DataTool</strong>
           </div>
           {#if needsCore}
-            <p class="small muted">DataTool reads the game files; this app drives it. It's downloaded into the app's folder{cores.latest ? ` (${cores.latest.tag_name}, ${formatBytes(releaseAsset(cores.latest)!.size)})` : ''}.</p>
+            <p class="small muted">This app runs DataTool, which reads the game files. It's downloaded into the app's folder{cores.latest ? ` (${cores.latest.tag_name}, ${formatBytes(releaseAsset(cores.latest)!.size)})` : ''}.</p>
             {#if cores.installing}
               {@const i = cores.installing}
               <div class="row">
@@ -155,7 +155,7 @@
     {#if gameAhead && !cores.update}
       <div class="notice warn">
         <TriangleAlert size={16} />
-        <span class="small">Overwatch was updated ({app.game?.build}) after this DataTool release ({cores.supportsGame}). If extractions fail, wait for a new DataTool release — the app checks for it on start.</span>
+        <span class="small">Overwatch was updated ({app.game?.build}) after this DataTool release ({cores.supportsGame}). If extractions fail, wait for a new DataTool release. The app checks for one when it starts.</span>
       </div>
     {/if}
   {/if}

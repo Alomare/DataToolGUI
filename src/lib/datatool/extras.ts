@@ -1,5 +1,5 @@
 // Hand-written knowledge about DataTool modes and flags: friendlier names,
-// grouping and help. Everything here is optional — modes and flags a new
+// grouping and help. Everything here is optional: modes and flags a new
 // DataTool release adds still appear, just with DataTool's own wording.
 
 import type { QueryInfo } from './schema';

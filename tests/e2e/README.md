@@ -25,7 +25,7 @@ seeded settings (see `defaultSeed` in `fixtures.ts`).
 
 ## What's checked
 
-- **Integrity after interactions** (`App.intact()`): the page itself never
+- After each interaction, `App.intact()` checks that the page itself never
   scrolls, the app fills the window, nothing is wider than the window or
   spills out of its box, and no notification covers Run or Stop. Any console
   error fails the test.

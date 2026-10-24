@@ -69,7 +69,7 @@
   <section class="panel about">
     <header><h2>About</h2></header>
     <p class="small">
-      DataTool GUI {app.info?.version} — a front end for <button class="link-btn" onclick={() => openUrl('https://github.com/overtools/OWLib')}>DataTool</button> by the overtools
+      DataTool GUI {app.info?.version} is a front end for <button class="link-btn" onclick={() => openUrl('https://github.com/overtools/OWLib')}>DataTool</button> by the overtools
       team. Not affiliated with Blizzard Entertainment.
     </p>
     <p class="small muted">

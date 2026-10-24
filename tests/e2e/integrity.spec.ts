@@ -139,3 +139,28 @@ test('an unreadable settings file is kept, not overwritten', async ({ app }) => 
   expect(backups.length).toBe(1);
   app.errors.length = 0; // the failed read is logged on purpose
 });
+
+test('the sidebar logo loads and takes the accent colour', async ({ app }) => {
+  const { page } = app;
+  const logo = page.locator('.side .brand .logo');
+  await expect(logo).toBeVisible();
+  // A mask that fails to load paints nothing, with no console error to catch.
+  const ok = await logo.evaluate(async (el) => {
+    const url = getComputedStyle(el).maskImage.match(/url\("?(.*?)"?\)/)?.[1];
+    if (!url) return false;
+    const img = new Image();
+    img.src = url;
+    await img.decode().catch(() => {});
+    return img.naturalWidth > 0;
+  });
+  expect(ok).toBe(true);
+  const [bg, accent] = await logo.evaluate((el) => {
+    const probe = document.createElement('span');
+    probe.style.color = 'var(--accent)';
+    document.body.append(probe);
+    const accent = getComputedStyle(probe).color;
+    probe.remove();
+    return [getComputedStyle(el).backgroundColor, accent];
+  });
+  expect(bg).toBe(accent);
+});

@@ -52,7 +52,7 @@
       <select value={String(effective ?? '')} onchange={(e) => set((e.currentTarget as HTMLSelectElement).value)}>
         {#if !flag.choices.includes(String(base))}<option value={String(base ?? '')}>{isLanguage ? 'Game\'s language' : `Default (${baseText})`}</option>{/if}
         {#each flag.choices as c (c)}
-          <option value={c}>{isLanguage && LANGUAGES[c] ? `${LANGUAGES[c]} (${c})` : c}{c === String(base) ? ` — ${inheritedLabel}` : ''}</option>
+          <option value={c}>{isLanguage && LANGUAGES[c] ? `${LANGUAGES[c]} (${c})` : c}{c === String(base) ? ` · ${inheritedLabel}` : ''}</option>
         {/each}
       </select>
     {:else}

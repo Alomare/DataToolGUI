@@ -34,7 +34,7 @@
 
 <aside class="side">
   <div class="brand">
-    <img src="/favicon.png" alt="" width="22" height="22" />
+    <span class="logo" aria-hidden="true"></span>
     <span>DataTool <span class="faint">GUI</span></span>
   </div>
 
@@ -99,6 +99,14 @@
     padding: 0 16px;
     font-weight: 700;
     font-size: 15px;
+  }
+  /* The glyph is a mask so it takes the theme's accent colour. */
+  .logo {
+    width: 22px;
+    height: 22px;
+    flex: none;
+    background: var(--accent);
+    mask: url('/logo.png') center / contain no-repeat;
   }
   nav {
     display: flex;
