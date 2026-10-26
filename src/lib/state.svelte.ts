@@ -33,8 +33,6 @@ export interface Prefs {
   autoInstall: boolean;
   /** How many installed DataTool versions to keep (older ones are removed after an update). */
   keepCores: number;
-  /** Show debug modes and hidden flags. */
-  showAdvanced: boolean;
   /** General DataTool flags applied to every run (language, region...). */
   globalFlags: Record<string, FlagValue>;
   /** Read hero/unlock/map names from the game when a query mode is opened. */
@@ -71,7 +69,6 @@ function defaultPrefs(): Prefs {
     checkUpdates: true,
     autoInstall: false,
     keepCores: 3,
-    showAdvanced: false,
     globalFlags: {},
     autoLoadChoices: true,
     openWhenDone: false,

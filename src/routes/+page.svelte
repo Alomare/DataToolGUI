@@ -99,6 +99,8 @@
           {#key mode.keyword}
             <ModePage {mode} {task} />
           {/key}
+        {:else if cores.loadingSchema}
+          <div class="empty">Loading…</div>
         {:else}
           <div class="empty">
             The mode "{app.mode}" isn't available in this DataTool build.

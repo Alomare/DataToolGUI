@@ -35,7 +35,6 @@ export function defaultSeed(): { prefs: Prefs; tasks: Record<string, unknown>; p
       checkUpdates: false,
       autoInstall: false,
       keepCores: 3,
-      showAdvanced: false,
       globalFlags: {},
       autoLoadChoices: false,
       openWhenDone: false,

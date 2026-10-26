@@ -30,17 +30,13 @@ test.describe('regression', () => {
 test('every Settings control can be used without breaking the layout', async ({ app }) => {
   const { page } = app;
   await app.nav('Settings');
-  // Show hidden options too, so they're exercised.
-  await page.locator('label.toggle', { hasText: 'Show advanced' }).click();
-  await app.intact('showing advanced options');
 
   const toggles = page.locator('main label.toggle:not(.disabled)');
   const n = await toggles.count();
-  expect(n).toBeGreaterThan(10);
+  expect(n).toBeGreaterThan(5);
   for (let i = 0; i < n; i++) {
     const t = toggles.nth(i);
     const label = (await t.innerText()).trim();
-    if (/show advanced/i.test(label)) continue;
     const input = t.locator('input');
     const before = await input.isChecked();
     await t.click();
@@ -114,14 +110,16 @@ test('long paths and names don\'t push content out of the window', async ({ app 
 
 test.describe('without DataTool', () => {
   test.use({ seed: { prefs: { customCore: '' } } });
-  test('mode pages say what is missing instead of "Ready"', async ({ app }) => {
+  test('no modes are listed; the sidebar points to Settings', async ({ app }) => {
     const { page } = app;
     await app.nav('Home');
     await expect(page.locator('main')).toContainText('Install DataTool');
-    await app.openMode('list-heroes');
-    await expect(page.locator('.runbar')).toContainText('Install DataTool first');
-    await expect(app.runButton()).toBeDisabled();
+    await expect(page.locator('button.mode[data-mode]')).toHaveCount(0);
+    await expect(page.locator('.side')).toContainText('No modes yet');
     await app.intact();
+    await page.locator('.side').getByRole('button', { name: 'Settings', exact: true }).last().click();
+    await expect(page.locator('main h1')).toHaveText('Settings');
+    await app.intact('opening Settings from the sidebar');
   });
 });
 

@@ -2,8 +2,6 @@
 // grouping and help. Everything here is optional: modes and flags a new
 // DataTool release adds still appear, just with DataTool's own wording.
 
-import type { QueryInfo } from './schema';
-
 export interface Category {
   id: string;
   label: string;
@@ -18,7 +16,6 @@ export const CATEGORIES: Category[] = [
   { id: 'ui', label: 'UI, images & video', description: 'UI art, vector images, game mode art, cinematics' },
   { id: 'data', label: 'Game data', description: 'Lists of heroes, unlocks, maps, strings and more' },
   { id: 'other', label: 'Other', description: 'Modes added in newer DataTool builds' },
-  { id: 'advanced', label: 'Advanced & debug', description: 'Unlisted modes for research and debugging' },
 ];
 
 export interface ModeExtra {
@@ -32,7 +29,7 @@ export interface ModeExtra {
   /** Example queries offered as one-click chips. */
   examples?: string[];
   positionals?: { label: string; placeholder: string; help: string; required: boolean };
-  /** Highlight these flag sections first (e.g. voice options for voice modes). */
+  /** Highlight these flag sections first (e.g. sound options for voice modes). */
   sections?: string[];
   /** Folder DataTool creates inside the output folder. */
   outputFolder?: string;
@@ -80,18 +77,18 @@ export const MODE_EXTRAS: Record<string, ModeExtra> = {
     queryRequired: true,
     queryPlaceholder: 'Tracer',
     examples: ['Tracer', '*'],
-    sections: ['sound', 'voice'],
+    sections: ['sound'],
   },
   'extract-conversations': {
     label: 'Hero conversations',
     category: 'audio',
     help: 'Back-and-forth conversations between heroes, saved in order. Leave the query empty for every hero.',
     queryPlaceholder: 'Hero name (empty = all)',
-    sections: ['sound', 'voice'],
+    sections: ['sound'],
     outputFolder: 'HeroConvo',
   },
-  'extract-npc-voice': { label: 'NPC voice lines', category: 'audio', help: 'Voice lines of NPCs and announcers.', sections: ['sound', 'voice'], outputFolder: 'NPCVoice' },
-  'extract-voice-sets': { label: 'All voice sets', category: 'audio', help: 'Every voice set in the game, by GUID. Takes a long time.', sections: ['sound', 'voice'], outputFolder: 'VoiceSets' },
+  'extract-npc-voice': { label: 'NPC voice lines', category: 'audio', help: 'Voice lines of NPCs and announcers.', sections: ['sound'], outputFolder: 'NPCVoice' },
+  'extract-voice-sets': { label: 'All voice sets', category: 'audio', help: 'Every voice set in the game, by GUID. Takes a long time.', sections: ['sound'], outputFolder: 'VoiceSets' },
   'extract-music': { label: 'Music', category: 'audio', help: 'Every sound classified as music. Music is Ogg Opus: VLC can\'t play most of it, foobar2000 can.', sections: ['sound'] },
 
   // --- Maps & world -----------------------------------------------------------
@@ -131,59 +128,9 @@ export const MODE_EXTRAS: Record<string, ModeExtra> = {
   'dump-strings': { label: 'All strings', category: 'data', help: 'Every localized string in your text language.' },
   'dump-lootbox-pools': { label: 'Loot box pools', category: 'data', help: 'Loot box drop pools, saved as CSV and JSON into the output folder.', outputFolder: 'LootboxPools' },
 
-  // --- Advanced ---------------------------------------------------------------
-  'extract-anything': {
-    label: 'Anything by GUID',
-    category: 'advanced',
-    help: 'Extract any asset by GUID, with everything it references. Accepts 0x-prefixed long GUIDs (0x0DE00000000024D4) or index.type (00000000B56B.0B2).',
-    queryRequired: true,
-    queryPlaceholder: '000000001234.0B2',
-  },
-  'extract-everything': { label: 'Everything', category: 'advanced', help: 'Runs every extract mode with "*". Takes many hours and hundreds of GB.' },
-  'extract-hero-voice-better': { label: 'Hero voice (better grouping)', category: 'advanced', help: 'Experimental voice extraction that groups lines more precisely.', sections: ['sound', 'voice'] },
-  'extract-hero-voice-old': { label: 'Hero voice (old)', category: 'advanced', help: 'The previous voice extractor; supports soundRestriction and groupRestriction.', queryRequired: true, sections: ['sound', 'voice'] },
-  'extract-music-old': { label: 'Music (old)', category: 'advanced', help: 'The previous music extractor.', sections: ['sound'] },
-  'extract-debug-newents': {
-    label: 'New entities (debug)',
-    category: 'advanced',
-    help: 'Extract entities listed in a .guids or .cmfhashes file.',
-    positionals: { label: 'List file', placeholder: 'C:\\path\\to\\new.guids', help: 'Path to a .guids or .cmfhashes file', required: true },
-  },
-  'te-map-placable-dump': {
-    label: 'Map placeables dump (debug)',
-    category: 'advanced',
-    positionals: { label: 'Map indices (hex)', placeholder: '5B D4', help: 'Hex map GUID indices, separated by spaces', required: true },
-  },
-  'te-model-chunk-dump': {
-    label: 'Model chunk dump (debug)',
-    category: 'advanced',
-    positionals: { label: 'Model indices (hex)', placeholder: '1234 5678', help: 'Hex model GUID indices, separated by spaces', required: true },
-  },
-  'te-model-chunk-stu': {
-    label: 'Model STU dump (debug)',
-    category: 'advanced',
-    positionals: { label: 'Model indices (hex)', placeholder: '1234 5678', help: 'Hex model GUID indices, separated by spaces', required: true },
-  },
-  'debug-install-issues': { label: 'Diagnose install issues', category: 'advanced', help: 'Collects information about problems with the game install, for bug reports.' },
-  'util-tool-info': { label: 'Tool info (JSON)', category: 'advanced', help: 'Describes every mode and flag as JSON. This app reads it to build its forms.' },
-  'util-dynamic-choices': { label: 'Query choices (JSON)', category: 'advanced', help: 'Lists every hero, unlock and map name the query builder offers.' },
 };
 
-/** Query info for modes `util-tool-info` doesn't describe (debug modes). */
-export const QUERY_OVERRIDES: Record<string, Omit<QueryInfo, 'required'>> = {
-  'extract-anything': { choicesKey: '', types: [] },
-  'extract-hero-voice-better': { choicesKey: 'datatool.ux.valid_hero_names', types: [] },
-  'extract-hero-voice-old': {
-    choicesKey: 'datatool.ux.valid_hero_names',
-    types: [
-      { name: 'soundRestriction', label: 'Sound', choicesKey: '', tags: [] },
-      { name: 'groupRestriction', label: 'Group', choicesKey: '', tags: [] },
-    ],
-  },
-};
-
-export function categoryFor(keyword: string, sensitive: boolean): string {
-  if (sensitive) return 'advanced';
+export function categoryFor(keyword: string): string {
   if (keyword.startsWith('list-')) return 'data';
   if (/voice|sound|music|audio|convo/.test(keyword)) return 'audio';
   if (/map/.test(keyword)) return 'maps';
@@ -203,11 +150,9 @@ export const FLAG_SECTIONS: FlagSection[] = [
   { id: 'textures', label: 'Textures' },
   { id: 'models', label: 'Models & animations' },
   { id: 'sound', label: 'Sound & subtitles' },
-  { id: 'voice', label: 'Voice line grouping' },
-  { id: 'raw', label: 'Raw output & skipping' },
+  { id: 'raw', label: 'Raw output' },
   { id: 'output', label: 'Output' },
   { id: 'game', label: 'Game data' },
-  { id: 'debug', label: 'Debugging' },
   { id: 'other', label: 'Other' },
 ];
 
@@ -223,20 +168,8 @@ export const FLAG_EXTRAS: Record<string, FlagExtra> = {
   'speech-language': { label: 'Speech language', section: 'game', help: 'Language for voice lines. It must be installed in the game. Default: the game\'s audio language.' },
   online: { label: 'Download damaged files', section: 'game', help: 'Fetch files that are missing or corrupted in your install from Blizzard\'s CDN.' },
   'deduplicate-textures': { label: 'Deduplicate textures', section: 'textures', help: 'Re-use textures already saved for other models instead of saving them again (smaller output when extracting many skins).' },
-  scratchdb: { label: 'Deduplication database', section: 'textures', help: 'Folder for a persistent deduplication database, so textures are re-used across separate runs. Use with "Deduplicate textures".' },
   rcn: { label: 'China region content', section: 'game', help: 'Load China-exclusive content (detected automatically for China installs).' },
   rkr: { label: 'Korea region content', section: 'game', help: 'Load Korea-exclusive content (detected automatically for Korean installs).' },
-  'string-guid': { label: 'Strings as GUIDs', section: 'debug' },
-  'no-names': { label: 'No texture names', section: 'textures' },
-  'canonical-names': { label: 'Only canonical names', section: 'output' },
-  'no-guid-names': { label: 'Disable GUID names', section: 'output', help: 'Don\'t use the GUIDNames table to name files.' },
-  'extract-shaders': { label: 'Extract shaders', section: 'debug' },
-  'disable-language-registry': { label: 'Ignore game language', section: 'game', help: 'Don\'t read the game\'s language from Battle.net or Steam.' },
-  'args-save': { label: 'Save arguments', section: 'debug', help: 'DataTool saves these arguments and adds them to every later run. Not recommended with this app.' },
-  'args-reset': { label: 'Reset arguments', section: 'debug' },
-  'args-delete': { label: 'Delete saved arguments', section: 'debug' },
-  debug: { label: 'Debug logging', section: 'debug' },
-  'no-parallel': { label: 'No parallel processing', section: 'debug', help: 'Process one item at a time. Slower; useful when tracking down crashes.' },
 
   // Extract
   'convert-textures-type': { label: 'Texture format', section: 'textures', help: 'png: widest support. tif: keeps multi-surface textures. dds: GPU format, fastest.' },
@@ -247,26 +180,12 @@ export const FLAG_EXTRAS: Record<string, FlagExtra> = {
   'raw-models': { label: 'Raw models', section: 'raw' },
   'raw-animations': { label: 'Raw animations', section: 'raw' },
   raw: { label: 'Skip all conversion', section: 'raw' },
-  'skip-textures': { label: 'Skip textures', section: 'raw' },
-  'skip-sound': { label: 'Skip sound', section: 'raw' },
-  'skip-models': { label: 'Skip models', section: 'raw' },
-  'skip-animations': { label: 'Skip animations', section: 'raw' },
-  'skip-animation-effects': { label: 'Skip animation effects', section: 'raw' },
-  'scale-anims': { label: 'Scale animations (Blender 2.79)', section: 'models' },
-  flatten: { label: 'Flatten folders', section: 'output', help: 'Put files in fewer folders.' },
   'force-dds-multisurface': { label: 'Multi-surface as DDS', section: 'textures', help: 'Save multi-surface textures (cubemaps, arrays) as DDS even when another format is chosen.' },
   'sheet-multisurface': { label: 'Multi-surface as sheet', section: 'textures', help: 'Tile all surfaces vertically into one large image.' },
   'combine-multisurface': { label: 'Combine surfaces', section: 'textures', help: 'Combine all surfaces into one image (TIF and DDS only).' },
   grayscale: { label: 'Single channel as grayscale', section: 'textures', help: 'Convert single-channel textures to grayscale RGB.' },
   'subtitles-with-sounds': { label: 'Subtitles next to sounds', section: 'sound', help: 'Save a .txt with the subtitle next to each voice line.' },
   'subtitles-as-sounds': { label: 'Name sounds by subtitle', section: 'sound', help: 'Name voice line files after their subtitle text.' },
-  'voice-group-by-hero': { label: 'Group by hero', section: 'voice' },
-  'voice-group-by-type': { label: 'Group by voice line type', section: 'voice' },
-  'voice-group-by-skin': { label: 'Group by skin', section: 'voice' },
-  'voice-group-by-locale': { label: 'Group by language', section: 'voice' },
-  'voice-flat-03F': { label: 'Flat 03F folders', section: 'voice' },
-  xml: { label: 'STUs as XML', section: 'debug', help: 'Convert STUs to XML when extracted by debug modes.' },
-  'keep-channels': { label: 'Keep all audio channels', section: 'sound', help: 'Keep every channel when converting Ogg Opus.' },
   'use-texture-decoder': { label: 'Accurate texture decoder', section: 'textures', help: 'Decode textures with TextureDecoder: slower, more accurate.' },
   'all-lods': { label: 'All model LODs', section: 'models', help: 'Save every level of detail, not just the best one.' },
 

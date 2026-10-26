@@ -95,7 +95,7 @@
       {/if}
     </div>
     {#if cores.schemaError}
-      <div class="notice danger small"><TriangleAlert size={15} /><span>This DataTool didn't describe its modes ({cores.schemaError}). The app is using its built-in list instead.</span></div>
+      <div class="notice danger small"><TriangleAlert size={15} /><span>This DataTool didn't describe its modes ({cores.schemaError}), so none can be shown. Try reinstalling it or choosing another version.</span></div>
     {/if}
     {#if gameAhead}
       <div class="notice warn small">

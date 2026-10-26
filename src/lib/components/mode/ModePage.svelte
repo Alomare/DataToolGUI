@@ -1,6 +1,6 @@
 <script lang="ts">
   import { openPath } from '@tauri-apps/plugin-opener';
-  import { Bookmark, Check, Copy, FolderOpen, Play, RotateCcw, TriangleAlert } from '@lucide/svelte';
+  import { Bookmark, Check, Copy, FolderOpen, Play, RotateCcw } from '@lucide/svelte';
   import Field from '$lib/components/ui/Field.svelte';
   import Help from '$lib/components/ui/Help.svelte';
   import Modal from '$lib/components/ui/Modal.svelte';
@@ -93,7 +93,6 @@
         <span>{category?.label ?? 'Mode'}</span>
         <span>›</span>
         <code class="code-pill">{mode.keyword}</code>
-        {#each mode.aliases as a (a)}<code class="code-pill" data-tip="Alias">{a}</code>{/each}
       </div>
       <h1>{mode.label}</h1>
       <p class="muted">{mode.help || mode.description}</p>
@@ -109,15 +108,6 @@
       <Bookmark size={14} /> Save preset
     </button>
   </div>
-
-  {#if mode.sensitive}
-    <div class="notice warn small">
-      <TriangleAlert size={16} />
-      <span>This is an unlisted DataTool mode, meant for research and debugging. It can change or disappear between DataTool releases and may need specific arguments.</span>
-    </div>
-  {:else if cores.schema.fromLive && !mode.live}
-    <div class="notice warn small"><TriangleAlert size={16} /><span>Your DataTool build doesn't report this mode.</span></div>
-  {/if}
 
   {#if mode.query}
     <QueryEditor {task} {mode} />

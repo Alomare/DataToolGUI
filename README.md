@@ -8,7 +8,7 @@ A portable Windows app for [DataTool](https://github.com/overtools/OWLib) (overt
 
 There is no installer and no .NET to set up. Unzip the folder and run `DataToolGUI.exe`; DataTool, your settings and the caches all live in that folder.
 
-Every DataTool mode and flag is available, including the unlisted debug modes and hidden options (behind an "advanced" switch), and you can add your own arguments on top.
+Every mode and flag DataTool lists is available, and you can add your own arguments on top.
 
 Each Overwatch patch needs a new DataTool release. The app checks GitHub when it starts and installs a new release in one click, or on its own if you turn that on. Older versions stay installed so you can roll back. The forms are built from what the installed DataTool reports about itself, so new modes and flags show up without an app update.
 
@@ -56,21 +56,14 @@ In development, the portable folders (`datatool/`, `data/`) are created next to 
 
 ### When DataTool changes
 
-A normal DataTool update needs no change here. The app reads the modes, flags and query syntax from `DataTool util-tool-info` and the defaults from `DataTool --help`.
-
-`src/lib/datatool/catalog.json` adds what that output leaves out (debug modes, hidden flags, aliases). Regenerate it from the OWLib source when DataTool adds those:
-
-```sh
-npm run catalog                        # latest OWLib master
-npm run catalog -- --ref v2.26.0.0+1160
-```
+A normal DataTool update needs no change here. The app reads the modes, flags and query syntax from `DataTool util-tool-info` and the flag defaults from `DataTool --help`.
 
 Friendly names, categories and help live in `src/lib/datatool/extras.ts`. They're optional: unknown modes and flags still show up with DataTool's own wording.
 
 ### Project layout
 
 ```
-src/lib/datatool/schema.ts   merges util-tool-info + --help + catalog into the modes/flags the UI shows
+src/lib/datatool/schema.ts   util-tool-info + --help defaults → the modes/flags the UI shows
 src/lib/datatool/query.ts    DataTool's query syntax: parse, serialize, validate
 src/lib/datatool/args.ts     task → command line
 src/lib/datatool/log.ts      log line severity, phases, failure diagnosis
@@ -81,7 +74,6 @@ src/lib/components/          UI (mode page, query builder, jobs, results, files,
 src-tauri/src/process.rs     running DataTool, batched log events, output file counter
 src-tauri/src/cores.rs       GitHub releases, downloads, zip install
 src-tauri/src/detect.rs      finding Overwatch installs (Steam, Battle.net)
-scripts/gen-catalog.mjs      catalog.json from the OWLib source
 scripts/package.mjs          portable zip
 ```
 

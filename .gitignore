@@ -18,9 +18,6 @@ vite.config.ts.timestamp-*
 # Claude Code local settings
 .claude/settings.local.json
 
-# OWLib checkout used by scripts/gen-catalog.mjs
-/.cache
-
 # Playwright
 /test-results
 /playwright-report

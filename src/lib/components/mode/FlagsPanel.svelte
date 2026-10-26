@@ -1,7 +1,7 @@
 <script lang="ts">
   // A mode's options, grouped into sections. General flags (language, region)
   // default to the app-wide settings and can be overridden per task.
-  import { ChevronRight, Eye, EyeOff } from '@lucide/svelte';
+  import { ChevronRight } from '@lucide/svelte';
   import FlagControl from './FlagControl.svelte';
   import { cores } from '$lib/core.svelte';
   import { LIST_OUTPUT_FLAGS, type TaskForm } from '$lib/datatool/args';
@@ -20,9 +20,7 @@
   let sections = $derived.by<Section[]>(() => {
     const schema = cores.schema;
     const group = mode.flagGroup ? schema.groups[mode.flagGroup] : undefined;
-    const all = [...(group?.flags ?? []), ...schema.global.flags].filter(
-      (f) => (app.prefs.showAdvanced || !f.hidden) && !(mode.kind === 'list' && LIST_OUTPUT_FLAGS.has(f.name)),
-    );
+    const all = [...(group?.flags ?? []), ...schema.global.flags].filter((f) => !(mode.kind === 'list' && LIST_OUTPUT_FLAGS.has(f.name)));
     const preferred = MODE_EXTRAS[mode.keyword]?.sections ?? [];
     const order = [...preferred, ...FLAG_SECTIONS.map((s) => s.id).filter((s) => !preferred.includes(s))];
     return order
@@ -32,11 +30,6 @@
         flags: all.filter((f) => flagSection(f.name) === id),
       }))
       .filter((s) => s.flags.length);
-  });
-
-  let hiddenCount = $derived.by(() => {
-    const group = mode.flagGroup ? cores.schema.groups[mode.flagGroup] : undefined;
-    return [...(group?.flags ?? []), ...cores.schema.global.flags].filter((f) => f.hidden).length;
   });
 
   let changedCount = $derived(Object.keys(task.flags).length);
@@ -64,15 +57,6 @@
     <span class="spacer"></span>
     {#if changedCount}
       <button class="btn ghost small" onclick={() => (task.flags = {})}>Reset all</button>
-    {/if}
-    {#if hiddenCount}
-      <button
-        class="btn ghost small"
-        onclick={() => (app.prefs.showAdvanced = !app.prefs.showAdvanced)}
-        data-tip="Options DataTool doesn't list in its help: debugging, raw output, voice grouping…"
-      >
-        {#if app.prefs.showAdvanced}<EyeOff size={13} /> Hide{:else}<Eye size={13} /> Show{/if} advanced ({hiddenCount})
-      </button>
     {/if}
   </header>
 

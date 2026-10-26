@@ -10,7 +10,7 @@
   import { cores } from '$lib/core.svelte';
   import { app, type Theme } from '$lib/state.svelte';
 
-  let globals = $derived(cores.schema.global.flags.filter((f) => app.prefs.showAdvanced || !f.hidden));
+  let globals = $derived(cores.schema.global.flags);
 </script>
 
 <div class="settings">
@@ -56,7 +56,6 @@
           ]}
         />
       </div>
-      <Toggle bind:checked={app.prefs.showAdvanced} label="Show advanced & debug modes and options" help="Modes and flags DataTool doesn't list in its own help." />
       <Toggle
         bind:checked={app.prefs.autoLoadChoices}
         label="Read names from the game for pickers"

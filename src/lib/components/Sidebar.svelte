@@ -12,9 +12,7 @@
   let groups = $derived.by(() => {
     const q = search.trim().toLowerCase();
     const visible = cores.schema.modes.filter(
-      (m) =>
-        (app.prefs.showAdvanced || m.category !== 'advanced') &&
-        (!q || m.label.toLowerCase().includes(q) || m.keyword.includes(q) || m.description.toLowerCase().includes(q) || m.aliases.some((a) => a.includes(q))),
+      (m) => !q || m.label.toLowerCase().includes(q) || m.keyword.includes(q) || m.description.toLowerCase().includes(q),
     );
     return CATEGORIES.map((c) => ({ ...c, modes: visible.filter((m) => m.category === c.id) })).filter((g) => g.modes.length);
   });
@@ -67,17 +65,19 @@
           {#each g.modes as m (m.keyword)}
             <button class="mode" data-mode={m.keyword} class:active={app.page === 'mode' && app.mode === m.keyword} onclick={() => open(m)} data-tip={`${m.description || m.label}\n${m.keyword}`}>
               <span class="ellipsis">{m.label}</span>
-              {#if !m.live && m.sensitive}<span class="tiny faint">debug</span>{/if}
             </button>
           {/each}
         {/if}
       </div>
     {:else}
-      <p class="tiny faint pad">No mode matches "{search}".</p>
+      {#if search}
+        <p class="tiny faint pad">No mode matches "{search}".</p>
+      {:else if cores.loadingSchema}
+        <p class="tiny faint pad">Reading DataTool's modes…</p>
+      {:else}
+        <p class="tiny faint pad">No modes yet. Set up DataTool in <button class="link-btn" onclick={() => (app.page = 'settings')}>Settings</button>.</p>
+      {/if}
     {/each}
-    {#if !app.prefs.showAdvanced}
-      <button class="link-btn tiny pad" onclick={() => (app.prefs.showAdvanced = true)}>Show advanced & debug modes</button>
-    {/if}
   </div>
 </aside>
 

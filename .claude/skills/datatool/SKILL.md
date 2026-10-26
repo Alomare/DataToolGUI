@@ -22,10 +22,9 @@ Source: github.com/overtools/OWLib, folder `DataTool/` (C#, .NET 10). Verified a
 - Exit code is 0 even after usage errors. Success = exit 0 AND a `[Core] Execution finished in` line.
 
 ## Self-description (the UI is built from these)
-- `DataTool . util-tool-info --json --out=<file>`: modes grouped by flag class, flags (no defaults, no hidden flags, no "IsSensitive" modes), query types/tags. Needs no game files.
-- `DataTool --help`: prints "Positional directory is required" then flag tables `--flag | help | default`. The defaults are scraped from these.
+- `DataTool . util-tool-info --json --out=<file>`: modes grouped by flag class, flags (no defaults, no hidden flags, no "IsSensitive" modes), query types/tags. Needs no game files. This is the app's only source of modes and flags; hidden flags and sensitive modes are deliberately not offered (users can still type them as extra arguments).
+- `DataTool --help`: prints "Positional directory is required" then flag tables `--flag | help | default`. The defaults are scraped from these until tool info reports them (a maintainer offered to add them to the metadata if asked).
 - `DataTool <game> util-dynamic-choices --json --out=<file>` (about 5 s, reads game): `Types[key].Choices[{QueryName, DisplayName, Children}]`. Keys: `datatool.ux.valid_hero_names` (children per unlock type), `valid_npc_names`, `valid_map_names` (QueryName = hex map index), `valid_owl_teams`.
-- Hidden and sensitive items come from `src/lib/datatool/catalog.json`, regenerated with `npm run catalog` (scripts/gen-catalog.mjs parses `[Tool(...)]` and `[CLIFlag(...)]` attributes).
 
 ## Query syntax (`DataTool/IQueryParser.cs`)
 `{target}|{type}=({tag}={value},{tag}={value}),{item},!{excluded}|{type}=...`

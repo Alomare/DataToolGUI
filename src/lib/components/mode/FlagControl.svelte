@@ -26,11 +26,7 @@
   let effective = $derived(value ?? base);
   let changed = $derived(value !== undefined && String(value) !== String(base));
   let label = $derived(flagLabel(flag.name));
-  let help = $derived(
-    [FLAG_EXTRAS[flag.name]?.help ?? flag.help, `--${flag.name}${flag.aliases.length ? ` (also ${flag.aliases.map((a) => (a.length === 1 ? `-${a}` : `--${a}`)).join(', ')})` : ''}`]
-      .filter(Boolean)
-      .join('\n'),
-  );
+  let help = $derived([FLAG_EXTRAS[flag.name]?.help ?? flag.help, `--${flag.name}`].filter(Boolean).join('\n'));
   let isLanguage = $derived(flag.name === 'language' || flag.name === 'speech-language');
   let baseText = $derived(base === '' || base === null ? 'not set' : String(base));
 
@@ -39,15 +35,11 @@
   }
 </script>
 
-{#snippet advanced()}
-  <span class="badge" data-tip="Not in DataTool's own help: an expert or debug option">advanced</span>
-{/snippet}
-
 <div class="flag" class:changed data-flag={flag.name}>
   {#if flag.type === 'boolean'}
     <Toggle checked={!!effective} {label} {help} onchange={(v) => set(v)} />
   {:else}
-    <span class="name">{label} <Help text={help} />{#if flag.hidden}{@render advanced()}{/if}</span>
+    <span class="name">{label} <Help text={help} /></span>
     {#if flag.choices?.length}
       <select value={String(effective ?? '')} onchange={(e) => set((e.currentTarget as HTMLSelectElement).value)}>
         {#if !flag.choices.includes(String(base))}<option value={String(base ?? '')}>{isLanguage ? 'Game\'s language' : `Default (${baseText})`}</option>{/if}
@@ -65,7 +57,6 @@
       />
     {/if}
   {/if}
-  {#if flag.hidden && flag.type === 'boolean'}{@render advanced()}{/if}
   {#if changed}
     <button class="btn ghost icon small reset" aria-label="Reset {label}" data-tip="Back to {inheritedLabel} ({baseText})" onclick={() => onchange(undefined)}>
       <RotateCcw size={13} />
@@ -102,15 +93,11 @@
     margin-left: auto;
     height: 28px;
   }
-  .name :global(.badge) {
-    margin-left: 2px;
-  }
   .reset {
     margin-left: auto;
   }
   select + .reset,
-  input + .reset,
-  :global(.badge) + .reset {
+  input + .reset {
     margin-left: 0;
   }
 </style>

@@ -17,14 +17,15 @@ describe('schema', () => {
   const schema = buildSchema(toolInfo, help);
   const mode = (k: string) => schema.modes.find((m) => m.keyword === k)!;
 
-  it('reads modes from tool info and adds debug modes from the catalog', () => {
+  const liveKeywords = new Set(Object.values(toolInfo.ToolGroups).flatMap((g) => g.Tools.map((t) => t.Keyword)));
+  const liveFlags = new Set([toolInfo.ToolFlags, ...Object.values(toolInfo.ToolGroups).map((g) => g.Flags)].flatMap((g) => g.Flags.map((f) => f.Name)));
+
+  it('reads modes from tool info only', () => {
     expect(schema.version).toBe('2.25.0.0');
-    expect(mode('extract-unlocks').live).toBe(true);
     expect(mode('extract-unlocks').kind).toBe('extract');
     expect(mode('list-heroes').kind).toBe('list');
-    expect(mode('extract-anything').sensitive).toBe(true);
-    expect(mode('extract-anything').live).toBe(false);
-    expect(mode('extract-anything').query?.required).toBe(true);
+    expect(schema.modes.map((m) => m.keyword).sort()).toEqual([...liveKeywords].sort());
+    expect(schema.modes.find((m) => m.keyword === 'extract-anything')).toBeUndefined();
   });
 
   it('keeps query types and tags', () => {
@@ -37,26 +38,28 @@ describe('schema', () => {
     expect(mode('extract-sprays').query?.required).toBe(false);
   });
 
-  it('merges defaults, help-scraped defaults and hidden flags', () => {
+  it('reads flags from tool info and defaults from --help', () => {
     const ex = schema.groups.ExtractFlags.flags;
     const f = (n: string) => ex.find((x) => x.name === n)!;
     expect(f('grayscale').default).toBe(true);
     expect(f('convert-textures-type').default).toBe('png');
     expect(f('convert-textures-type').choices).toEqual(['dds', 'tif', 'png']);
-    expect(f('voice-group-by-hero').hidden).toBe(true);
-    expect(f('voice-group-by-hero').default).toBe(true);
-    expect(f('all-lods').aliases).toEqual(['lods']);
+    expect(f('raw').default).toBe(false);
     expect(ex.some((x) => x.name === 'out-path')).toBe(false);
     const online = schema.global.flags.find((x) => x.name === 'online')!;
     expect(online.default).toBe(true);
     expect(schema.global.flags.some((x) => x.name === 'h')).toBe(false);
+    // Hidden flags (not in tool info) aren't offered.
+    const all = [...schema.global.flags, ...Object.values(schema.groups).flatMap((g) => g.flags)];
+    expect(all.find((x) => x.name === 'voice-group-by-hero')).toBeUndefined();
+    expect(all.filter((x) => !liveFlags.has(x.name))).toEqual([]);
   });
 
-  it('works from the catalog alone', () => {
-    const offline = buildSchema(null);
-    expect(offline.fromLive).toBe(false);
-    expect(offline.modes.find((m) => m.keyword === 'extract-maps')?.query).not.toBeNull();
-    expect(offline.groups.ExtractFlags.flags.find((f) => f.name === 'raw')?.hidden).toBe(false);
+  it('has no modes or flags without tool info', () => {
+    const empty = buildSchema(null);
+    expect(empty.modes).toEqual([]);
+    expect(empty.global.flags).toEqual([]);
+    expect(Object.values(empty.groups).flatMap((g) => g.flags)).toEqual([]);
   });
 
   it('parses help defaults and the version line', () => {

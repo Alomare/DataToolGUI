@@ -3,13 +3,11 @@
 
 import { expect, readSettings, test, type App } from './fixtures';
 
-test.use({ seed: { prefs: { showAdvanced: true } } });
-
 test('every mode opens, renders and builds a command', async ({ app }) => {
   test.setTimeout(240_000);
   const { page } = app;
   const modes = await page.locator('button.mode[data-mode]').evaluateAll((els) => els.map((e) => e.getAttribute('data-mode')!));
-  expect(modes.length).toBeGreaterThan(70);
+  expect(modes.length).toBeGreaterThan(30);
   for (const keyword of modes) {
     await page.locator(`button.mode[data-mode="${keyword}"]`).click();
     await expect(page.locator('.mode .crumbs')).toContainText(keyword);
@@ -18,6 +16,19 @@ test('every mode opens, renders and builds a command', async ({ app }) => {
     await app.expandOptions();
     await app.intact(`opening ${keyword}`);
   }
+});
+
+test('only the modes and options DataTool lists are offered', async ({ app }) => {
+  const { page } = app;
+  await expect(page.locator('button.mode[data-mode="extract-unlocks"]')).toBeVisible();
+  await expect(page.locator('.side')).not.toContainText(/advanced|debug/i);
+  await expect(page.locator('button.mode[data-mode="extract-anything"]')).toHaveCount(0);
+  await app.openMode('extract-hero-voice');
+  await app.expandOptions();
+  await expect(page.locator('main')).not.toContainText(/advanced/i);
+  await expect(page.locator('[data-flag="voice-group-by-hero"]')).toHaveCount(0);
+  await app.nav('Settings');
+  await expect(page.locator('main')).not.toContainText(/show advanced/i);
 });
 
 /** Click/choose every flag of the open mode and check the command each time. */

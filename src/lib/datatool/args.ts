@@ -154,7 +154,6 @@ export function buildArgs(ctx: BuildContext): BuiltCommand {
   args.push(...splitArgs(task.extraArgs));
 
   if (args.some((a) => /["”]/.test(a))) errors.push('Remove the quote characters: DataTool refuses any argument that contains them.');
-  if (task.flags['args-save'] === true) warnings.push('"Save arguments" makes DataTool add these flags to every later run, including runs from this app.');
 
   return { args, errors, warnings };
 }
